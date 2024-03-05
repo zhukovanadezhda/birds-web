@@ -4,13 +4,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">  
   <link rel="stylesheet" href="style.css">
+  <script src="./script.js"></script>
   <title>Oiseaux-France</title>
-
 </head>
+
 <body>
+
   <nav>
     <ul>
-        <li><a href="#" class="highlight">Accueil</a></li>
+        <li><a href="index.html" class="highlight">Accueil</a></li>
         <li><a href="#">Quiz</a></li>
         <li><a href="#">Sommaire</a></li>
         <li><a href="#">Associations</a></li>
@@ -24,12 +26,29 @@
     </ul>
 </nav>
 
+<div class="bird-container bird-container-one">
+  <div class="bird bird-one"></div>
+</div>        
+<div class="bird-container bird-container-two">
+  <div class="bird bird-two"></div>
+</div>  
+<div class="bird-container bird-container-three">
+  <div class="bird bird-three"></div>
+</div> 
+<div class="bird-container bird-container-four">
+  <div class="bird bird-four"></div>
+</div>
 
-<script src="./cmap/France-map.js"></script>
-<script>francefree();</script>
+<div class="night-toggle" onClick="switchMode()">
+  <div id="moon" class="moon"></div>
+</div>
 
 
 
+<div id="tip"> </div>
+<div id="cmap"></div>
+<script type="text/javascript" src="France.js"></script>
+<script type="text/javascript" src="cmap.js"></script>
 
 </body>
 </html>
