@@ -1,23 +1,6 @@
-/*
-Plugin Name: France regions HTML 5 map
-Plugin URI: http://cmap.comersis.com/
-Description: France regions map.
-Version: france-free-1.032
-Author: S.Marmion
-Author URI: http://www.cmap.comersis.com
-License: non-comercial
-*/
-
-// MAP CONFIG  ///////////////////////////////////////////////////////////////////////
-
-var mapcolor = "#70ABF3";			// couleur de fond de carte
-var mapcolor_hover = "#FF0000";		// couleur de survol de la souris
-var maplines = "#FFFFFF";			// couleur des traits de séparation des régions
-
-//
-
-
-// MAP LINKS  ///////////////////////////////////////////////////////////////////////
+var mapcolor = "#70ABF3";		 // couleur de fond de carte
+var mapcolor_hover = "#990000"; // couleur de survol de la souris
+var maplines = "#FFFFFF";		 // couleur des traits de séparation des régions
 
 var paths = {
 			R0: {
@@ -87,6 +70,7 @@ var paths = {
 			}
 
 }
+
 function francefree(){
 var cmap = '';
 cmap += '<link rel="stylesheet" href="cmap/style.css" type="text/css" media="screen" />';
