@@ -60,3 +60,14 @@ title: "Provence-Alpes-Côte-d-Azur",
 url: "regions/Provence-Alpes-Cote-d-Azur.html"
 }
 }
+
+// Assign IDs to paths
+Object.keys(paths).forEach(function(region) {
+    var path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    path.setAttribute('d', window[region + 'pat']);
+    path.setAttribute('id', region); // Set ID for each path
+    path.setAttribute('fill', mapfill);
+    path.setAttribute('stroke', mapstroke);
+    path.setAttribute('stroke-width', mapstroke_width);
+    document.getElementById("cmap").appendChild(path);
+});
