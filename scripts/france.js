@@ -28,7 +28,7 @@ title: "Bretagne",
 url: "regions/Bretagne.html"
 },
 Z6: {
-title: "Centre",
+title: "Centre-Val de Loire",
 url: "regions/Centre.html"
 },
 Z7: {
@@ -71,4 +71,3 @@ Object.keys(paths).forEach(function(region) {
     path.setAttribute('stroke-width', mapstroke_width);
     document.getElementById("cmap").appendChild(path);
 });
-s
