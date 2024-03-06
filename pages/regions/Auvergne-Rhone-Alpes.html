@@ -1,55 +1,57 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../../styles/style.css">
   <script src="../../scripts/script.js"></script>
   <link rel="icon" href="../../styles/humming-bird.png" type="image/x-icon">
-  <title>Oiseaux Auvergne Rhone Alpes</title>
-
+  <title>Oiseaux les plus communs d'Auvergne-Rhone-Alpes</title>
 </head>
-<body>
 
+<body>
   <nav>
     <ul>
-        <li><a href="../index.html" class="highlight">Accueil</a></li>
-        <li><a href="../quiz.html">Quiz</a></li>
-        <li><a href="../sommaire.html">Sommaire</a></li>
-        <li><a>Associations</a>
-          <ul class="dropdown">
-            <li><a href="https://www.lpo.fr/">LPO</a></li>
-          </ul>
-        </li>
-        <li>
-            <a>Contacts</a>
-            <ul class="dropdown">
-                <li><a href="../cv_nadya.html">Nadezhda ZHUKOVA</a></li>
-                <li><a href="../cv_theo.html">Théo SERRALTA</a></li>
-            </ul>
-        </li>
+      <li><a href="../index.html" class="highlight">Accueil</a></li>
+      <li><a href="../quiz.html">Quiz</a></li>
+      <li><a href="../sommaire.html">Sommaire</a></li>
+      <li><a>Associations</a>
+        <ul class="dropdown">
+          <li><a href="https://www.lpo.fr/">LPO</a></li>
+        </ul>
+      </li>
+      <li>
+        <a>Contacts</a>
+        <ul class="dropdown">
+          <li><a href="../cv_nadya.html">Nadezhda ZHUKOVA</a></li>
+          <li><a href="../cv_theo.html">Théo SERRALTA</a></li>
+        </ul>
+      </li>
     </ul>
-</nav>
+  </nav>
 
+  <div class="background-image">
+    </div>
 
-<div class="bird-container bird-container-one">
-  <div class="bird bird-one"></div>
-</div>        
-<div class="bird-container bird-container-two">
-  <div class="bird bird-two"></div>
-</div>  
-<div class="bird-container bird-container-three">
-  <div class="bird bird-three"></div>
-</div> 
-<div class="bird-container bird-container-four">
-  <div class="bird bird-four"></div>
-</div>
+    <h1>Oiseaux les plus communs d'Auvergne-Rhone-Alpes</h1>
 
-<div class="night-toggle" onClick="switchMode()">
-  <div id="moon" class="moon"></div>
-</div>
+  <script>
+    // Get the background image element
+    const backgroundImage = document.querySelector('.background-image');
 
-<div id="sky"></div>
+    // Add scroll event listener
+    window.addEventListener('scroll', function() {
+      // Get scroll position
+      const scrollTop = window.pageYOffset;
 
+      // Adjust the opacity based on scroll position
+      const opacity = 1 - (scrollTop / 100); // Adjust the value of 100 to modify fade speed
+
+      // Set the opacity of the background image
+      backgroundImage.style.opacity = opacity;
+    });
+  </script>
 </body>
+
 </html>

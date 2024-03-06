@@ -13,6 +13,11 @@ nav {
     text-align: right; 
     margin-right: 200px; 
     margin-top: 55px; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100; /* Place le menu au-dessus du contenu */
 }
 
 nav ul {
@@ -1950,3 +1955,29 @@ position: absolute;
         transform: translate(80.0240979233vw, 0.0066192762vh);
    }
 }
+
+
+.background-image {
+    background-image: url("Paysages/Paysage_Auvergne.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0; ;
+    width: 100%;
+    height: 1000px;
+    filter: blur(3px);
+}
+
+.titre-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 24px; /* Ajustez la taille de police */
+    font-weight: bold;
+    z-index: 10; /* Place le titre au-dessus du contenu de l'image */
+  }
+  
