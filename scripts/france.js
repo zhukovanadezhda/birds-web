@@ -8,11 +8,11 @@ var mapHeight=430;				// Hauteur de la carte en pixels
 
 var paths = {
 Z1: {
-title: "Alsace-Champagne-Ardenne-Lorraine",
+title: "Grand Est",
 url: "regions/Grand-Est.html"
 },
 Z2: {
-title: "Aquitaine-Limousin-Poitou-Charentes",
+title: "Nouvelle-Aquitaine",
 url: "regions/Nouvelle-Aquitaine.html"
 },
 Z3: {
@@ -36,7 +36,7 @@ title: "Corse",
 url: "regions/Corse.html"
 },
 Z8: {
-title: "Languedoc-Roussillon-Midi-Pyrénées",
+title: "Occitanie",
 url: "regions/Occitanie.html"
 },
 Z9: {
@@ -44,7 +44,7 @@ title: "Ile-de-France",
 url: "regions/Ile-de-France.html"
 },
 Z10: {
-title: "Nord-Pas-de-Calais-Picardie",
+title: "Hauts-de-France",
 url: "regions/Hauts-de-France.html"
 },
 Z11: {
@@ -71,3 +71,4 @@ Object.keys(paths).forEach(function(region) {
     path.setAttribute('stroke-width', mapstroke_width);
     document.getElementById("cmap").appendChild(path);
 });
+s
