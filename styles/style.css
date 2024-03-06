@@ -1,7 +1,13 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
+    transition: 1.5s;
 }
+
+/* ##############################################
+   MENU DE NAVIGATION
+   ############################################## 
+*/
 
 nav {
     text-align: right; 
@@ -74,9 +80,11 @@ nav ul li:hover .dropdown {
     background-color: none;
 }
 
-body {
-    transition: 1.5s;
-}
+/* ##############################################
+    MODE JOUR / NUIT
+   ############################################## 
+*/
+
 .night-toggle {
 width: 33px;
 height: 33px;
@@ -119,6 +127,11 @@ position: absolute;
     margin-top: 5%;
     text-align: center;
 }    
+
+/* ##############################################
+    ANIMATION DES OISEAUX VOLANTS
+   ############################################## 
+*/
 
 .bird{
     background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells-new.svg');
@@ -259,6 +272,11 @@ position: absolute;
     }
     
 }
+
+/* ##############################################
+    
+   ############################################## 
+*/
 
 #tip {
     position: absolute;
