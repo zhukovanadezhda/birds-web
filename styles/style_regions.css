@@ -1,24 +1,37 @@
-.background-image {
-    position: relative;
-    background-image: url("Paysages/Paysage_Auvergne.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    margin: 0; ;
-    width: 100%;
-    height: 1000px;
-    filter: blur(2px);
-}
-
-
 h1 {
     position: absolute;
-    top: 50%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: rgba(255, 255, 255, 1);
+    color: rgba(255, 255, 255, 0.85);
     text-align: center;
     font-size: 48px; 
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 10;
 }
+
+.background-image {
+    position: relative;
+    margin: 0;
+    width: 100%;
+    height: 1000px;
+    overflow: hidden; 
+}
+
+.background-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("Paysages/Paysage_Auvergne.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: blur(2px);
+    z-index: -1;
+}
+
+
