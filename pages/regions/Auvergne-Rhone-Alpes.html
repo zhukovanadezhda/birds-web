@@ -36,23 +36,102 @@
     <div id="moon" class="moon"></div>
   </div>
 
-  <div class="background-image">
+  <div class="background-image" id="background-image">
+      <h1>Oiseaux les plus communs d'Auvergne-Rhone-Alpes</h1>
+      <div class="scroll-down-arrow" onclick="scrollToContent()">
+        <div class="arrow"></div>
+      </div>
+          </div>
 
-  <h1>Oiseaux les plus communs d'Auvergne-Rhone-Alpes</h1>
-</div>
-  <script>
-    // Get the background image element
-    const backgroundImage = document.querySelector('.background-image');
-    // Add scroll event listener
-    window.addEventListener('scroll', function() {
-      // Get scroll position
-      const scrollTop = window.pageYOffset;
-      // Adjust the opacity based on scroll position
-      const opacity = 1 - (scrollTop / 60);
-      // Set the opacity of the background image
-      backgroundImage.style.opacity = opacity;
-    });
-  </script>
+  <script src="script.js"></script>
+
+
+  <div id="all-bird"> 
+    <div class="row">
+      <div class="bird-card" onmouseover="expandCard(this)" onmouseout="shrinkCard(this)">
+        <img src="../../styles/Oiseaux/accenteur-mouchet-172854.jpg" alt="Accenteur mouchet">
+        <span class="bird-name">Accenteur mouchet</span>
+        <div class="bird-info">
+          Description de l'oiseau 1.
+        </div>
+      </div>
+
+      <div class="bird-card" onmouseover="expandCard(this)" onmouseout="shrinkCard(this)">
+        <img src="../../styles/Oiseaux/Aigle_royal.jpg" alt="Aigle Royal">
+        <span class="bird-name">Aigle royal</span>
+        <div class="bird-info">
+          Description de l'oiseau 2.
+        </div>
+      </div>
+
+      <div class="bird-card" onmouseover="expandCard(this)" onmouseout="shrinkCard(this)">
+        <img src="../../styles/Oiseaux/Buse_variable.jpg" alt="Buse variable">
+        <span class="bird-name">Buse variable</span>
+        <div class="bird-info">
+          Description de l'oiseau 3.
+        </div>
+      </div>
+
+      <div class="bird-card" onmouseover="expandCard(this)" onmouseout="shrinkCard(this)">
+        <img src="../../styles/Oiseaux/chevechette_d_europe.jpg" alt="Chevechette d'Europe">
+        <span class="bird-name">Chevechette d'Europe</span>
+        <div class="bird-info">
+          Description de l'oiseau 4.
+        </div>
+      </div>
+
+      <div class="bird-card" onmouseover="expandCard(this)" onmouseout="shrinkCard(this)">
+        <img src="../../styles/Oiseaux/Courlis_Cendré.jpg" alt="Courlis cendré">
+        <span class="bird-name">Courlis cendré</span>
+        <div class="bird-info">
+          Description de l'oiseau 5.
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="bird-card" onmouseover="expandCard(this)" onmouseout="shrinkCard(this)">
+        <img src="../../styles/Oiseaux/Faucon_pelerin.jpg" alt="Faucon pelerin">
+        <span class="bird-name">Faucon pelerin</span>
+        <div class="bird-info">
+          Description de l'oiseau 6.
+        </div>
+      </div>
+
+      <div class="bird-card" onmouseover="expandCard(this)" onmouseout="shrinkCard(this)">
+        <img src="../../styles/Oiseaux/Grand-ducdEurope.jpg" alt="Grand-duc d'Europe">
+        <span class="bird-name">Grand-duc d'Europe</span>
+        <div class="bird-info">
+          Des</div>cription de l'oiseau 7.
+        </div>
+      </div>
+
+      <div class="bird-card" onmouseover="expandCard(this)" onmouseout="shrinkCard(this)">
+        <img src="../../styles/Oiseaux/Grand_Corbeau.jpg" alt="Grand corbeau">
+        <span class="bird-name">Grand corbeau</span>
+        <div class="bird-info">
+          Description de l'oiseau 8.
+        </div>
+      </div>
+
+      <div class="bird-card" onmouseover="expandCard(this)" onmouseout="shrinkCard(this)">
+        <img src="../../styles/Oiseaux/milan_royal.jpg" alt="Milan royal">
+        <span class="bird-name">Milan Royal</span>
+        <div class="bird-info">
+          Description de l'oiseau 9.
+        </div>
+      </div>
+
+      <div class="bird-card" onmouseover="expandCard(this)" onmouseout="shrinkCard(this)">
+        <img src="../../styles/Oiseaux/Vautour_Fauve.jpg" alt="Vautour fauve">
+        <span class="bird-name">Vautour fauve</span>
+        <div class="bird-info">
+          Description de l'oiseau 10.
+        </div>
+      </div>
+    </div>
+  </div>
+
 </body>
 
 </html>

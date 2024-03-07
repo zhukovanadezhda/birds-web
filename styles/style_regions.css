@@ -1,6 +1,6 @@
 h1 {
     position: absolute;
-    top: 25%;
+    top: 40%; /* Ajustez cette valeur pour déplacer le titre verticalement */
     left: 50%;
     transform: translate(-50%, -50%);
     color: rgba(255, 255, 255, 0.85);
@@ -9,14 +9,18 @@ h1 {
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     z-index: 10;
+    padding: 20px; /* Ajoutez un peu de marge intérieure */
+    background-color: rgba(0, 0, 0, 0.5); /* Couleur de fond avec transparence */
+    border-radius: 10px; /* Bords arrondis */
 }
+
 
 .background-image {
     position: relative;
     margin: 0;
     width: 100%;
-    height: 1000px;
-    overflow: hidden; 
+    min-height: 100vh;
+        overflow: hidden; 
 }
 
 .background-image::before {
@@ -30,8 +34,86 @@ h1 {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    filter: blur(2px);
+    filter: blur(3px);
     z-index: -1;
+    transition: opacity 0.5s ease;
+    opacity: 1;
 }
 
+.scroll-down-arrow {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
 
+.arrow {
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent; /* Ajustez la largeur pour contrôler la taille du V */
+    border-right: 15px solid transparent; /* Ajustez la largeur pour contrôler la taille du V */
+    border-top: 30px solid white; /* Ajustez la hauteur pour contrôler la taille du V */
+}
+
+/*###########Bird Section###########*/
+
+#all-bird {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Espacement entre les cartes */
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .bird-card {
+    width: 200px; /* Largeur des cartes d'oiseaux */
+    height: auto;
+    margin: 10px; /* Espacement entre les cartes */
+    overflow: hidden;
+    border: 1px solid #ccc;
+    transition: transform 0.3s;
+    border-radius: 10px; /* Rendre le cadre rond */
+  }
+  
+  .bird-card:hover {
+    transform: scale(1.05); /* Ajustez le facteur d'échelle pour le zoom au survol */
+  }
+  
+  .bird-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajustement de l'image à la taille du cadre */
+    border-radius: 10px; /* Rendre l'image ronde */
+  }
+  
+  .bird-name {
+    text-align: center;
+    margin-top: 5px;
+  }
+  
+  .bird-info {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .bird-card:hover .bird-info {
+    display: block;
+  }
+
+  
