@@ -5,9 +5,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../../styles/style.css">
+  <link rel="stylesheet" href="../../styles/style_regions.css">
   <script src="../../scripts/script.js"></script>
   <link rel="icon" href="../../styles/humming-bird.png" type="image/x-icon">
-  <title>Oiseaux les plus communs d'Auvergne-Rhone-Alpes</title>
+  <title>Oiseaux Auvergne Rhone Alpes</title>
 </head>
 
 <body>
@@ -31,23 +32,23 @@
     </ul>
   </nav>
 
-  <div class="background-image">
-    </div>
+  <div class="night-toggle" onClick="switchMode()">
+    <div id="moon" class="moon"></div>
+  </div>
 
-    <h1>Oiseaux les plus communs d'Auvergne-Rhone-Alpes</h1>
+  <div class="background-image"></div>
+
+  <h1>Oiseaux les plus communs d'Auvergne-Rhone-Alpes</h1>
 
   <script>
     // Get the background image element
     const backgroundImage = document.querySelector('.background-image');
-
     // Add scroll event listener
     window.addEventListener('scroll', function() {
       // Get scroll position
       const scrollTop = window.pageYOffset;
-
       // Adjust the opacity based on scroll position
-      const opacity = 1 - (scrollTop / 100); // Adjust the value of 100 to modify fade speed
-
+      const opacity = 1 - (scrollTop / 60);
       // Set the opacity of the background image
       backgroundImage.style.opacity = opacity;
     });

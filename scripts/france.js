@@ -1,10 +1,15 @@
-var mapfill = "#70ABF3";		// Couleur de remplissage des régions
-var maphover_fill = "#70abf386";// Couleur de survol au passage de la souris
-var mapstroke = "#FFFFFF";		// Couleur des lignes de séparation des régions
-var mapstroke_width = 1;		// Epaisseur des lignes de séparation des régions (en points)
-var mapWidth=500;				// Largeur de la carte en pixels
-var mapHeight=430;				// Hauteur de la carte en pixels 
+var mapfill = "#70ABF3";		 // Couleur de remplissage des régions
+var maphover_fill = "#70abf386"; // Couleur de survol au passage de la souris
+var mapstroke = "#FFFFFF";		 // Couleur des lignes de séparation des régions
+var mapstroke_width = 1;		 // Epaisseur des lignes de séparation des régions (en points)
+var mapWidthPercentage = 50;     // Largeur de la carte en pourcentage de la largeur de l'écran
+var mapHeightPercentage = 80;    // Hauteur de la carte en pourcentage de la hauteur de l'écran
 
+var screenWidth = window.innerWidth;
+var screenHeight = window.innerHeight;
+
+var mapWidth = (screenWidth * mapWidthPercentage) / 100;
+var mapHeight = (screenHeight * mapHeightPercentage) / 100;
 
 var paths = {
 Z1: {
@@ -61,11 +66,11 @@ url: "regions/Provence-Alpes-Cote-d-Azur.html"
 }
 }
 
-// Assign IDs to paths
+// assign IDs to paths
 Object.keys(paths).forEach(function(region) {
     var path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
     path.setAttribute('d', window[region + 'pat']);
-    path.setAttribute('id', region); // Set ID for each path
+    path.setAttribute('id', region);
     path.setAttribute('fill', mapfill);
     path.setAttribute('stroke', mapstroke);
     path.setAttribute('stroke-width', mapstroke_width);
