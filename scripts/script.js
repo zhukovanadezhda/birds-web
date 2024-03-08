@@ -79,7 +79,7 @@ function scrollToContent() {
 }
 
 function expandCard(card) {
-	card.style.transform = 'scale(1.1)';
+	card.style.transform = 'scale(1.05)';
   }
   
   function shrinkCard(card) {
