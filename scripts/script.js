@@ -1,4 +1,4 @@
-/* day and night mode */
+/* switch between dark and light mode */
 
 function switchMode() {
 	let moon = document.getElementById("moon");
@@ -23,7 +23,7 @@ function switchMode() {
 	}
 }	
 
-/* stars */
+/* add stars to the background */
 
 let sky, center;
 
@@ -54,4 +54,3 @@ function init() {
 
 window.onload = init;
 
-  
