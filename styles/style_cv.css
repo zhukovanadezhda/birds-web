@@ -1,13 +1,18 @@
-div{float: center; box-sizing: border-box;}
-.tu{text-transform: uppercase;}
-.tr{transition: 0.2s;}
-
-.bio_area {
-	display: flex; /* Use flexbox */
-	margin-top: 10%;
-	justify-content: center; /* Horizontally center the flex items */
+div{
+	float: center; 
+	box-sizing: border-box;
 }
-
+.tu{
+	text-transform: uppercase;
+}
+.tr{
+	transition: 0.2s;
+}
+.bio_area {
+	display: flex; 
+	margin-top: 11%;
+	justify-content: center;
+}
 .bl_area {
 	width: 20%;
 	background: #FFFFFF;
@@ -16,13 +21,11 @@ div{float: center; box-sizing: border-box;}
 	text-align: center;
 	padding-bottom: 15px;
 }
-
 .bl_area img {
 	margin-top: 3%;
 	width: 80%;
 	border-radius: 10px 10px 0px 0px;
 }
-
 .br_area {
 	width: 50%;
 	background: #FFFFFF;
@@ -33,7 +36,6 @@ div{float: center; box-sizing: border-box;}
 	margin-left: 10px;
 	
 }
-
 .t_color{
 	color:#4F4F4F;
 }
@@ -61,7 +63,6 @@ div{float: center; box-sizing: border-box;}
 	overflow: hidden;
 	font-size: 18px;
 }
-/* arrow icon*/
 .hmcon{
 	float: left;
 	background: #70ABF3;
@@ -76,28 +77,32 @@ div{float: center; box-sizing: border-box;}
 .hire_me:hover .hmcon{
 	display: block;
 	left: 0px;
-  animation: mymove 1s infinite;
-  animation-iteration-count: 1;
+	animation: mymove 1s infinite;
+	animation-iteration-count: 1;
 }
-.hm{margin-right:20px}
+.hm{
+	margin-right:20px
+}
 @keyframes mymove {
     from {left: -10px;}
     to {left:0px;}
 }
 .social_links{
 	float: none;
-	margin: 5px 0px;
-	padding:5px;
+	margin: 5px 5px;
+	padding: 5px;
 }
 .cr_bg{
 	background: transparent;
 	box-shadow: 0px 0px 29px -8px rgba(0,0,0,0.75);
 	padding: 10px;
-	border-radius: 50px;
-	color:#119AB9;
-	transition:0.5s;
+	border-radius: 60px;
+	color:#70ABF3;
+	transition: 0.5s;
 }
-.fb{padding: 10px 14px;}
+.fb{
+	padding: 10px 14px;
+}
 .cr_bg:hover{
 	border-color: #70ABF3;
 	background: #70ABF3;
@@ -106,13 +111,17 @@ div{float: center; box-sizing: border-box;}
 .cr_bg:hover .rt{
 	transform: rotate(360deg);
 }
-span{color:#70ABF3;}
+span{
+	color:#70ABF3;
+}
 hr{
     border: none;
     border-top: 1px solid #ccc;
     margin-top:-15px;
 }
-.aj{font-weight: bold;}
+.aj{
+	font-weight: bold;
+}
 .ftd{
 	position: relative;
 	top:-15px;
@@ -125,7 +134,7 @@ hr{
 }
 .box,.name_cnt{
 	background: transparent;
-	box-shadow: 0px 0px 29px -8px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 29px -8px rgba(0, 0, 0, 0.75);
 	padding: 10px;
 	width: 90%;
 	margin:5px;
@@ -140,7 +149,9 @@ hr{
 	background: gray;
 	color:#fff;
 }
-.namet{width: 380px;}
+.namet{
+	width: 380px;
+}
 .name{
 	position: relative;
 	display: inline-block;
@@ -175,10 +186,22 @@ hr{
 	border-radius: 50px 0px 0px 50px;
 	background: #70ABF3;
 }
-.name:hover .mail{width: 105%;}
-.name:hover .adbx{width: 120%;}
-.name:hover .mailcnt{margin-left: 92px; width: 280px; padding: 10px 0px; text-transform: none;}
-.name:hover .adcnt{margin-left:110px; width:255px;}
+.name:hover .mail{
+	width: 105%;
+}
+.name:hover .adbx{
+	width: 120%;
+}
+.name:hover .mailcnt{
+	margin-left: 92px; 
+	width: 280px; 
+	padding: 10px 0px; 
+	text-transform: none;
+}
+.name:hover .adcnt{
+	margin-left: 110px; 
+	width: 255px;
+}
 
 .cv_button {
 	color: black;
@@ -190,14 +213,11 @@ hr{
 	font-size: 16px;
 
 }
-
 .cv_button:hover {
 	background-color: #70abf386;
 }
-
-
 .cv_page {
 	position: absolute;
 	margin-top: 5%;
 	margin-left: 20%;
-  }
+}
