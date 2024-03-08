@@ -111,8 +111,8 @@ h1 {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) rotateY(180deg); /* Rotation uniquement sur l'axe Y */
-    text-align: center;
+    transform: translate(-50%, -50%) rotateY(180deg) scale(-1, 1); /* Rotation uniquement sur l'axe Y */
+    text-align: left;
     backface-visibility: hidden; /* Empêche l'affichage du nom à l'arrière de la carte */
     color: white; /* Couleur du texte */
     font-weight: bold; /* Style du texte */
@@ -138,10 +138,14 @@ h1 {
   }
   
   .bird-card:hover .bird-name {
-
     -moz-transform: scale(-1, 1);
     -webkit-transform: scale(-1, 1);
     -o-transform: scale(-1, 1);
     -ms-transform: scale(-1, 1);
     transform: scale(-1, 1);
-}
+    left: 20%; /* Position horizontale au centre */
+    top: 30%; /* Position verticale au centre */
+    right: 25%;
+    display: flex;
+    justify-content: center;
+  }
