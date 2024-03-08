@@ -64,7 +64,8 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px; /* Espacement entre les cartes */
+    max-width: calc(222px * 5 ); /* Largeur maximale pour afficher cinq cartes d'oiseaux */
+    margin: 0 auto; /* Pour centrer le conteneur */
   }
   
   .row {
