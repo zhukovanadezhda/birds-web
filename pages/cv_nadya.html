@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="../styles/style_cv.css"> 
   <script src="https://kit.fontawesome.com/d14e45815f.js" crossorigin="anonymous"></script>
   <script src="../scripts/script.js"></script>
+  <script src="../scripts/cv.js"></script>
   <link rel="icon" href="../styles/humming-bird.png" type="image/x-icon">
   <title>CV Nadezhda ZHUKOVA</title>
 
@@ -65,47 +66,65 @@
     </div>
   </div>
   <div class="br_area">
-    <div class="b_deatil">
       <button class="cv_button" onclick="showPage('pageAbout')">About</button>
       <button class="cv_button" onclick="showPage('pageSkills')">Skills</button>
       <button class="cv_button" onclick="showPage('pageEducation')">Education</button>
       <button class="cv_button" onclick="showPage('pageExperience')">Experience</button>
       <button class="cv_button" onclick="showPage('pageProjects')">Projets</button>
-      
-    </div>
-  </div>
-  <div id="pageAbout" class="cv_page">
-    <h3 class="t_color tu aj">Nadezhda <span>ZHUKOVA</span></h3>
-    <div class="t_color pm">Étudiante en Master de Bioinformatique à l'Université Paris Cité,<br>
-      Alternante en bioinformatique à l'Institut de Psychiatrie et Neurosciences de Paris.</div><br>
-    <p class="t_color">
+      <div id="pageAbout" class="cv_page">
+            <h3 class="t_color">
+            Étudiante en Master de Bioinformatique à l'<a href="https://u-paris.fr/">Université Paris Cité</a><br>
+            Alternante en bioinformatique à l'<a href="https://ipnp.paris5.inserm.fr/">Institut de Psychiatrie et Neurosciences</a>
+            </h3>
+            <div class="t_color pm">
 
-    </p>
-  </div>
+              <div class="details">
+                
+                <div class="left-column">
+                  <h3><i class="fa-solid fa-computer"></i> Intérêts pro :</h3>
+                  <h3><i class="fa-solid fa-palette"></i> Intérêts perso :</h3>
+                  <h3><i class="fa-solid fa-language"></i> Langues : </h3>
+                </div>
+
+                <div class="right-column">
+                  <p>Statistiques, ML/DL, psychiatrie, analyse de données NGS</p>
+                  <p>Santé mentale, voyages, photographie argentique, ski alpin, jeux sportifs</p>
+                  <p>Anglais, Français, Russe</p>
+                </div>
+              </div>
+
+              <h3 class="t_color t_center">❓Choisissez le mensonge 🤔</h3>
+              
+              <div class="button-row">
+                <button onclick="checkAnswer(this)">🌎 <br> J'ai visité 29 pays</button>
+                <button onclick="checkAnswer(this)">🥇<br> J'ai couru un semi-marathon</button>
+                <button onclick="checkAnswer(this)" id="correctAnswer">👔 <br> J'ai été directrice d'une entreprise</button>
+                <button onclick="checkAnswer(this)">📚 <br> J'ai appris une langue en 6 mois</button>
+                <button onclick="checkAnswer(this)">👩‍🏫 <br> J'ai été prof pendant 7 ans</button>
+              </div>
+              <div class="feedback"></div>
+            </div>
+      </div>
   <div id="pageSkills" class="cv_page" style="display: none;">
     <!-- Content for Skills page -->
     <!-- You can add content specific to the Skills page here -->
-    <h3 class="t_color tu">Skills</h3>
     <!-- Add content specific to Skills page -->
   <div id="pageEducation" class="cv_page" style="display: none;">
     <!-- Content for Education page -->
     <!-- You can add content specific to the Education page here -->
-    <h3 class="t_color tu">Education</h3>
     <!-- Add content specific to Education page -->
   </div>
   <div id="pageExperience" class="cv_page" style="display: none;">
     <!-- Content for Experience page -->
     <!-- You can add content specific to the Experience page here -->
-    <h3 class="t_color tu">Experience</h3>
     <!-- Add content specific to Experience page -->
   </div>
   <div id="pageProjects" class="cv_page" style="display: none;">
       <!-- Content for Skills page -->
       <!-- You can add content specific to the Skills page here -->
-      <h3 class="t_color tu">Skills</h3>
       <!-- Add content specific to Skills page -->
   </div>
-
+</div>
 
 
 
