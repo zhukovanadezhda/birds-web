@@ -68,13 +68,6 @@ h1 {
     margin: 0 auto; /* Pour centrer le conteneur */
   }
   
-  .row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-  }
-  
   .bird-card {
     width: 200px; /* Largeur des cartes d'oiseaux */
     height: auto;
@@ -83,10 +76,13 @@ h1 {
     border: 1px solid #ccc;
     transition: transform 0.3s;
     border-radius: 10px; /* Rendre le cadre rond */
+    position: relative; /* Ajout de la position relative pour le contenu de la carte */
+    perspective: 1000px; /* Ajout de la perspective pour l'effet 3D */
+    backface-visibility: hidden; /* Empêche l'affichage du visage arrière */
   }
   
-  .bird-card:hover {
-    transform: scale(1.05); /* Ajustez le facteur d'échelle pour le zoom au survol */
+  .bird-card:hover .bird-card-inner {
+    transform: scale(1.05) rotateY(180deg); /* Ajustement pour l'effet de rotation au survol */
   }
   
   .bird-card img {
@@ -94,13 +90,41 @@ h1 {
     height: 100%;
     object-fit: cover; /* Ajustement de l'image à la taille du cadre */
     border-radius: 10px; /* Rendre l'image ronde */
+    filter: blur(0px); /* Valeur par défaut, pas de flou */
+    transition: filter 0.3s; /* Animer le flou avec la rotation */
+  } 
+
+  .bird-card:hover img {
+    filter: blur(5px); /* Appliquer le flou à l'image au survol */
+  }
+  
+  .bird-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s;
+    transform-style: preserve-3d; /* Conserve la face avant visible pendant la rotation */
+    overflow: hidden; /* Assurez-vous que le contenu débordant est masqué */
   }
   
   .bird-name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotateY(180deg); /* Rotation uniquement sur l'axe Y */
     text-align: center;
-    margin-top: 5px;
+    backface-visibility: hidden; /* Empêche l'affichage du nom à l'arrière de la carte */
+    color: white; /* Couleur du texte */
+    font-weight: bold; /* Style du texte */
+    font-size: 18px; /* Taille de la police */
+    padding: 5px 10px; /* Espacement autour du texte */
+    background-color: rgba(0, 0, 0, 0.5); /* Couleur de fond semi-transparente */
+    border-radius: 5px; /* Coins arrondis */
+    transition: transform 0.3s; /* Animer la transition avec la rotation */
+    text-orientation: mixed;
+
   }
-  
+
   .bird-info {
     display: none;
     background-color: rgba(0, 0, 0, 0.8);
@@ -113,8 +137,11 @@ h1 {
     text-align: center;
   }
   
-  .bird-card:hover .bird-info {
-    display: block;
-  }
+  .bird-card:hover .bird-name {
 
-  
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    transform: scale(-1, 1);
+}
