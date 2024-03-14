@@ -32,3 +32,33 @@ card.style.transform = 'scale(1.05)';
 function shrinkCard(card) {
 card.style.transform = 'scale(1)';
 }
+
+// Fonction pour ouvrir le cadre modal
+function openModal(birdName, birdDescription) {
+  var modal = document.getElementById('bird-modal');
+  var nameField = document.getElementById('bird-name');
+  var descriptionField = document.getElementById('bird-description');
+  
+  nameField.textContent = birdName;
+  descriptionField.textContent = birdDescription;
+  
+  modal.style.display = 'block';
+}
+
+// Fonction pour fermer le cadre modal
+function closeModal() {
+  var modal = document.getElementById('bird-modal');
+  modal.style.display = 'none';
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  var birdCards = document.querySelectorAll('.bird-card');
+
+  birdCards.forEach(function(card) {
+    card.addEventListener('click', function() {
+      var birdName = card.querySelector('.bird-name').textContent;
+      var birdDescription = card.querySelector('.bird-info').textContent;
+      openModal(birdName, birdDescription);
+    });
+  });
+});

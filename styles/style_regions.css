@@ -20,7 +20,7 @@ h1 {
     margin: 0;
     width: 100%;
     min-height: 100vh;
-        overflow: hidden; 
+    overflow: hidden; 
 }
 
 .background-image::before {
@@ -145,3 +145,113 @@ h1 {
     display: flex;
     justify-content: center;
   }
+
+/* Cadre informations oiseaux */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #FFAC9A;
+  margin: 10% auto; /* Vous pouvez ajuster la marge comme vous le souhaitez */
+  padding: 30px; /* Ajustez la marge intérieure pour plus d'espace */
+  border: 1px solid #888;
+  width: 70%; /* Ajustez la largeur pour rendre le cadre plus large */
+  max-width: 800px; /* Définissez une largeur maximale si nécessaire */
+  max-height: 80%; /* Définissez une hauteur maximale si nécessaire */
+  overflow-y: auto; /* Ajoutez une barre de défilement verticale si nécessaire */
+}
+
+.shapes {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.rectangle1 {
+  position: absolute;
+  top: 200px;
+  right: 170px;
+  width: 300px;
+  height: 25px;
+  background-color: #AFABAA;
+  margin: 5px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+}
+
+
+.rectangle2 {
+  position: absolute;
+  top: 230px;
+  right: 170px;
+  width: 300px;
+  height: 150px;
+  background-color: #F7F1F0;
+  margin: 5px;
+  border: 1px solid #000000; /* Bordure noire pour toutes les faces */
+  border-radius: 5px;
+}
+
+.rectangle2 table td:first-child {
+  width: 100px; /* Largeur de la première colonne */
+  height: auto;
+  background-color: #AFABAA;
+  border: 1px solid #000000;
+}
+
+.rectangle2 td {
+  width: 200px;
+  height: 48px;
+  border-bottom: 1px solid #000000; /* Bordure noire pour chaque cellule */
+  padding: 0px; /* Espacement intérieur des cellules */
+  text-align: center; /* Centrer le texte à l'intérieur des cellules */
+}
+
+.rectangle3 {
+  position: absolute;
+  top: 385px;
+  right: 170px;
+  width: 300px;
+  height: 25px;
+  background-color: #F7F1F0;
+  margin: 5px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+}
+
+.rectangle4 {
+  position: absolute;
+  top: 415px;
+  right: 170px;
+  width: 300px;
+  height: 100px;
+  background-color: #F7F1F0;
+  margin: 5px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+}
+
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
