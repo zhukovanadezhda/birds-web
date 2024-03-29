@@ -178,65 +178,78 @@ h1 {
 }
 
 .rectangle1 {
-  position: absolute;
-  top: 200px;
-  right: 170px;
-  width: 300px;
-  height: 25px;
+  width: 90%;
+  height: 5%;
   background-color: #AFABAA;
-  margin: 5px;
+  margin: 0.5% 5%;
   border: 1px solid #000000;
   border-radius: 5px;
 }
 
-
 .rectangle2 {
-  position: absolute;
-  top: 230px;
-  right: 170px;
-  width: 300px;
-  height: 150px;
+  width: 90%;
+  height: 50%;
   background-color: #F7F1F0;
-  margin: 5px;
+  margin: 0.5% 5%;
   border: 1px solid #000000; /* Bordure noire pour toutes les faces */
   border-radius: 5px;
 }
 
-.rectangle2 table td:first-child {
-  width: 100px; /* Largeur de la première colonne */
-  height: auto;
-  background-color: #AFABAA;
-  border: 1px solid #000000;
+.rectangle2 table {
+  border-collapse: collapse; /* Fusionner les bordures de cellule */
+  width: 100%
 }
 
 .rectangle2 td {
-  width: 200px;
-  height: 48px;
   border-bottom: 1px solid #000000; /* Bordure noire pour chaque cellule */
-  padding: 0px; /* Espacement intérieur des cellules */
+  padding: 10px; /* Espacement intérieur des cellules */
   text-align: center; /* Centrer le texte à l'intérieur des cellules */
+  min-height: 48px; /* Hauteur minimale pour chaque cellule */
 }
 
+.rectangle2 td:first-child {
+  width: 30%; /* Largeur de la première colonne (colonne de gauche) */
+  background-color: #AFABAA;
+  border-top: 1px solid #000000; /* Bordure supérieure de la cellule de gauche */
+  border-bottom: 1px solid #000000; /* Bordure inférieure de la cellule de gauche */
+}
+
+.rectangle2 td:not(:first-child) {
+  width: 70%; /* Largeur des autres colonnes (colonne de droite) */
+  border-top: 1px solid #000000; /* Bordure supérieure de la cellule de droite */
+  border-bottom: 1px solid #000000; /* Bordure inférieure de la cellule de droite */
+  border-left: none; /* Supprimer la bordure gauche de la cellule de droite */
+}
+
+.rectangle2 td:last-child {
+  width: 0; /* Supprimer la largeur de la dernière colonne (pour éviter les problèmes d'affichage) */
+}
+
+/* Styles spécifiques pour la première ligne */
+.rectangle2 tr:first-child td {
+  border-top: none; /* Supprimer la bordure du haut de la première ligne */
+}
+
+/* Styles spécifiques pour la dernière ligne */
+.rectangle2 tr:last-child td {
+  border-bottom: none; /* Supprimer la bordure du bas de la dernière ligne */
+}
+
+
 .rectangle3 {
-  position: absolute;
-  top: 385px;
-  right: 170px;
-  width: 300px;
-  height: 25px;
+  width: 90%;
+  height: 5%;
   background-color: #F7F1F0;
-  margin: 5px;
+  margin: 0.5% 5%;
   border: 1px solid #000000;
   border-radius: 5px;
 }
 
 .rectangle4 {
-  position: absolute;
-  top: 415px;
-  right: 170px;
-  width: 300px;
-  height: 100px;
+  width: 90%;
+  height: 15%;
   background-color: #F7F1F0;
-  margin: 5px;
+  margin: 0.5% 5%;
   border: 1px solid #000000;
   border-radius: 5px;
 }
