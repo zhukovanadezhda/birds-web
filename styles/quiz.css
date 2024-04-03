@@ -1,22 +1,32 @@
 body {
     font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
-    font-size: 16px;  
+    font-size: 16px;
     color: #333;
     background-color: #fff;
   }
-  button, button:hover, button:active, button:focus, button:visited, .btn, .btn:hover, .btn:active, .btn:focus, .btn:visited {
+  button,
+  button:hover,
+  button:active,
+  button:focus,
+  button:visited,
+  .btn,
+  .btn:hover,
+  .btn:active,
+  .btn:focus,
+  .btn:visited {
     text-decoration: none !important;
     outline: none !important;
   }
-  .btn.disabled, .btn[disabled] {
+  .btn.disabled,
+  .btn[disabled] {
     cursor: default;
     opacity: 1;
   }
   #quiz {
     width: 100%;
     overflow-x: hidden;
-    font-family: 'Permanent Marker', cursive;
-    letter-spacing: .015em;
+    font-family: "Permanent Marker", cursive;
+    letter-spacing: 0.015em;
   }
   #quiz .container-fluid {
     margin: 0;
@@ -33,17 +43,17 @@ body {
     font-size: 56px;
     color: rgba(0, 0, 0, 0.8);
   }
-  #quiz-stats>div>p {
+  #quiz-stats > div > p {
     padding: 0;
     margin: 0;
   }
-  #quiz-stats>div>span {
+  #quiz-stats > div > span {
     font-size: 24px;
   }
-  #quiz-stats>div>span.fadeIn {
+  #quiz-stats > div > span.fadeIn {
     animation-duration: 0.375s;
   }
-  #quiz-stats>div>span.fadeOut {
+  #quiz-stats > div > span.fadeOut {
     animation-duration: 0.375s;
   }
   #quiz-question {
@@ -55,9 +65,9 @@ body {
     margin: 26px 0;
   }
   .quiz-ans-btn {
-      font-size: 20px;
+    font-size: 20px;
     color: #fff;
-  /*   display: block;   */
+    /*   display: block;   */
     width: 45%;
     min-height: 75px;
     padding: 5px;
@@ -65,15 +75,22 @@ body {
     border: 1px solid rgba(0, 0, 0, 0.075);
     border-radius: 50px;
     outline: none;
-    letter-spacing: .05em;
+    letter-spacing: 0.05em;
     transition: all 0.5s;
     margin: 8px;
-  /*   margin:auto; */
-    box-shadow: 0px 1px 4px rgba(0,0,0, 0.10); 
-    white-space: normal; 
+    /*   margin:auto; */
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+    white-space: normal;
   }
-  .quiz-ans-btn:hover { color: #fff; background-color: #476b6b; }
-  .btn.quiz-ans-btn:active, .btn.quiz-ans-btn:focus { color: #fff; background-color: #334d4d; }
+  .quiz-ans-btn:hover {
+    color: #fff;
+    background-color: #476b6b;
+  }
+  .btn.quiz-ans-btn:active,
+  .btn.quiz-ans-btn:focus {
+    color: #fff;
+    background-color: #334d4d;
+  }
   .quiz-ans-btn.correct {
     background-color: #29a329;
   }
@@ -84,35 +101,163 @@ body {
     overflow-y: hidden;
     display: none;
   }
-  #quiz-play-again-btn {  
+  #quiz-play-again-btn {
     display: block;
     font-size: 32px;
     color: #fff;
     background-color: #669999;
-      border: 8px double #fff; 
-      border-radius: 14px;
-      padding: 5px 10px;  
+    border: 8px double #fff;
+    border-radius: 14px;
+    padding: 5px 10px;
     width: 33%;
     min-height: 100px;
     outline: none;
-    letter-spacing: .05em;
+    letter-spacing: 0.05em;
     transition: all 0.5s;
     margin: 0px auto;
-    white-space: normal;   
+    white-space: normal;
   }
-  #quiz-play-again-btn:hover { color: #fff; background-color: #476b6b; }
-  #quiz-play-again-btn:active, #quiz-play-again-btn:focus { color: #fff; background-color: #334d4d; }
-  #quiz-play-again-btn.pulse { 
+  #quiz-play-again-btn:hover {
+    color: #fff;
+    background-color: #476b6b;
+  }
+  #quiz-play-again-btn:active,
+  #quiz-play-again-btn:focus {
+    color: #fff;
+    background-color: #334d4d;
+  }
+  #quiz-play-again-btn.pulse {
     animation-duration: 2s;
   }
   
   @media (max-width: 768px) {
-    #quiz-stats { padding: 12px 0 8px 0; font-size: 10px; }   
-    #quiz-stats>div>span { font-size: 18px; }
-    #quiz-stats>div>p>span { display: none; }
-    #quiz-stats .fa-bar-chart { font-size: 54px; }  
-    #quiz-question { font-size: 16px; margin: 20px 0 14px 0; }  
-    #quiz-options { margin: 14px 0 20px 0; } 
-    .quiz-ans-btn { font-size: 16px; min-height: 65px; }  
-    #quiz-play-again-btn {  font-size: 28px; width: 66%; }
+    #quiz-stats {
+      padding: 12px 0 8px 0;
+      font-size: 10px;
+    }
+    #quiz-stats > div > span {
+      font-size: 18px;
+    }
+    #quiz-stats > div > p > span {
+      display: none;
+    }
+    #quiz-stats .fa-bar-chart {
+      font-size: 54px;
+    }
+    #quiz-question {
+      font-size: 16px;
+      margin: 20px 0 14px 0;
+    }
+    #quiz-options {
+      margin: 14px 0 20px 0;
+    }
+    .quiz-ans-btn {
+      font-size: 16px;
+      min-height: 65px;
+    }
+    #quiz-play-again-btn {
+      font-size: 28px;
+      width: 66%;
+    }
   }
+  
+  /* Réponses sortantes */
+  .fadeOutLeft {
+    animation-name: fadeOutLeft;
+    animation-duration: 1s; /* Durée de l'animation */
+    animation-fill-mode: both;
+  }
+  
+  @keyframes fadeOutLeft {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+  }
+  
+  .fadeOutRight {
+    animation-name: fadeOutRight;
+    animation-duration: 1s; /* Durée de l'animation */
+    animation-fill-mode: both;
+  }
+  
+  @keyframes fadeOutRight {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+  }
+
+  /* Réponses entrantes */
+  .fadeInLeft {
+    animation-name: fadeInLeft;
+    animation-duration: 1s; /* Durée de l'animation */
+    animation-fill-mode: both;
+  }
+  
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .fadeInRight {
+    animation-name: fadeInRight;
+    animation-duration: 1s; /* Durée de l'animation */
+    animation-fill-mode: both;
+  }
+  
+  @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+/* Question sortante */
+.fadeOut {
+    animation-name: fadeOut;
+    animation-duration: 1s; /* Durée de l'animation */
+    animation-fill-mode: both;
+  }
+  
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  
+  /* Question entrante */
+  .fadeIn {
+    animation-name: fadeIn;
+    animation-duration: 1s; /* Durée de l'animation */
+    animation-fill-mode: both;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
