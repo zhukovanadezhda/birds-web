@@ -34,10 +34,15 @@ body {
     border-bottom: 1px solid rgba(0, 0, 0, 0.5);
   }
   #quiz-stats {
-    padding: 16px 0 12px 0;
-    margin: 0;
-    font-size: 14px;
-    color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center; /* Centrer horizontalement */
+    align-items: center; /* Centrer verticalement */
+    margin-left: 2.5%; /* Définir une marge gauche */
+    margin-right: 23%; /* Définir une marge droite */
+  }
+  #quiz-stats > div {
+    flex: 1; /* Les colonnes vont occuper le même espace */
+    text-align: center; /* Centrer le contenu horizontalement */
   }
   #quiz-stats .fa-bar-chart {
     font-size: 56px;
@@ -49,6 +54,9 @@ body {
   }
   #quiz-stats > div > span {
     font-size: 24px;
+    display: flex;
+    align-items: center; /* Alignement vertical */
+    justify-content: center; /* Alignement horizontal */
   }
   #quiz-stats > div > span.fadeIn {
     animation-duration: 0.375s;
@@ -260,4 +268,5 @@ body {
       opacity: 1;
     }
   }
+  
   
