@@ -1,239 +1,283 @@
-let questions = []; // Global Array of Objects (each Object representing a Question)
+const myQuestions = [
+  {
+    type: 'boolean',
+    difficulty: 'easy',
+    category: 'Science: Computers',
+    question: 'Ada Lovelace is often considered the first computer programmer.',
+    correct_answer: 'True',
+    incorrect_answers: ['False'],
+  },
+  {
+    type: 'multiple',
+    difficulty: 'easy',
+    category: 'Entertainment: Music',
+    question:
+      'The band Muse released their first album, Showbiz, in what year?',
+    correct_answer: '1999',
+    incorrect_answers: ['1998', '2000', '2001'],
+  },
+  {
+    type: 'multiple',
+    difficulty: 'medium',
+    category: 'Geography',
+    question:
+      'All of the following countries have official claims to territory in Antarctica EXCEPT:',
+    correct_answer: 'United States',
+    incorrect_answers: ['Australia', 'Chile', 'Norway'],
+  },
+  {
+    type: 'multiple',
+    difficulty: 'medium',
+    category: 'Entertainment: Video Games',
+    question:
+      'Which of these games was NOT a Nintendo Switch launch title in the United States? ',
+    correct_answer: 'Voez',
+    incorrect_answers: ['Just Dance 2017', 'Snipperclips', 'Fast RMX'],
+  },
+  {
+    type: 'multiple',
+    difficulty: 'medium',
+    category: 'Science &amp; Nature',
+    question: 'Which of these is a type of stretch/deep tendon reflex?',
+    correct_answer: 'Ankle jerk reflex',
+    incorrect_answers: [
+      'Gag reflex',
+      'Pupillary light reflex',
+      'Scratch reflex',
+    ],
+  },
+  {
+    type: 'multiple',
+    difficulty: 'medium',
+    category: 'Entertainment: Video Games',
+    question: 'When was the Sega Genesis released in Japan?',
+    correct_answer: 'October 29, 1988',
+    incorrect_answers: [
+      'August 14, 1989',
+      'November 30, 1990',
+      'September 1, 1986',
+    ],
+  },
+  {
+    type: 'boolean',
+    difficulty: 'medium',
+    category: 'Science &amp; Nature',
+    question:
+      'Scientists accidentally killed the once known world&#039;s oldest living creature, a mollusc, known to be aged as 507 years old.',
+    correct_answer: 'True',
+    incorrect_answers: ['False'],
+  },
+  {
+    type: 'multiple',
+    difficulty: 'easy',
+    category: 'Entertainment: Film',
+    question: 'When was the movie &#039;Con Air&#039; released?',
+    correct_answer: '1997',
+    incorrect_answers: ['1985', '1999', '1990'],
+  },
+  {
+    type: 'multiple',
+    difficulty: 'medium',
+    category: 'Art',
+    question: 'Who designed the Chupa Chups logo?',
+    correct_answer: 'Salvador Dali',
+    incorrect_answers: ['Pablo Picasso', 'Andy Warhol', 'Vincent van Gogh'],
+  },
+  {
+    type: 'multiple',
+    difficulty: 'medium',
+    category: 'Entertainment: Books',
+    question:
+      'What was the name of the Mysterious Island, in Jules Verne&#039;s &quot;The Mysterious Island&quot;?',
+    correct_answer: 'Lincoln Island',
+    incorrect_answers: [
+      'Vulcania Island',
+      'Prometheus Island',
+      'Neptune Island',
+    ],
+  },
+];
+
+let questions = [];
 let stats = {
   questionsAsked: 0,
   correct: 0,
   correctStreak: 0,
   currentTime: null,
-  averageResponseTime: 0
-}; // Global stats Object
+  averageResponseTime: 0,
+};
 
-initiateGame(questions, stats);
+initiateGame();
 
-/*
-// Event Handlers
-*/
-
-// Handle click events
-document.addEventListener("click", function (event) {
-  // This way of handling is useful for dynamically created elements
-  if (event.target.classList.contains("quiz-ans-btn")) {
-    // Handle ".quiz-ans-btn" click
-    Array.from(document.querySelectorAll(".quiz-ans-btn")).forEach(
-      (btn) => (btn.disabled = true)
-    ); // Disable buttons
+document.addEventListener('click', function (event) {
+  if (event.target.classList.contains('quiz-ans-btn')) {
+    Array.from(document.querySelectorAll('.quiz-ans-btn')).forEach(
+      btn => (btn.disabled = true),
+    );
     event.target.blur();
-    const choice = Number(event.target.id.split("-")[2]);
+    const choice = Number(event.target.id.split('-')[2]);
     const responseTime = round((new Date() - stats.currentTime) / 1000, 2);
     stats.averageResponseTime = round(
       (stats.averageResponseTime * (stats.questionsAsked - 1) + responseTime) /
         stats.questionsAsked,
-      2
+      2,
     );
-    if (questions[0].answers[choice].isCorrect) {
-      event.target.classList.add("pulse", "correct");
+    const correctAnswerIndex = questions[0].incorrect_answers.length;
+    if (choice === correctAnswerIndex) {
+      console.log('correct answer');
+      event.target.classList.add('pulse', 'correct');
       stats.correct++;
       stats.correctStreak++;
       setTimeout(() => {
-        nextQuestion(questions);
+        nextQuestion();
       }, 1250);
     } else {
-      event.target.classList.add("shake", "incorrect");
+      console.log('incorrect answer');
+      event.target.classList.add('shake', 'incorrect');
       stats.correctStreak = 0;
       setTimeout(() => {
-        const correctAnswerId =
-          "quiz-ans-" +
-          questions[0].answers.findIndex((elem) => elem.isCorrect);
-        document.querySelector("#" + correctAnswerId).classList.add("correct");
+        const correctAnswerId = 'quiz-ans-' + correctAnswerIndex;
+        document.querySelector('#' + correctAnswerId).classList.add('correct');
         setTimeout(() => {
-          nextQuestion(questions);
+          nextQuestion();
         }, 1500);
       }, 750);
     }
-    displayStats(stats);
+    displayStats();
   }
 });
-// Attendre que le DOM soit complètement chargé
-document.addEventListener("DOMContentLoaded", function() {
-    // Ajouter le gestionnaire d'événements pour le clic sur le bouton "Play Again"
-    document.querySelector("#quiz-play-again-btn").addEventListener("click", function () {
-        document.querySelector("#quiz-play-again-btn").classList.remove("infinite", "pulse");
-        document.querySelector("#quiz-play-again-btn").classList.add("flipOutX");
-        setTimeout(() => {
-            document.querySelector("#quiz-play-again-btn").classList.remove("flipOutX");
-            document.querySelector("#quiz-play-again").style.display = "none";
-            questions = [];
-            stats = {
-                questionsAsked: 0,
-                correct: 0,
-                correctStreak: 0,
-                currentTime: null,
-                averageResponseTime: 0
-            };
-            displayStats(stats);
-            initiateGame(questions, stats);
-        }, 750);
-    });
-});
 
-/*
-// Auxiliary Functions
-*/
-
-// Initiate New Game
-function initiateGame(questions, stats) {
-  fetch("https://opentdb.com/api.php?amount=10")
-    .then(function (res) {
-      if (!res.ok) {
-        throw Error(res.statusText);
-      }
-      return res.json(); // Read the response as json.
-    })
-    .then(function (data) {
-      for (let i = 0; i < data.results.length; i++) {
-        questions.push({
-          category: data.results[i].category,
-          difficulty: data.results[i].difficulty,
-          type: data.results[i].type,
-          question: data.results[i].question,
-          answers: createAnswersArray(
-            data.results[i].correct_answer,
-            data.results[i].incorrect_answers
-          )
-        });
-      }
-      displayQuestion(questions[0]);
-    })
-    .catch(function (error) {
-      console.log("Looks like there was a problem: \n", error);
-    });
-}
-
-// Manipulate API Data structure and return an Answers Array
-function createAnswersArray(correct_answer, incorrect_answers) {
-  const totalAnswers = incorrect_answers.length + 1;
-  const correct_answer_index = Math.floor(Math.random() * totalAnswers);
-  let answersArray = [];
-  for (let i = 0; i < incorrect_answers.length; i++) {
-    answersArray.push({
-      answer: incorrect_answers[i],
-      isCorrect: false
-    });
-  }
-  answersArray.splice(correct_answer_index, 0, {
-    answer: correct_answer,
-    isCorrect: true
-  });
-  if (totalAnswers === 2) {
-    // => Boolean -> Preferably always show True(1st) - False(2nd) (or Yes - No) -> sort in descending order since both "True" and "Yes" are alphabetically greater than ("False" and "No")
-    answersArray.sort((a, b) => a.answer < b.answer);
-  }
-  return answersArray;
-}
-
-// Display Question
-function displayQuestion(questionObject) {
-    const quizQuestion = document.querySelector("#quiz-question");
-    const quizOptions = document.querySelector("#quiz-options");
-  
-    // Add fadeOut class to question and answers for synchronized fading
-    quizQuestion.classList.add("zoomOut");
-    quizOptions.classList.add("zoomOut");
-  
-    setTimeout(() => {
-      quizQuestion.innerHTML = questionObject.question;
-  
-      // Remove fadeOut class to allow fadeIn animation
-      quizQuestion.classList.remove("zoomOut");
-      quizOptions.classList.remove("zoomOut");
-  
-      // Add fadeIn class to question and answers for synchronized fading
-      quizQuestion.classList.add("zoomIn");
-      quizOptions.classList.add("zoomIn");
-  
+document.addEventListener('DOMContentLoaded', function () {
+  document
+    .querySelector('#quiz-play-again-btn')
+    .addEventListener('click', function () {
+      document
+        .querySelector('#quiz-play-again-btn')
+        .classList.remove('infinite', 'pulse');
+      document.querySelector('#quiz-play-again-btn').classList.add('flipOutX');
       setTimeout(() => {
-        stats.questionsAsked++;
-        stats.currentTime = new Date();
-        for (let i = 0; i < questionObject.answers.length; i++) {
-          let button = document.createElement("button");
+        document
+          .querySelector('#quiz-play-again-btn')
+          .classList.remove('flipOutX');
+        document.querySelector('#quiz-play-again').style.display = 'none';
+        questions = [];
+        stats = {
+          questionsAsked: 0,
+          correct: 0,
+          correctStreak: 0,
+          currentTime: null,
+          averageResponseTime: 0,
+        };
+        displayStats();
+        initiateGame();
+      }, 750);
+    });
+});
+
+function initiateGame() {
+  questions = myQuestions.slice();
+  displayQuestion(questions[0]);
+}
+
+function displayQuestion(questionObject) {
+  const quizQuestion = document.querySelector('#quiz-question');
+  const quizOptions = document.querySelector('#quiz-options');
+
+  quizQuestion.classList.add('zoomOut');
+  quizOptions.classList.add('zoomOut');
+
+  setTimeout(() => {
+    quizQuestion.innerHTML = questionObject.question;
+
+    quizQuestion.classList.remove('zoomOut');
+    quizOptions.classList.remove('zoomOut');
+
+    quizQuestion.classList.add('zoomIn');
+    quizOptions.classList.add('zoomIn');
+
+    setTimeout(() => {
+      stats.questionsAsked++;
+      stats.currentTime = new Date();
+
+      if (questionObject) {
+        const allAnswers = questionObject.incorrect_answers.concat(
+          questionObject.correct_answer,
+        );
+        for (let i = 0; i < allAnswers.length; i++) {
+          let button = document.createElement('button');
           button.disabled = true;
-          button.id = "quiz-ans-" + i;
+          button.id = 'quiz-ans-' + i;
           button.classList.add(
-            "btn",
-            "quiz-ans-btn",
-            "animated",
-            i % 2 === 0 ? "fadeInLeft" : "fadeInRight"
+            'btn',
+            'quiz-ans-btn',
+            'animated',
+            i % 2 === 0 ? 'fadeInLeft' : 'fadeInRight',
           );
-          button.innerHTML = questionObject.answers[i].answer;
+          button.innerHTML = allAnswers[i];
           quizOptions.appendChild(button);
           setTimeout(() => {
             button.disabled = false;
-            button.classList.remove(i % 2 === 0 ? "fadeInLeft" : "fadeInRight");
-          }, 1200);
+            button.classList.remove(i % 2 === 0 ? 'fadeInLeft' : 'fadeInRight');
+          }, 500);
         }
-      }, 0.01); // Adjust timing based on your animation duration
-    }, 500); // Adjust timing based on your animation duration
-  } 
-
-
-// Remove current question and display next one
-function nextQuestion(questions) {
-    document.querySelector("#quiz-question").classList.add("fadeOut"); // Add fadeOut class to question for synchronized fading
-    for (let i = 0; i < questions[0].answers.length; i++) {
-      const answerButton = document.querySelector("#quiz-ans-" + i);
-      answerButton.classList.add(i % 2 === 0 ? "fadeOutLeft" : "fadeOutRight");
-      answerButton.disabled = true; // Disable answer buttons during animation
-    }
-    setTimeout(() => {
-      const quizOptions = document.querySelector("#quiz-options");
-      while (quizOptions.firstChild) {
-        quizOptions.removeChild(quizOptions.firstChild);
-      }
-      if (questions.length > 1) {
-        questions.shift();
-        displayQuestion(questions[0]);
-        setTimeout(() => {
-          document.querySelector("#quiz-question").classList.remove("fadeOut"); // Remove fadeOut class from question
-        }, 500); // Adjust timing based on your animation duration
       } else {
-        document.querySelector("#quiz-play-again").style.display = "block";
-        document.querySelector("#quiz-play-again-btn").classList.add("flipInX");
-        setTimeout(() => {
-          document
-            .querySelector("#quiz-play-again-btn")
-            .classList.remove("flipInX");
-          document
-            .querySelector("#quiz-play-again-btn")
-            .classList.add("infinite", "pulse");
-        }, 1000);
+        console.log('Invalid question object or missing answers property.');
       }
-    }, 500); // Adjust timing based on your animation duration
-  }
-  
+    }, 0.01);
+  }, 500);
+}
 
-// Display Stats
-function displayStats(stats) {
+function nextQuestion() {
+  document.querySelector('#quiz-question').classList.add('fadeOut');
+
+  if (questions.length > 0) {
+    const quizOptions = document.querySelector('#quiz-options');
+    while (quizOptions.firstChild) {
+      quizOptions.removeChild(quizOptions.firstChild);
+    }
+    questions.shift();
+    if (questions.length > 0) {
+      displayQuestion(questions[0]);
+      setTimeout(() => {
+        document.querySelector('#quiz-question').classList.remove('fadeOut');
+      }, 500);
+    } else {
+      document.querySelector('#quiz-play-again').style.display = 'block';
+      document.querySelector('#quiz-play-again-btn').classList.add('flipInX');
+      setTimeout(() => {
+        document
+          .querySelector('#quiz-play-again-btn')
+          .classList.remove('flipInX');
+        document
+          .querySelector('#quiz-play-again-btn')
+          .classList.add('infinite', 'pulse');
+      }, 0);
+    }
+  }
+}
+
+function displayStats() {
   document
-    .querySelectorAll("#quiz-stats>div>span")
-    .forEach((el) => el.classList.add("fadeOut"));
+    .querySelectorAll('#quiz-stats>div>span')
+    .forEach(el => el.classList.add('fadeOut'));
   setTimeout(() => {
-    document.querySelector("#rate-span").innerHTML =
-      stats.correct + "/" + stats.questionsAsked;
-    document.querySelector("#streak-span").innerHTML = stats.correctStreak;
-    document.querySelector("#response-time-span").innerHTML =
+    document.querySelector('#rate-span').innerHTML =
+      stats.correct + '/' + stats.questionsAsked;
+    document.querySelector('#streak-span').innerHTML = stats.correctStreak;
+    document.querySelector('#response-time-span').innerHTML =
       stats.averageResponseTime;
-    document.querySelectorAll("#quiz-stats>div>span").forEach((el) => {
-      el.classList.remove("fadeOut");
-      el.classList.add("fadeIn");
+    document.querySelectorAll('#quiz-stats>div>span').forEach(el => {
+      el.classList.remove('fadeOut');
+      el.classList.add('fadeIn');
     });
     setTimeout(() => {
       document
-        .querySelectorAll("#quiz-stats>div>span")
-        .forEach((el) => el.classList.remove("fadeIn"));
+        .querySelectorAll('#quiz-stats>div>span')
+        .forEach(el => el.classList.remove('fadeIn'));
     }, 375);
   }, 375);
 }
 
-// Auxilliary Rounding Function
 function round(value, decimals) {
-  return Number(Math.round(value + "e" + decimals) + "e-" + decimals);
-} // Note: decimals>=0, Example: round(1.005, 2); -> 1.01
+  return Number(Math.round(value + 'e' + decimals)) / Math.pow(10, decimals);
+}
