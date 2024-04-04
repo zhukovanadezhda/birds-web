@@ -2002,3 +2002,115 @@ z-index: 100;
         transform: translate(80.0240979233vw, 0.0066192762vh);
    }
 }
+
+
+/* Footer Styles */
+
+.footer {
+    background-color: #f8f9fa;
+    margin-top: 50px;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.footer-info {
+    width: calc(30% - 15px);
+}
+.footer-form {
+    width: calc(30% - 15px);
+}
+
+.footer-cr {
+    margin-top: 50px;
+}
+
+.footer-text-cr {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: gray;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.footer-title {
+    font-family: Arial, sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #70ABF3;
+}
+
+.footer-text {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+
+.input-field,
+.textarea-field {
+    width: 100%;
+    max-width: 300px; /* Adjusted width */
+    padding: 8px; /* Smaller padding */
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 10px; /* Smaller margin bottom */
+}
+
+.textarea-field {
+    height: 80%; 
+    resize: none;
+}
+
+.submit-btn {
+    margin: 0 auto;
+    background-color: #70abf386;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.submit-btn:hover {
+    background-color: #70ABF3;
+}
+
+.footer-links {
+    width: calc(20% - 15px);
+    text-align: left; /* Align links to the left */
+}
+
+.footer-list {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-list li {
+    margin-bottom: 10px; /* Adjust spacing between links */
+}
+
+.footer-list li a {
+    text-decoration: none;
+    color: #555; /* Adjust link color */
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-list li a:hover {
+    color: #70ABF3; /* Change link color on hover */
+}
+
