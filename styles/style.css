@@ -1,7 +1,11 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    transition: 1.5s;
+    padding: 0;
+    background-image: url('../styles/images/back.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Ensures the background doesn't scroll */
 }
 
 /* ##############################################
@@ -2009,6 +2013,10 @@ z-index: 100;
 .footer {
     background-color: #f8f9fa;
     margin-top: 50px;
+    color: #fff;
+    padding: 20px;
+    position: relative; /* Set to relative to avoid overlapping with the background */
+    z-index: 1; /* Ensure footer stays above the background */
 }
 
 .container {
