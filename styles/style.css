@@ -2013,7 +2013,6 @@ z-index: 100;
 .footer {
     background-color: #f8f9fa;
     margin-top: 50px;
-    color: #fff;
     padding: 15px;
     position: relative; /* Set to relative to avoid overlapping with the background */
     z-index: 1; /* Ensure footer stays above the background */

@@ -31,8 +31,6 @@ function showTip(event, text) {
     tip.style.top = (event.clientY + 10) + "px";            
 }
 
-
-
 function hideTip() {
     document.getElementById("tip").style.display = "none";
 }
