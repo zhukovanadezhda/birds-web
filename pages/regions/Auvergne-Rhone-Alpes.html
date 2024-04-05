@@ -47,11 +47,25 @@
           </div>
 
   <script src="regions.js"></script>
-        <br><br><br><br><br><br><br><br>
+<br>
+  <div class="introduction">
+    <h2>À propos de la région Auvergne-Rhône-Alpes</h2>
+    <p>L'Auvergne-Rhône-Alpes est une région située dans le centre-est de la France. Connue pour sa diversité géographique, cette région abrite une grande variété d'habitats naturels, des montagnes majestueuses aux vastes plaines, en passant par les lacs et les rivières pittoresques.</p>
+    <p>Grâce à sa topographie variée et à son climat favorable, l'Auvergne-Rhône-Alpes est un lieu de prédilection pour de nombreuses espèces d'oiseaux, en particulier les rapaces. Ces majestueux prédateurs dominent les cieux de la région et sont souvent observés dans leur habitat naturel.</p>
+    <p>Découvrez ci-dessous quelques-uns des oiseaux les plus emblématiques de l'Auvergne-Rhône-Alpes.</p>
+    <div class="highlights">
+        <h3>Ce que vous trouverez dans cette région :</h3>
+        <ul>
+            <li>Rapaces tels que l'aigle royal et le faucon pelerin</li>
+            <li>Oiseaux des plaines et des forêts comme le grand corbeau</li>
+            <li>Oiseaux aquatiques comme le courlis cendré</li>
+        </ul>
+    </div>
+  </div>
 
   <div id="all-bird"> 
-      <div class="bird-card" onmouseover="expandCard(this)" onmouseout="shrinkCard(this)">
-        <div class="bird-card-inner">
+    <div class="bird-card" onclick="toggleCard('Accenteur mouchet', 'Prunellidés', '15 cm', '20 g', 'Milieux ouverts', 'Description de l\'oiseau 1.')">
+      <div class="bird-card-inner">
           <img src="../../styles/Oiseaux/Accenteur_mouchet.jpg" alt="Accenteur mouchet">
           <div class="bird-name">Accenteur mouchet</div>
           <div class="bird-info">
@@ -65,17 +79,25 @@ Une seule espèce, la plus plastique écologiquement parlant, l'Accenteur mouche
         </div>
       </div>
 
-      <div class="bird-card" onmouseover="expandCard(this)" onmouseout="shrinkCard(this)">
+      <div class="bird-card" onclick="toggleCard('Aigle Royal', 'Accipitridés', '90 cm', '3630 à 6700 g', 'Grands espaces ouverts où il peut chasser des proies de grande taille', 'Description de l\'oiseau 1.')">
         <div class="bird-card-inner">
           <img src="../../styles/Oiseaux/Aigle_royal.jpg" alt="Aigle Royal">
           <div class="bird-name">Aigle royal</div>
           <div class="bird-info">
-            Description de l'oiseau 2.
+            Les Accipitridés sont une famille de rapaces diurnes présente sur tous les continents, excepté l'Antarctique. Leur taille va de petite à grande.
+Ils ont en commun :
+- un dimorphisme sexuel, le mâle étant plus petit que la femelle,
+- une vision binoculaire importante, permettant un repérage efficace des proies,
+- un bec dont la mâchoire supérieure est recourbée en crochet apte à déchirer des chairs,
+- des pattes munies de 4 doigts aux ongles le plus souvent longs, recourbés et acérés, capables de capturer une proie.
+Il y a une exception au régime carnivore de la famille, celle du Vautour palmiste qui consomme les fruits du palmier à huile.
+Ils sont le plus souvent monogames. Le poussin est nidicole et couvert de duvet.
+Ils sont situés en bout de chaines alimentaires et près de 12% des espèces sont en très mauvais état de conservation.
           </div>
         </div>
       </div>
 
-      <div class="bird-card" onmouseover="expandCard(this)" onmouseout="shrinkCard(this)">
+      <div class="bird-card" onclick="toggleCard('Accenteur mouchet', 'Prunellidés', '15 cm', '20 g', 'Milieux ouverts', 'Description de l\'oiseau 1.')">
         <div class="bird-card-inner">
           <img src="../../styles/Oiseaux/Buse_variable.jpg" alt="Buse variable">
           <div class="bird-name">Buse variable</div>
@@ -85,7 +107,7 @@ Une seule espèce, la plus plastique écologiquement parlant, l'Accenteur mouche
         </div>
       </div>
 
-      <div class="bird-card" onmouseover="expandCard(this)" onmouseout="shrinkCard(this)">
+      <div class="bird-card" onclick="toggleCard('Accenteur mouchet', 'Prunellidés', '15 cm', '20 g', 'Milieux ouverts', 'Description de l\'oiseau 1.')">
         <div class="bird-card-inner">
           <img src="../../styles/Oiseaux/chevechette_d_europe.jpg" alt="Chevechette d'Europe">
           <div class="bird-name">Chevechette d'Europe</div>
@@ -95,7 +117,7 @@ Une seule espèce, la plus plastique écologiquement parlant, l'Accenteur mouche
         </div>
       </div>
 
-      <div class="bird-card" onmouseover="expandCard(this)" onmouseout="shrinkCard(this)">
+      <div class="bird-card" onclick="toggleCard('Accenteur mouchet', 'Prunellidés', '15 cm', '20 g', 'Milieux ouverts', 'Description de l\'oiseau 1.')">
         <div class="bird-card-inner">
           <img src="../../styles/Oiseaux/Courlis_Cendré.jpg" alt="Courlis cendré">
           <div class="bird-name">Courlis cendré</div>
@@ -105,7 +127,7 @@ Une seule espèce, la plus plastique écologiquement parlant, l'Accenteur mouche
         </div>
       </div>
 
-      <div class="bird-card" onmouseover="expandCard(this)" onmouseout="shrinkCard(this)">
+      <div class="bird-card" onclick="toggleCard('Accenteur mouchet', 'Prunellidés', '15 cm', '20 g', 'Milieux ouverts', 'Description de l\'oiseau 1.')">
         <div class="bird-card-inner">
           <img src="../../styles/Oiseaux/Faucon_pelerin.jpg" alt="Faucon pelerin">
           <div class="bird-name">Faucon pelerin</div>
@@ -115,7 +137,7 @@ Une seule espèce, la plus plastique écologiquement parlant, l'Accenteur mouche
         </div>
       </div>
 
-      <div class="bird-card" onmouseover="expandCard(this)" onmouseout="shrinkCard(this)">
+      <div class="bird-card" onclick="toggleCard('Accenteur mouchet', 'Prunellidés', '15 cm', '20 g', 'Milieux ouverts', 'Description de l\'oiseau 1.')">
         <div class="bird-card-inner">
           <img src="../../styles/Oiseaux/Grand-ducdEurope.jpg" alt="Grand-duc d'Europe">
           <div class="bird-name">Grand-duc d'Europe</div>
@@ -125,7 +147,7 @@ Une seule espèce, la plus plastique écologiquement parlant, l'Accenteur mouche
         </div>
       </div>
 
-      <div class="bird-card" onmouseover="expandCard(this)" onmouseout="shrinkCard(this)">
+      <div class="bird-card" onclick="toggleCard('Accenteur mouchet', 'Prunellidés', '15 cm', '20 g', 'Milieux ouverts', 'Description de l\'oiseau 1.')">
         <div class="bird-card-inner">
           <img src="../../styles/Oiseaux/Grand_Corbeau.jpg" alt="Grand corbeau">
           <div class="bird-name">Grand corbeau</div>
@@ -135,7 +157,7 @@ Une seule espèce, la plus plastique écologiquement parlant, l'Accenteur mouche
         </div>
       </div>
 
-      <div class="bird-card" onmouseover="expandCard(this)" onmouseout="shrinkCard(this)">
+      <div class="bird-card" onclick="toggleCard('Accenteur mouchet', 'Prunellidés', '15 cm', '20 g', 'Milieux ouverts', 'Description de l\'oiseau 1.')">
         <div class="bird-card-inner">
           <img src="../../styles/Oiseaux/milan_royal.jpg" alt="Milan royal">
           <div class="bird-name">Milan Royal</div>
@@ -145,7 +167,7 @@ Une seule espèce, la plus plastique écologiquement parlant, l'Accenteur mouche
         </div>
       </div>
 
-      <div class="bird-card" onmouseover="expandCard(this)" onmouseout="shrinkCard(this)">
+      <div class="bird-card" onclick="toggleCard('Accenteur mouchet', 'Prunellidés', '15 cm', '20 g', 'Milieux ouverts', 'Description de l\'oiseau 1.')">
         <div class="bird-card-inner">
           <img src="../../styles/Oiseaux/Vautour_Fauve.jpg" alt="Vautour fauve">
           <div class="bird-name">Vautour fauve</div>
@@ -161,28 +183,29 @@ Une seule espèce, la plus plastique écologiquement parlant, l'Accenteur mouche
         <span class="close" onclick="closeModal()">&times;</span>
         <h2 id="bird-name"></h2>
         <div id="bird-description"></div>
-
+    
         <div class="rectangle1">
           <table>
             <tr>
-              <td>Cellule 1</td>
+              <td></td>
+              <td id="bird-name-cell"></td>
             </tr>
           </table>
         </div>
-
+    
         <div class="rectangle2">
           <table>
             <tr>
-              <td>Cellule 1</td>
-              <td>Cellule2</td>
+              <td>Famille</td>
+              <td id="bird-family-cell"></td>
             </tr>
             <tr>
-              <td>Cellule 3</td>
-              <td>Cellule 4</td>
+              <td>Taille moyenne</td>
+              <td id="bird-size-cell"></td>
             </tr>
             <tr>
-              <td>Cellule 5</td>
-              <td>Cellule 6</td>
+              <td>Poids moyen</td>
+              <td id="bird-weight-cell"></td>
             </tr>
           </table>
         </div>
@@ -190,19 +213,21 @@ Une seule espèce, la plus plastique écologiquement parlant, l'Accenteur mouche
         <div class="rectangle3">
           <table>
             <tr>
-              <td>Cellule 1</td>
+              <td></td>
+              <td id="bird-habitat-cell"></td>
             </tr>
           </table>
         </div>
-
+    
         <div class="rectangle4">
           <table>
             <tr>
-              <td>Cellule 1</td>
+              <td></td>
+              <td id="bird-description-cell"></td>
             </tr>
           </table>
         </div>
-
+    
       </div>
     </div>
 </body>

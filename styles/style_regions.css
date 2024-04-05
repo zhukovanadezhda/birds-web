@@ -64,14 +64,14 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    max-width: calc(222px * 5 ); /* Largeur maximale pour afficher cinq cartes d'oiseaux */
+    max-width: calc(250px * 5 ); /* Largeur maximale pour afficher cinq cartes d'oiseaux */
     margin: 0 auto; /* Pour centrer le conteneur */
   }
   
   .bird-card {
     width: 200px; /* Largeur des cartes d'oiseaux */
     height: auto;
-    margin: 10px; /* Espacement entre les cartes */
+    margin: 20px; /* Espacement entre les cartes */
     overflow: hidden;
     border: 1px solid #ccc;
     transition: transform 0.3s;
@@ -186,6 +186,11 @@ h1 {
   border-radius: 5px;
 }
 
+.rectangle1 td {
+  text-align: center; /* Ajoutez cette ligne pour centrer le texte */
+}
+
+
 .rectangle2 {
   width: 90%;
   height: 50%;
@@ -268,3 +273,43 @@ h1 {
   text-decoration: none;
   cursor: pointer;
 }
+
+
+/*### Style d'introduction ###*/
+.introduction {
+  padding: 20px;
+  background-color: rgba(247, 247, 247, 0.8); /* Fond transparent légèrement grisé */
+  border-radius: 10px;
+  margin: 0 auto 20px auto; /* Centre le cadre horizontalement */
+  width: 98%; /* Utilise 95% de la largeur de la page */
+  max-width: 88%; /* Définit une largeur maximale */
+}
+
+.introduction h2 {
+  color: #333;
+}
+
+.introduction p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.highlights {
+  margin-top: 20px;
+}
+
+.highlights h3 {
+  color: #666;
+}
+
+.highlights ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.highlights li {
+  margin-bottom: 8px;
+}
+
+
+

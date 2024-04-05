@@ -62,3 +62,26 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+function toggleCard(birdName, birdFamily, birdSize, birdWeight, birdHabitat, birdDescription) {
+  var modal = document.getElementById("bird-modal");
+  var nameCell = document.getElementById("bird-name-cell");
+  var familyCell = document.getElementById("bird-family-cell");
+  var sizeCell = document.getElementById("bird-size-cell");
+  var weightCell = document.getElementById("bird-weight-cell");
+  var habitatCell = document.getElementById("bird-habitat-cell");
+  var descriptionCell = document.getElementById("bird-description-cell");
+
+  // Remplir les cellules du tableau avec les informations spécifiques de l'oiseau
+  nameCell.textContent = birdName;
+  familyCell.textContent = birdFamily;
+  sizeCell.textContent = birdSize;
+  weightCell.textContent = birdWeight;
+  habitatCell.textContent = birdHabitat;
+  descriptionCell.textContent = birdDescription;
+
+  // Afficher ou masquer le modal
+  modal.style.display = modal.style.display === "none" ? "block" : "none";
+}
+
+
