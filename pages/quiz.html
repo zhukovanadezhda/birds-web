@@ -2,45 +2,45 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-  <link rel="stylesheet" href="../styles/style.css">
-  <link rel="stylesheet" href="../styles/quiz.css">
-  <script src="../scripts/script.js"></script>
-  <script src="../scripts/quiz.js"></script>
-  <link rel="icon" href="../styles/images/humming-bird.png" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quiz</title>
+  <link rel="icon" href="../styles/images/humming-bird.png" type="image/x-icon">
+  <link rel="stylesheet" href="../styles/quiz.css">
+  <link rel="stylesheet" href="../styles/style.css">
+  <script src="../scripts/script.js"></script>
 </head>
+
 <body>
+
   <nav>
     <ul>
-      <li><a href="index.html" class="highlight">Accueil</a></li>
-      <li><a href="quiz.html">Quiz</a></li>
-      <li><a href="sommaire.html">Sommaire</a></li>
-      <li><a>Associations</a>
-        <ul class="dropdown">
-          <li><a href="https://www.lpo.fr/">LPO</a></li>
-        </ul>
-      </li>
-      <li>
-        <a>Contacts</a>
-        <ul class="dropdown">
-          <li><a href="../cv_nadya.html">Nadezhda ZHUKOVA</a></li>
-          <li><a href="../cv_theo.html">Théo SERRALTA</a></li>
-        </ul>
-      </li>
+        <li><a href="index.html" class="highlight">Accueil</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="sommaire.html">Sommaire</a></li>
+        <li><a>Associations</a>
+          <ul class="dropdown">
+            <li><a href="https://www.lpo.fr/">LPO</a></li>
+          </ul>
+        </li>
+        <li>
+            <a>Contacts</a>
+            <ul class="dropdown">
+                <li><a href="cv_nadya.html">Nadezhda ZHUKOVA</a></li>
+                <li><a href="cv_theo.html">Théo SERRALTA</a></li>
+            </ul>
+        </li>
     </ul>
   </nav>
 
-
   <div class="bird-container bird-container-one">
     <div class="bird bird-one"></div>
-  </div>        
+  </div>
   <div class="bird-container bird-container-two">
     <div class="bird bird-two"></div>
-  </div>  
+  </div>
   <div class="bird-container bird-container-three">
     <div class="bird bird-three"></div>
-  </div> 
+  </div>
   <div class="bird-container bird-container-four">
     <div class="bird bird-four"></div>
   </div>
@@ -54,7 +54,6 @@
   <div id="app"></div>
 
   <br><br><br><br><br><br><br><br><br><br>
-
   <div id="quiz">
     <div class="container-fluid">
       <div id="quiz-stats" class="row text-center">
@@ -76,25 +75,26 @@
       </div>
     </div>
 
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12 col-md-10 col-md-offset-1 text-center">
-            <p id="quiz-question" class="animated"></p>
-            <div id="quiz-options">
-              <!--           <button id="quiz-ans-0" class="btn quiz-ans-btn animated">Gale</button>
-            <button id="quiz-ans-1" class="btn quiz-ans-btn animated">Perkins</button>
-            <button id="quiz-ans-2" class="btn quiz-ans-btn animated">Day</button>
-            <button id="quiz-ans-3" class="btn quiz-ans-btn animated">Parker</button>          -->
-            </div>
-            <div id="quiz-play-again">
-              <button id="quiz-play-again-btn" class="btn animated">
-                Play Again
-              </button>
-            </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-md-10 col-md-offset-1 text-center">
+          <p id="quiz-question" class="animated"></p>
+          <div id="quiz-options">
+            <!--           <button id="quiz-ans-0" class="btn quiz-ans-btn animated">Gale</button>
+          <button id="quiz-ans-1" class="btn quiz-ans-btn animated">Perkins</button>
+          <button id="quiz-ans-2" class="btn quiz-ans-btn animated">Day</button>
+          <button id="quiz-ans-3" class="btn quiz-ans-btn animated">Parker</button>          -->
+          </div>
+
+          <div id="quiz-play-again">
+            <button id="quiz-play-again-btn" class="btn animated">
+              Play Again
+            </button>
           </div>
         </div>
       </div>
     </div>
-    <script src="../scripts/quiz.js"></script>
-  </body>
+  </div>
+  <script src="../scripts/quiz.js"></script>
+</body>
 </html>
