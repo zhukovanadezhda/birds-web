@@ -2,14 +2,16 @@
 function switchMode() {
     let moon = document.getElementById("moon");
     let navLinks = document.querySelectorAll("nav ul li a");
-	let footerText = document.querySelectorAll(".footer-text, .footer-list li a, .footer-text-cr");
+    let footerText = document.querySelectorAll(".footer-text, .footer-list li a, .footer-text-cr");
     let container = document.querySelector(".container");
     let footer = document.querySelector(".footer"); // Select the footer element
+
+    // Additional variables for map colors
+    var mapfill, maphover_fill, mapstroke;
 
     if (moon.className == "moon") {
         moon.className = "sun";
         document.body.style.backgroundImage = "url('../styles/images/back_night.jpg')";
-		document.body.style.backgroundColor = "#070B17";
         document.body.style.color = "#FFFFFF";
         container.style.backgroundColor = "#070B17"; // Background color of the container in night mode
         // Update menu text color to white
@@ -21,7 +23,6 @@ function switchMode() {
             text.style.color = "#FFFFFF";
         });
         // Set padding color to match the background color
-        footer.style.padding = "15px";
         footer.style.backgroundColor = "#070B17"; // Set footer background color to match container
         // Save mode selection to localStorage
         localStorage.setItem('mode', 'dark');
@@ -30,7 +31,6 @@ function switchMode() {
     } else {
         moon.className = "moon";
         document.body.style.backgroundImage = "url('../styles/images/back_day.jpg')";
-		document.body.style.backgroundColor = "#FFFFFF";
         document.body.style.color = "#000000";
         container.style.backgroundColor = ""; // Reset background color of the container in day mode
         // Update menu text color to black
@@ -42,7 +42,6 @@ function switchMode() {
             text.style.color = "#555";
         });
         // Reset padding color to default (white)
-        footer.style.padding = "15px";
         footer.style.backgroundColor = ""; // Reset footer background color
         // Save mode selection to localStorage
         localStorage.setItem('mode', 'light');
@@ -51,6 +50,14 @@ function switchMode() {
     }
 }
 
+// Function to initialize stars animation for night mode
+function initStars() {
+    if (!document.getElementById('star')) {
+        for (let i = 0; i < 360; i++) {
+            sky.appendChild(dot(i)); // Create new stars
+        }
+    }
+}
 
 // Function to clear stars animation
 function clearStars() {
@@ -59,15 +66,6 @@ function clearStars() {
         star.parentNode.removeChild(star);
     });
 }
-
-// Check if mode is stored in localStorage and apply it on page load
-document.addEventListener('DOMContentLoaded', function() {
-    let mode = localStorage.getItem('mode');
-    if (mode === 'dark') {
-        switchMode(); // Apply dark mode
-    }
-    // If mode is not stored or it's 'light', keep the default light mode
-});
 
 // Function to create a star element
 function dot(i) {
@@ -89,6 +87,17 @@ function init() {
         x: sky.clientWidth / 2,
         y: sky.clientHeight / 2,
     };
+    initStars(); // Initialize stars animation
 }
 
-window.onload = init;
+
+// Check if mode is stored in localStorage and apply it on page load
+document.addEventListener('DOMContentLoaded', function() {
+    let mode = localStorage.getItem('mode');
+    if (mode === 'dark') {
+        switchMode(); // Apply dark mode
+    } else {
+        clearStars(); // Clear stars if mode is light
+    }
+});
+

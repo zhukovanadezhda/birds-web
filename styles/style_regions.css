@@ -15,7 +15,7 @@ h1 {
 }
 
 
-.background-image {
+.background-img {
     position: relative;
     margin: 0;
     width: 100%;
@@ -23,7 +23,7 @@ h1 {
     overflow: hidden; 
 }
 
-.background-image::before {
+.background-img::before {
     content: "";
     position: absolute;
     top: 0;
