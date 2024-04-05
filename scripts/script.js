@@ -13,6 +13,8 @@ function switchMode() {
         });
         // Save mode selection to localStorage
         localStorage.setItem('mode', 'dark');
+        // Re-initialize stars animation for night mode
+        initStars();
     } else {
         moon.className = "moon";
         document.body.style.backgroundImage = "url('../styles/images/back_day.jpg')";
@@ -23,7 +25,26 @@ function switchMode() {
         });
         // Save mode selection to localStorage
         localStorage.setItem('mode', 'light');
+        // Clear stars animation for day mode
+        clearStars();
     }
+}
+
+// Function to initialize stars animation for night mode
+function initStars() {
+    if (!document.getElementById('star')) {
+        for (let i = 0; i < 360; i++) {
+            sky.appendChild(dot(i)); // Create new stars
+        }
+    }
+}
+
+// Function to clear stars animation
+function clearStars() {
+    let stars = document.querySelectorAll('.star');
+    stars.forEach(star => {
+        star.parentNode.removeChild(star);
+    });
 }
 
 // Check if mode is stored in localStorage and apply it on page load
@@ -35,34 +56,26 @@ document.addEventListener('DOMContentLoaded', function() {
     // If mode is not stored or it's 'light', keep the default light mode
 });
 
-
-/* add stars to the background */
-
-let sky, center;
-
+// Function to create a star element
 function dot(i) {
-   const size = Math.round(Math.random() + 1);
-   const root = document.createElement('span');
-   const x = Math.random() * sky.clientWidth;
-   const y = Math.random() * sky.clientHeight;
-   root.style.top = y + 'px';
-   root.style.left = x + 'px';
-   root.classList.add('star', `size-${size}`, `axis-${i}`);
-   return root;
+    const size = Math.round(Math.random() + 1);
+    const root = document.createElement('span');
+    root.id = 'star';
+    const x = Math.random() * sky.clientWidth;
+    const y = Math.random() * sky.clientHeight;
+    root.style.top = y + 'px';
+    root.style.left = x + 'px';
+    root.classList.add('star', `size-${size}`, `axis-${i}`);
+    return root;
 }
 
-function clear() {
-   sky.innerHTML = '';
-}
-
+// Function to initialize stars animation on page load
 function init() {
-   sky = document.querySelector('#sky');
-   center = {
-      x: sky.clientWidth / 2,
-      y: sky.clientHeight / 2,
-   };
-   clear();
-   for (let i = 0; i < 360; i++) sky.appendChild(dot(i));
+    sky = document.querySelector('#sky');
+    center = {
+        x: sky.clientWidth / 2,
+        y: sky.clientHeight / 2,
+    };
 }
 
 window.onload = init;
