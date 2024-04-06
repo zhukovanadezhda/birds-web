@@ -167,17 +167,11 @@ h1 {
   background-repeat: no-repeat; /* Empêche la répétition de l'image */
   background-position: center; /* Centre l'image horizontalement et verticalement */
   margin: 10% auto; /* Vous pouvez ajuster la marge comme vous le souhaitez */
-  padding: 30px 180px; /* Ajustez la marge intérieure pour plus d'espace */
+  padding: 10px 160px; /* Ajustez la marge intérieure pour plus d'espace */
   border: 1px solid #888;
-  width: 100%; /* Ajustez la largeur pour rendre le cadre plus large */
-  max-width: 1000px; /* Définissez une largeur maximale si nécessaire */
-  max-height: 80%; /* Définissez une hauteur maximale si nécessaire */
+  width: 50%; /* Utilisez 90% de la largeur de l'écran */
+  height: 60%; /* Utilisez 90% de la hauteur de l'écran */
   overflow-y: auto; /* Ajoutez une barre de défilement verticale si nécessaire */
-}
-
-.modal-content p {
-  margin: 20px 0px; /* Ajoutez des marges en haut et en bas du paragraphe */
-  padding: 0; /* Supprimez les marges intérieures par défaut */
 }
 
 .shapes {
@@ -201,7 +195,7 @@ h1 {
 
 .rectangle2 {
   width: 90%;
-  height: 50%;
+  height: auto;
   background-color: #F7F1F0;
   margin: 0.5% 5%;
   border: 1px solid #000000; /* Bordure noire pour toutes les faces */
@@ -326,5 +320,56 @@ h1 {
   margin-bottom: 8px;
 }
 
+/* Observation des oiseaux */
 
+.bird-observation-section {
+  padding: 20px;
+  background-color: rgba(247, 247, 247, 0.8); /* Fond transparent légèrement grisé */
+  border-radius: 10px;
+  margin: 0 auto 20px auto; /* Centre le cadre horizontalement */
+  width: 98%; /* Utilise 95% de la largeur de la page */
+  max-width: 88%; /* Définit une largeur maximale */
+}
 
+.bird-observation-section h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.bird-observation-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.bird-observation-section li {
+  margin-bottom: 20px;
+}
+
+.bird-observation-section h3 {
+  color: #4CAF50;
+}
+
+/* Styles spécifiques pour les autres lieux d'observation */
+.other-observation-locations {
+  margin-top: 40px;
+}
+
+.other-observation-locations h3 {
+  color: #4CAF50;
+}
+
+.other-observation-locations ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.other-observation-locations li {
+  margin-bottom: 10px;
+  font-style: italic;
+  color: #666;
+}
+
+.other-observation-locations li:before {
+  content: "•";
+  margin-right: 5px;
+}
