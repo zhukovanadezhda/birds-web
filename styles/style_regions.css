@@ -184,12 +184,11 @@ h1 {
   margin: 0.5% 5%;
   border: 1px solid #000000;
   border-radius: 5px;
+  display: flex; /* Utilisez Flexbox pour centrer le contenu */
+  align-items: center; /* Centrez verticalement le contenu */
+  justify-content: center; /* Centrez horizontalement le contenu */
+  font-weight: bold; /* Texte en gras */
 }
-
-.rectangle1 td {
-  text-align: center; /* Ajoutez cette ligne pour centrer le texte */
-}
-
 
 .rectangle2 {
   width: 90%;
@@ -217,6 +216,7 @@ h1 {
   background-color: #AFABAA;
   border-top: 1px solid #000000; /* Bordure supérieure de la cellule de gauche */
   border-bottom: 1px solid #000000; /* Bordure inférieure de la cellule de gauche */
+  font-weight: bold; /* Texte en gras */
 }
 
 .rectangle2 td:not(:first-child) {
@@ -248,15 +248,21 @@ h1 {
   margin: 0.5% 5%;
   border: 1px solid #000000;
   border-radius: 5px;
+  display: flex; /* Utilisez Flexbox pour centrer le contenu */
+  align-items: center; /* Centrez verticalement le contenu */
+  justify-content: center; /* Centrez horizontalement le contenu */
 }
 
 .rectangle4 {
   width: 90%;
-  height: 15%;
+  height: 5%;
   background-color: #F7F1F0;
   margin: 0.5% 5%;
   border: 1px solid #000000;
   border-radius: 5px;
+  display: flex; /* Utilisez Flexbox pour centrer le contenu */
+  align-items: center; /* Centrez verticalement le contenu */
+  justify-content: center; /* Centrez horizontalement le contenu */
 }
 
 
