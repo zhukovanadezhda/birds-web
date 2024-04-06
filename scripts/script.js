@@ -4,14 +4,23 @@ function switchMode() {
     let navLinks = document.querySelectorAll("nav ul li a");
     let footerText = document.querySelectorAll(".footer-text, .footer-list li a, .footer-text-cr");
     let container = document.querySelector(".container");
+    let quizContainer = document.querySelector(".container-fluid");
     let footer = document.querySelector(".footer"); // Select the footer element
+    let menu = document.querySelector(".top-page-container"); // Select the menu element
+
 
     if (moon.className == "moon") {
         moon.className = "sun";
         document.body.style.backgroundImage = "url('../styles/images/back_night.jpg')";
-        document.body.style.color = "#FFFFFF";
+        menu.style.backgroundImage = "url('../styles/images/back_night.jpg')";
+        container.style.color = "#FFFFFF"; 
+        quizContainer.style.color = "#FFFFFF";
         // Update menu text color to white
         navLinks.forEach(link => {
+            link.style.color = "#FFFFFF";
+        });
+        // Update menu text color to white
+        container.forEach(link => {
             link.style.color = "#FFFFFF";
         });
         // Update footer text color to white
@@ -27,8 +36,11 @@ function switchMode() {
     } else {
         moon.className = "moon";
         document.body.style.backgroundImage = "url('../styles/images/back_day.jpg')";
+        menu.style.backgroundImage = "url('../styles/images/back_day.jpg')"; // Reset background color of the menu in day mode
         document.body.style.color = "#000000";
         container.style.backgroundColor = ""; // Reset background color of the container in day mode
+        container.style.color = ""; // Reset text color of the container in day mode
+        quizContainer.style.color = ""; // Reset text color of the quiz container in day mode
         // Update menu text color to black
         navLinks.forEach(link => {
             link.style.color = "#000000";

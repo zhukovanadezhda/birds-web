@@ -137,7 +137,6 @@ nav ul li:hover .dropdown {
 .top-page-container {
     z-index: 100; /* Set higher z-index to stay above other elements */
     padding: 10px; /* Add padding to create space around the content */
-    border-radius: 10px; /* Add border-radius for rounded corners */
     z-index: 99999999999;
     position: fixed;
     width: 100%;
