@@ -13,7 +13,6 @@ function switchMode() {
         moon.className = "sun";
         document.body.style.backgroundImage = "url('../styles/images/back_night.jpg')";
         document.body.style.color = "#FFFFFF";
-        container.style.backgroundColor = "#070B17"; // Background color of the container in night mode
         // Update menu text color to white
         navLinks.forEach(link => {
             link.style.color = "#FFFFFF";

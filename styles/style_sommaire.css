@@ -171,9 +171,6 @@
 
 .container-heading h1{
   outline: 2px solid MintCream;
-}
-
-h1 {
   font-size: 80px;
   text-transform: uppercase;
   font-family: 'Gambetta', serif;
@@ -187,12 +184,12 @@ h1 {
   -webkit-text-stroke-color: black; /* Color of the black border */
 }
 
-h1:hover {
+.container-heading h1:hover {
   font-variation-settings: "wght" 582; 
   letter-spacing: 7px;
 }
 
-p {
+.container-heading p {
   font-size: 1.2em;
   text-align: right;
   color: MintCream;
@@ -201,7 +198,7 @@ p {
   -webkit-text-stroke-color: black; /* Color of the black border */
 }
 
-p span {
+.container-heading p span {
   color: PaleGoldenRod;
   font-weight: bold;
   font-style: italic;
