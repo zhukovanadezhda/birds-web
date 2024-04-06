@@ -221,6 +221,7 @@ function displayQuestion(questionObject) {
         const allAnswers = questionObject.incorrect_answers.concat(
           questionObject.correct_answer,
         );
+        shuffleArray(allAnswers); // Shuffle the combined answers
         for (let i = 0; i < allAnswers.length; i++) {
           let button = document.createElement('button');
           button.disabled = true;
