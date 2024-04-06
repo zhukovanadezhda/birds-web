@@ -79,6 +79,7 @@ h1 {
     position: relative; /* Ajout de la position relative pour le contenu de la carte */
     perspective: 1000px; /* Ajout de la perspective pour l'effet 3D */
     backface-visibility: hidden; /* Empêche l'affichage du visage arrière */
+    cursor: pointer;
   }
   
   .bird-card:hover .bird-card-inner {

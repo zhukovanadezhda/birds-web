@@ -25,6 +25,17 @@ function scrollToContent() {
   });
 }
 
+window.addEventListener('scroll', function() {
+  var scrollPosition = window.scrollY;
+  var background = document.getElementById('background-img');
+  var opacity = 1 - scrollPosition / 500; // Change 500 to adjust fade-out speed
+  
+  if (opacity >= 0) {
+      background.style.opacity = opacity;
+  }
+});
+
+
 function expandCard(card) {
 card.style.transform = 'scale(1.05)';
 }
