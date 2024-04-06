@@ -6,9 +6,6 @@ function switchMode() {
     let container = document.querySelector(".container");
     let footer = document.querySelector(".footer"); // Select the footer element
 
-    // Additional variables for map colors
-    var mapfill, maphover_fill, mapstroke;
-
     if (moon.className == "moon") {
         moon.className = "sun";
         document.body.style.backgroundImage = "url('../styles/images/back_night.jpg')";
