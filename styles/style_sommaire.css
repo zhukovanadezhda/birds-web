@@ -62,3 +62,40 @@
   .p7{ -moz-transform: rotateY(270deg) translateZ(300px);}
   .p8{ -moz-transform: rotateY(315deg) translateZ(300px);}
   
+
+  /* Styles for the alphabetical sommaire */
+  .alphabetical-sommaire {
+    background-color: rgba(255, 255, 255, 0.5); /* Fond blanc transparent */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .alphabetical-sommaire h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .alphabetical-sommaire ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .alphabetical-sommaire a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .alphabetical-sommaire a:hover {
+    text-decoration: underline;
+  }
+  
+  .alphabetical-sommaire ul ul {
+    margin-top: 10px;
+  }
+  
+  .alphabetical-sommaire ul ul li {
+    margin-bottom: 5px;
+  }
+  
