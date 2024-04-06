@@ -16,29 +16,30 @@ h1 {
 
 
 .background-img {
-    position: relative;
-    margin: 0;
-    width: 100%;
-    min-height: 100vh;
-    overflow: hidden; 
+  position: relative;
+  margin: 0;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden; 
 }
 
 .background-img::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("Paysages/Paysage_Auvergne.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    filter: blur(3px);
-    z-index: -1;
-    transition: opacity 0.5s ease;
-    opacity: 1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: var(--bg-image); /* Utilisez une variable CSS pour l'image de fond */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: blur(3px);
+  z-index: -1;
+  transition: opacity 0.5s ease;
+  opacity: 1;
 }
+
 
 .scroll-down-arrow {
     position: absolute;
