@@ -84,4 +84,6 @@ function toggleCard(birdName, birdFamily, birdSize, birdWeight, birdHabitat, bir
   modal.style.display = modal.style.display === "none" ? "block" : "none";
 }
 
-
+document.addEventListener('DOMContentLoaded', function() {
+  AOS.init();
+});
