@@ -8,19 +8,15 @@ function switchMode() {
     let footer = document.querySelector(".footer"); // Select the footer element
     let menu = document.querySelector(".top-page-container"); // Select the menu element
 
-
     if (moon.className == "moon") {
         moon.className = "sun";
         document.body.style.backgroundImage = "url('../styles/images/back_night.jpg')";
         menu.style.backgroundImage = "url('../styles/images/back_night.jpg')";
         container.style.color = "#FFFFFF"; 
         quizContainer.style.color = "#FFFFFF";
+        document.body.style.color = "#FFFFFF";
         // Update menu text color to white
         navLinks.forEach(link => {
-            link.style.color = "#FFFFFF";
-        });
-        // Update menu text color to white
-        container.forEach(link => {
             link.style.color = "#FFFFFF";
         });
         // Update footer text color to white
@@ -98,7 +94,6 @@ function init() {
     initStars(); // Initialize stars animation
 }
 
-
 // Check if mode is stored in localStorage and apply it on page load
 document.addEventListener('DOMContentLoaded', function() {
     let mode = localStorage.getItem('mode');
@@ -109,3 +104,5 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+// Call init() function when the page loads
+init();
