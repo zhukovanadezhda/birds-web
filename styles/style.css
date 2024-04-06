@@ -134,6 +134,26 @@ nav ul li:hover .dropdown {
     }
 }
 
+.top-page-container {
+    z-index: 100; /* Set higher z-index to stay above other elements */
+    padding: 10px; /* Add padding to create space around the content */
+    border-radius: 10px; /* Add border-radius for rounded corners */
+    z-index: 99999999999;
+    position: fixed;
+    width: 100%;
+    height: 15%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../styles/images/back_day.jpg'); /* Set the background image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Ensures the background doesn't scroll */
+    z-index: 99; /* Set a z-index to position the overlay below the content */
+}
+
+
 
 /* ##############################################
     MODE JOUR / NUIT
@@ -146,7 +166,7 @@ height: 33px;
 right: 8%;
 top: 10.5%;
 position: fixed;
-z-index: 100;
+z-index: 999999;
 }
 .night-toggle:hover{
     cursor: pointer;
@@ -162,6 +182,7 @@ z-index: 100;
     margin-top:0px;
     transition: 2s;
 }
+
 .sun {
     background-color: #fdd462;
     box-shadow: 2px 0px 0px 1px #D19C29;
@@ -197,7 +218,6 @@ z-index: 100;
     width: 88px;
     height: 125px;
     will-change: background-position;
-
     animation-name: fly-cycle;
     animation-timing-function: steps(10);
     animation-iteration-count: infinite;
@@ -229,30 +249,39 @@ z-index: 100;
     left: 0%;
     transform: scale(0) translateX(-10vw);
     will-change: transform;
-    
     animation-name: fly-right-one;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
+    z-index: 999;
+    position: fixed;
 }
     
 .bird-container-one{
     animation-duration: 15s;
     animation-delay: 0;
+    z-index: 999;
+    position: fixed;
 }
     
 .bird-container-two{
     animation-duration: 16s;
     animation-delay: 1s;
+    z-index: 999;
+    position: fixed;
 }
     
 .bird-container-three{
     animation-duration: 14.6s;
     animation-delay: 9.5s;
+    z-index: 999;
+    position: fixed;
 }
     
 .bird-container-four {
         animation-duration: 16s;
         animation-delay: 10.25s;
+        z-index: 999;
+        position: fixed;
 }
 @keyframes fly-cycle {
     
