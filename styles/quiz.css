@@ -290,3 +290,22 @@ button:visited,
     opacity: 1;
   }
 }
+
+.intro-text {
+  font-family: 'Arial', sans-serif; /* Choisir une police de caractères lisible */
+  font-size: 18px;
+  color: #333; /* Couleur de texte */
+  line-height: 1.6; /* Espacement entre les lignes */
+  margin-bottom: 20px; /* Espacement inférieur */
+}
+
+.intro-text:last-child {
+  margin-bottom: 0; /* Supprimer l'espacement inférieur pour le dernier paragraphe */
+}
+
+.intro-container {
+  background-color: rgba(255, 255, 255, 0.4); /* Couleur de fond blanche avec une opacité de 0.9 */
+  border-radius: 10px; /* Coins arrondis du cadre */
+  padding: 20px; /* Espacement interne du cadre */
+  margin-bottom: 20px; /* Espacement inférieur du cadre */
+}
