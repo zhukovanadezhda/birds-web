@@ -291,21 +291,69 @@ button:visited,
   }
 }
 
-.intro-text {
-  font-family: 'Arial', sans-serif; /* Choisir une police de caractères lisible */
-  font-size: 18px;
-  color: #333; /* Couleur de texte */
-  line-height: 1.6; /* Espacement entre les lignes */
-  margin-bottom: 20px; /* Espacement inférieur */
-}
-
-.intro-text:last-child {
-  margin-bottom: 0; /* Supprimer l'espacement inférieur pour le dernier paragraphe */
-}
 
 .intro-container {
-  background-color: rgba(255, 255, 255, 0.4); /* Couleur de fond blanche avec une opacité de 0.9 */
+  background-color: #2c4b757d; /* Couleur de fond blanche avec une opacité de 0.9 */
   border-radius: 10px; /* Coins arrondis du cadre */
   padding: 20px; /* Espacement interne du cadre */
-  margin-bottom: 20px; /* Espacement inférieur du cadre */
+  margin-bottom: 40px; /* Espacement inférieur du cadre */
+  width: 70%;
+  margin: 0 auto; 
+}
+
+
+.container-heading {
+  width: 50%;
+  display: flex;
+  margin: 12% auto 0; /* Adjust the top margin to move the container down */
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container-heading h1{
+  outline: 2px solid MintCream;
+  font-size: 80px;
+  text-transform: uppercase;
+  font-family: 'Gambetta', serif;
+  letter-spacing: 5px;
+  transition: 700ms ease;
+  font-variation-settings: "wght" 311;
+  color: PaleGoldenRod;
+  text-align: center;
+  margin: 0;
+  -webkit-text-stroke-width: 0.5px; /* Width of the black border */
+  -webkit-text-stroke-color: black; /* Color of the black border */
+}
+
+.container-heading h1:hover {
+  font-variation-settings: "wght" 582; 
+  letter-spacing: 7px;
+}
+
+.container-heading p {
+  font-size: 1.2em;
+  text-align: right;
+  color: MintCream;
+  letter-spacing: .5px;
+  -webkit-text-stroke-width: 0.1px; /* Width of the black border */
+  -webkit-text-stroke-color: black; /* Color of the black border */
+}
+
+.container-heading p span {
+  color: PaleGoldenRod;
+  font-weight: bold;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+.simple p {
+  margin: 10px auto;
+  padding: 0;
+  font-size: 1.2em;
+  text-align: center;
+  letter-spacing: .5px;
+  color: MintCream;
+  letter-spacing: .5px;
+  -webkit-text-stroke-width: 0.3px; /* Width of the black border */
+  -webkit-text-stroke-color: black; /* Color of the black border */
 }
