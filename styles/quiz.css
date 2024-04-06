@@ -10,10 +10,12 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 img {
   margin: auto; /* Centrer l'image horizontalement */
   max-width: 100%; /* La largeur maximale de l'image est égale à la largeur de son conteneur */
   max-height: 200px; /* La hauteur maximale de l'image est de 300 pixels */
+  border-radius: 10px; /* Coins arrondis de l'image */
 }
 
 button,
@@ -38,10 +40,14 @@ button:visited,
   cursor: pointer;
 }
 #quiz {
-  width: 100%;
+  width: 80%;
   overflow-x: hidden;
   font-family: 'Permanent Marker', cursive;
   letter-spacing: 0.015em;
+  margin: 0 auto;
+  background-color: #2c4a7550;
+  border-radius: 10px;
+  padding: 20px;
 }
 #quiz .container-fluid {
   margin: auto;
@@ -97,7 +103,7 @@ button:visited,
   width: 45%;
   min-height: 75px;
   padding: 5px;
-  background-color: #669999;
+  background-color: #70abf3b9;
   border: 1px solid rgba(0, 0, 0, 0.075);
   border-radius: 50px;
   outline: none;
@@ -110,18 +116,18 @@ button:visited,
 }
 .quiz-ans-btn:hover {
   color: #fff;
-  background-color: #476b6b;
+  background-color: #70abf386;
 }
 .btn.quiz-ans-btn:active,
 .btn.quiz-ans-btn:focus {
   color: #fff;
-  background-color: #334d4d;
+  background-color: #70abf386;
 }
 .quiz-ans-btn.correct {
-  background-color: #29a329;
+  background-color: #3ca93caf;
 }
 .quiz-ans-btn.incorrect {
-  background-color: #e60000;
+  background-color: #e83737d5;
 }
 #quiz-play-again {
   overflow-y: hidden;
@@ -131,7 +137,7 @@ button:visited,
   display: block;
   font-size: 32px;
   color: #fff;
-  background-color: #669999;
+  background-color: #70ABF3;
   border: 8px double #fff;
   border-radius: 14px;
   padding: 5px 10px;
@@ -150,7 +156,7 @@ button:visited,
 #quiz-play-again-btn:active,
 #quiz-play-again-btn:focus {
   color: #fff;
-  background-color: #334d4d;
+  background-color: #70abf386;
 }
 #quiz-play-again-btn.pulse {
   animation-duration: 2s;
@@ -291,7 +297,6 @@ button:visited,
   }
 }
 
-
 .intro-container {
   background-color: #2c4b757d; /* Couleur de fond blanche avec une opacité de 0.9 */
   border-radius: 10px; /* Coins arrondis du cadre */
@@ -300,7 +305,6 @@ button:visited,
   width: 70%;
   margin: 0 auto; 
 }
-
 
 .container-heading {
   width: 50%;
