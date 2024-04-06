@@ -158,17 +158,26 @@ h1 {
   height: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
 }
 
 .modal-content {
-  background-color: #FFAC9A;
+  background-image: url('../styles/images/fond-tableau-oiseau.PNG'); /* Ajout de l'image de fond */
+  background-size: cover; /* Ajustement de la taille de l'image pour couvrir tout le cadre */
+  background-repeat: no-repeat; /* Empêche la répétition de l'image */
+  background-position: center; /* Centre l'image horizontalement et verticalement */
   margin: 10% auto; /* Vous pouvez ajuster la marge comme vous le souhaitez */
-  padding: 30px; /* Ajustez la marge intérieure pour plus d'espace */
+  padding: 30px 180px; /* Ajustez la marge intérieure pour plus d'espace */
   border: 1px solid #888;
-  width: 70%; /* Ajustez la largeur pour rendre le cadre plus large */
-  max-width: 800px; /* Définissez une largeur maximale si nécessaire */
+  width: 100%; /* Ajustez la largeur pour rendre le cadre plus large */
+  max-width: 1000px; /* Définissez une largeur maximale si nécessaire */
   max-height: 80%; /* Définissez une hauteur maximale si nécessaire */
   overflow-y: auto; /* Ajoutez une barre de défilement verticale si nécessaire */
+}
+
+.modal-content p {
+  margin: 20px 0px; /* Ajoutez des marges en haut et en bas du paragraphe */
+  padding: 0; /* Supprimez les marges intérieures par défaut */
 }
 
 .shapes {
