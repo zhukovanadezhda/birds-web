@@ -49,8 +49,8 @@
 
 .alphabetical-sommaire h1 {
   display: block;
-
 }
+
 
 .bird-grid {
   display: grid;
@@ -136,6 +136,18 @@
   white-space: nowrap; /* Prevent line breaks */
 }
 
+.letters-bar h2 {
+  font-size: 15px;
+  text-transform: uppercase;
+  font-family: 'Gambetta', serif;
+  letter-spacing: 5px;
+  color: PaleGoldenRod;
+  text-align: center;
+  margin: 0;
+  -webkit-text-stroke-width: 0.5px; /* Width of the black border */
+  -webkit-text-stroke-color: black; /* Color of the black border */
+}
+
 .letter {
   display: inline-block; /* Display letters horizontally */
   margin: 0 5px;
@@ -146,4 +158,62 @@
   color: black;
   font-weight: bold;
   padding: 5px;
+}
+
+
+.container-heading {
+  width: 50%;
+  height: 80vh;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container-heading h1{
+  outline: 2px solid MintCream;
+}
+
+h1 {
+  font-size: 80px;
+  text-transform: uppercase;
+  font-family: 'Gambetta', serif;
+  letter-spacing: 5px;
+  transition: 700ms ease;
+  font-variation-settings: "wght" 311;
+  color: PaleGoldenRod;
+  text-align: center;
+  margin: 0;
+  -webkit-text-stroke-width: 0.5px; /* Width of the black border */
+  -webkit-text-stroke-color: black; /* Color of the black border */
+}
+
+h1:hover {
+  font-variation-settings: "wght" 582; 
+  letter-spacing: 7px;
+}
+
+p {
+  font-size: 1.2em;
+  text-align: right;
+  color: MintCream;
+  letter-spacing: .5px;
+  -webkit-text-stroke-width: 0.1px; /* Width of the black border */
+  -webkit-text-stroke-color: black; /* Color of the black border */
+}
+
+p span {
+  color: PaleGoldenRod;
+  font-weight: bold;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+.simple p {
+  margin: 0 auto;
+  padding: 0;
+  font-size: 1.2em;
+  text-align: center;
+  letter-spacing: .5px;
+  -webkit-text-stroke-width: 0px; /* Width of the black border */
 }
