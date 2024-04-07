@@ -148,7 +148,7 @@ h1 {
     justify-content: center;
   }
 
-/* Cadre informations oiseaux */
+/*########## Cadre informations oiseaux ##########*/
 
 .modal {
   display: none;
@@ -183,8 +183,8 @@ h1 {
 }
 
 .rectangle1 {
-  width: 90%;
-  height: 5%;
+  width: auto;
+  height: auto;
   background-color: #AFABAA;
   margin: 0.5% 5%;
   border: 1px solid #000000;
@@ -196,7 +196,7 @@ h1 {
 }
 
 .rectangle2 {
-  width: 90%;
+  width: auto;
   height: auto;
   background-color: #F7F1F0;
   margin: 0.5% 5%;
