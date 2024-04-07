@@ -8,83 +8,83 @@ const myQuestions = [
       incorrect_answers: ['Vrai'],
   },
   {
-    type: 'multiple',
-    difficulty: 'easy',
-    category: 'Animal',
-    question: 'Quel est cet oiseau ?',
-    image: '../styles/Oiseaux/Merle_noir.jpg',
-    correct_answer: 'Merle noir',
-    incorrect_answers: ['Pigeon ramier', 'Mésange charbonnière', 'Coucou gris'],
-  },
-  {
-    type: 'multiple',
-    difficulty: 'medium',
-    category: 'Animal',
-    question: 'Quel est cet oiseau ?',
-    image: '../styles/Oiseaux/pic_epeiche.jpg',
-    correct_answer: 'Pic épeiche',
-    incorrect_answers: ['Pic vert', 'Pic noir', 'Pic mar'],
-  },
-  {
-    type: 'boolean',
-    difficulty: 'medium',
-    category: 'Animal',
-    question: "En France, la période de nidification des oiseaux s'étend de mi-Mars à mi-Août.",
-    correct_answer: 'Vrai',
-    incorrect_answers: ['Faux'],
-  },
-  {
-    type: 'boolean',
-    difficulty: 'medium',
-    category: 'Animal',
-    question: 'Cet oiseau est-il le préféré de Nadya ou de Théo ? (Le Martin-pêcheur)',
-    image: '../styles/Oiseaux/Martin_pecheur.jpg',
-    correct_answer: 'Théo',
-    incorrect_answers: ['Nadya'],
-  },
-  {
-    type: 'multiple',
-    difficulty: 'hard',
-    category: 'Animal',
-    question: 'Quel est cet oiseau ?',
-    image: '../styles/Oiseaux/Sitelle_Torchepot.jpg',
-    correct_answer: 'Sitelle torchepot',
-    incorrect_answers: ["Verdier d'Europe", 'Mésange bleue', 'Pouillot véloce'],
-  },
-  {
-    type: 'boolean',
-    difficulty: 'easy',
-    category: 'Animal',
-    question: "Il n'y a pas de corbeaux à Paris.",
-    image: '../styles/Oiseaux/Grand_Corbeau.jpg',
-    correct_answer: 'True',
-    incorrect_answers: ['False'],
-  },
-  {
-    type: 'multiple',
-    difficulty: 'hard',
-    category: 'Animal',
-    question: "Quel oiseau n'existe pas ?",
-    correct_answer: 'Galinette cendrée',
-    incorrect_answers: ['Bouscarle de cetti', 'Bruant zizi', 'Chevalier cul-blanc'],
-  },
-  {
-    type: 'multiple',
-    difficulty: 'medium',
-    category: 'Animal',
-    question: 'Quel est cet oiseau ?',
-    image: '../styles/Oiseaux/Buse_variable.jpg',
-    correct_answer: 'Buse variable',
-    incorrect_answers: ['Milan noir', 'Aigle royal', 'Faucon pelerin'],
-  },
-  {
-    type: 'multiple',
-    difficulty: 'medium',
-    category: 'Animal',
-    question: "Quel oiseau n'existe pas en France ?",
-    correct_answer: 'Héron goliath',
-    incorrect_answers: ["Ouette d'Egypte", 'Perruche à collier', 'Tourterelle turque'],
-  },
+        type: 'multiple',
+        difficulty: 'easy',
+        category: 'Animal',
+        question: 'Quel est cet oiseau ?',
+        image: '../styles/Oiseaux/Merle_noir.jpg',
+        correct_answer: 'Merle noir',
+        incorrect_answers: ['Pigeon ramier', 'Mésange charbonnière', 'Coucou gris'],
+      },
+      {
+        type: 'multiple',
+        difficulty: 'medium',
+        category: 'Animal',
+        question: 'Quel est cet oiseau ?',
+        image: '../styles/Oiseaux/pic_epeiche.jpg',
+        correct_answer: 'Pic épeiche',
+        incorrect_answers: ['Pic vert', 'Pic noir', 'Pic mar'],
+      },
+      {
+        type: 'boolean',
+        difficulty: 'medium',
+        category: 'Animal',
+        question: "En France, la période de nidification des oiseaux s'étend de mi-Mars à mi-Août.",
+        correct_answer: 'Vrai',
+        incorrect_answers: ['Faux'],
+      },
+      {
+        type: 'boolean',
+        difficulty: 'medium',
+        category: 'Animal',
+        question: 'Cet oiseau est-il le préféré de Nadya ou de Théo ? (Le Martin-pêcheur)',
+        image: '../styles/Oiseaux/Martin_pecheur.jpg',
+        correct_answer: 'Théo',
+        incorrect_answers: ['Nadya'],
+      },
+      {
+        type: 'multiple',
+        difficulty: 'hard',
+        category: 'Animal',
+        question: 'Quel est cet oiseau ?',
+        image: '../styles/Oiseaux/Sitelle_Torchepot.jpg',
+        correct_answer: 'Sitelle torchepot',
+        incorrect_answers: ["Verdier d'Europe", 'Mésange bleue', 'Pouillot véloce'],
+      },
+      {
+        type: 'boolean',
+        difficulty: 'easy',
+        category: 'Animal',
+        question: "Il n'y a pas de corbeaux à Paris.",
+        image: '../styles/Oiseaux/Grand_Corbeau.jpg',
+        correct_answer: 'True',
+        incorrect_answers: ['False'],
+      },
+      {
+        type: 'multiple',
+        difficulty: 'hard',
+        category: 'Animal',
+        question: "Quel oiseau n'existe pas ?",
+        correct_answer: 'Galinette cendrée',
+        incorrect_answers: ['Bouscarle de cetti', 'Bruant zizi', 'Chevalier cul-blanc'],
+      },
+      {
+        type: 'multiple',
+        difficulty: 'medium',
+        category: 'Animal',
+        question: 'Quel est cet oiseau ?',
+        image: '../styles/Oiseaux/Buse_variable.jpg',
+        correct_answer: 'Buse variable',
+        incorrect_answers: ['Milan noir', 'Aigle royal', 'Faucon pelerin'],
+      },
+      {
+        type: 'multiple',
+        difficulty: 'medium',
+        category: 'Animal',
+        question: "Quel oiseau n'existe pas en France ?",
+        correct_answer: 'Héron goliath',
+        incorrect_answers: ["Ouette d'Egypte", 'Perruche à collier', 'Tourterelle turque'],
+      },
 ];
 
 function shuffleArray(array) {
@@ -188,22 +188,19 @@ document.addEventListener('click', function (event) {
           event.target.classList.add('pulse', 'correct');
           stats.correct++;
           stats.correctStreak++;
-          setTimeout(() => {
-              nextQuestion();
-          }, 1250);
+          //here regardless of whether the selected answer is true or false, it is ensured that the correct answer is highlighted in green
       } else {
           console.log('incorrect answer');
           event.target.classList.add('shake', 'incorrect');
           stats.correctStreak = 0;
-          setTimeout(() => {
-              const correctAnswerId = 'quiz-ans-' + event.target.id.split('-')[2];
-              document.querySelector('#' + correctAnswerId).classList.add('correct');
-              setTimeout(() => {
-                  nextQuestion();
-              }, 1500);
-          }, 750);
+          // Highlighting the correct answer in green in this one, same as before ig
+          const correctAnswerId = 'quiz-ans-' + Array.from(event.target.parentNode.children).findIndex(child => child.dataset.isCorrect === 'true');
+          document.querySelector('#' + correctAnswerId).classList.add('correct');
       }
-      displayStats();
+      setTimeout(() => {
+          nextQuestion();
+          displayStats();
+      }, 1500);
   }
 });
 
