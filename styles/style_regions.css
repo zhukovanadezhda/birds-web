@@ -2,6 +2,14 @@
    MENU DE NAVIGATION
    ############################################## 
 */
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('../styles/images/back_day.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -99;
+}
 
 .menu-regions {
   text-align: center; 
