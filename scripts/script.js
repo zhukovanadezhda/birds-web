@@ -5,7 +5,7 @@ function switchMode() {
     let footerText = document.querySelectorAll(".footer-text, .footer-list li a, .footer-text-cr");
     let container = document.querySelector(".container");
     let quizContainer = document.querySelector(".container-fluid");
-    let footer = document.querySelector(".footer"); // Select the footer element
+    let footer = document.querySelector(".footer-container"); // Select the footer element
     let menu = document.querySelector(".top-page-container"); // Select the menu element
 
     if (moon.className == "moon") {
