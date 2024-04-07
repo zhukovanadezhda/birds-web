@@ -1,11 +1,11 @@
 const myQuestions = [
   {
-    type: 'boolean',
-    difficulty: 'easy',
-    category: 'Animals',
-    question: 'Tous les oiseaux savent voler.',
-    correct_answer: 'Faux',
-    incorrect_answers: ['Vrai'],
+      type: 'boolean',
+      difficulty: 'easy',
+      category: 'Animals',
+      question: 'Tous les oiseaux savent voler.',
+      correct_answer: 'Faux',
+      incorrect_answers: ['Vrai'],
   },
   {
     type: 'multiple',
@@ -87,21 +87,77 @@ const myQuestions = [
   },
 ];
 
-// Fonction pour mélanger un tableau
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
   }
 }
 
-// Mélanger le tableau de questions
-shuffleArray(myQuestions);
+function displayQuestion(questionObject) {
+  const quizQuestion = document.querySelector('#quiz-question');
+  const quizOptions = document.querySelector('#quiz-options');
+  const quizImage = document.querySelector('#quiz-image');
+  quizQuestion.innerHTML = '';
+  quizOptions.innerHTML = '';
 
-// Mélanger les réponses pour chaque question
-myQuestions.forEach(question => {
-  shuffleArray(question.incorrect_answers);
-});
+  quizQuestion.classList.add('zoomOut');
+  quizOptions.classList.add('zoomOut');
+
+  setTimeout(() => {
+      quizQuestion.innerHTML = questionObject.question;
+
+      if (questionObject.image) {
+          const image = document.createElement('img');
+          image.src = questionObject.image;
+          image.className = 'fadeIn animated';
+          quizImage.innerHTML = '';
+          quizImage.appendChild(image);
+      } else {
+          quizImage.innerHTML = ''; // Clear if no image
+      }
+
+      quizQuestion.classList.remove('zoomOut');
+      quizOptions.classList.remove('zoomOut');
+
+      quizQuestion.classList.add('zoomIn');
+      quizOptions.classList.add('zoomIn');
+
+      setTimeout(() => {
+          stats.questionsAsked++;
+          stats.currentTime = new Date();
+
+          if (questionObject) {
+              const allAnswers = questionObject.incorrect_answers.slice(); // Copy incorrect answers
+              const correctAnswer = questionObject.correct_answer;
+              const correctAnswerIndex = Math.floor(Math.random() * (allAnswers.length + 1)); // Random index for correct answer
+              allAnswers.splice(correctAnswerIndex, 0, correctAnswer); // Insert correct answer at random index
+              shuffleArray(allAnswers); // Shuffle the combined answers
+              for (let i = 0; i < allAnswers.length; i++) {
+                  let button = document.createElement('button');
+                  button.disabled = true;
+                  button.id = 'quiz-ans-' + i;
+                  // Add a data attribute to store the correctness of the answer
+                  button.dataset.isCorrect = allAnswers[i] === questionObject.correct_answer;
+                  button.classList.add(
+                      'btn',
+                      'quiz-ans-btn',
+                      'animated',
+                      i % 2 === 0 ? 'fadeInLeft' : 'fadeInRight',
+                  );
+                  button.innerHTML = allAnswers[i];
+                  quizOptions.appendChild(button);
+                  setTimeout(() => {
+                      button.disabled = false;
+                      button.classList.remove(i % 2 === 0 ? 'fadeInLeft' : 'fadeInRight');
+                  }, 500);
+              }
+          } else {
+              console.log('Invalid question object or missing answers property.');
+          }
+      }, 0.01);
+  }, 1000);
+}
 
 let questions = [];
 let stats = {
@@ -116,67 +172,66 @@ initiateGame();
 
 document.addEventListener('click', function (event) {
   if (event.target.classList.contains('quiz-ans-btn')) {
-    Array.from(document.querySelectorAll('.quiz-ans-btn')).forEach(
-      btn => (btn.disabled = true),
-    );
-    event.target.blur();
-    const choice = Number(event.target.id.split('-')[2]);
-    const responseTime = round((new Date() - stats.currentTime) / 1000, 2);
-    stats.averageResponseTime = round(
-      (stats.averageResponseTime * (stats.questionsAsked - 1) + responseTime) /
-        stats.questionsAsked,
-      2,
-    );
-    const correctAnswerIndex = questions[0].incorrect_answers.length;
-    if (choice === correctAnswerIndex) {
-      console.log('correct answer');
-      event.target.classList.add('pulse', 'correct');
-      stats.correct++;
-      stats.correctStreak++;
-      setTimeout(() => {
-        nextQuestion();
-      }, 1250);
-    } else {
-      console.log('incorrect answer');
-      event.target.classList.add('shake', 'incorrect');
-      stats.correctStreak = 0;
-      setTimeout(() => {
-        const correctAnswerId = 'quiz-ans-' + correctAnswerIndex;
-        document.querySelector('#' + correctAnswerId).classList.add('correct');
-        setTimeout(() => {
-          nextQuestion();
-        }, 1500);
-      }, 750);
-    }
-    displayStats();
+      Array.from(document.querySelectorAll('.quiz-ans-btn')).forEach(
+          btn => (btn.disabled = true),
+      );
+      event.target.blur();
+      const isCorrect = event.target.dataset.isCorrect === 'true';
+      const responseTime = round((new Date() - stats.currentTime) / 1000, 2);
+      stats.averageResponseTime = round(
+          (stats.averageResponseTime * (stats.questionsAsked - 1) + responseTime) /
+          stats.questionsAsked,
+          2,
+      );
+      if (isCorrect) {
+          console.log('correct answer');
+          event.target.classList.add('pulse', 'correct');
+          stats.correct++;
+          stats.correctStreak++;
+          setTimeout(() => {
+              nextQuestion();
+          }, 1250);
+      } else {
+          console.log('incorrect answer');
+          event.target.classList.add('shake', 'incorrect');
+          stats.correctStreak = 0;
+          setTimeout(() => {
+              const correctAnswerId = 'quiz-ans-' + event.target.id.split('-')[2];
+              document.querySelector('#' + correctAnswerId).classList.add('correct');
+              setTimeout(() => {
+                  nextQuestion();
+              }, 1500);
+          }, 750);
+      }
+      displayStats();
   }
 });
 
 document.addEventListener('DOMContentLoaded', function () {
   document
-    .querySelector('#quiz-play-again-btn')
-    .addEventListener('click', function () {
-      document
-        .querySelector('#quiz-play-again-btn')
-        .classList.remove('infinite', 'pulse');
-      document.querySelector('#quiz-play-again-btn').classList.add('flipOutX');
-      setTimeout(() => {
-        document
-          .querySelector('#quiz-play-again-btn')
-          .classList.remove('flipOutX');
-        document.querySelector('#quiz-play-again').style.display = 'none';
-        questions = [];
-        stats = {
-          questionsAsked: 0,
-          correct: 0,
-          correctStreak: 0,
-          currentTime: null,
-          averageResponseTime: 0,
-        };
-        displayStats();
-        initiateGame();
-      }, 750);
-    });
+      .querySelector('#quiz-play-again-btn')
+      .addEventListener('click', function () {
+          document
+              .querySelector('#quiz-play-again-btn')
+              .classList.remove('infinite', 'pulse');
+          document.querySelector('#quiz-play-again-btn').classList.add('flipOutX');
+          setTimeout(() => {
+              document
+                  .querySelector('#quiz-play-again-btn')
+                  .classList.remove('flipOutX');
+              document.querySelector('#quiz-play-again').style.display = 'none';
+              questions = [];
+              stats = {
+                  questionsAsked: 0,
+                  correct: 0,
+                  correctStreak: 0,
+                  currentTime: null,
+                  averageResponseTime: 0,
+              };
+              displayStats();
+              initiateGame();
+          }, 750);
+      });
 });
 
 function initiateGame() {
@@ -184,116 +239,54 @@ function initiateGame() {
   displayQuestion(questions[0]);
 }
 
-function displayQuestion(questionObject) {
-  const quizQuestion = document.querySelector('#quiz-question');
-  const quizOptions = document.querySelector('#quiz-options');
-  const quizImage = document.querySelector('#quiz-image');
-  quizQuestion.innerHTML = '';
-  quizOptions.innerHTML = '';
-
-  quizQuestion.classList.add('zoomOut');
-  quizOptions.classList.add('zoomOut');
-
-  setTimeout(() => {
-    quizQuestion.innerHTML = questionObject.question;
-
-    if (questionObject.image) {
-      const image = document.createElement('img');
-      image.src = questionObject.image;
-      image.className = 'fadeIn animated';
-      quizImage.innerHTML = '';
-      quizImage.appendChild(image);
-    } else {
-      quizImage.innerHTML = ''; // Clear if no image
-    }
-
-    quizQuestion.classList.remove('zoomOut');
-    quizOptions.classList.remove('zoomOut');
-
-    quizQuestion.classList.add('zoomIn');
-    quizOptions.classList.add('zoomIn');
-
-    setTimeout(() => {
-      stats.questionsAsked++;
-      stats.currentTime = new Date();
-
-      if (questionObject) {
-        const allAnswers = questionObject.incorrect_answers.concat(
-          questionObject.correct_answer,
-        );
-        shuffleArray(allAnswers); // Shuffle the combined answers
-        for (let i = 0; i < allAnswers.length; i++) {
-          let button = document.createElement('button');
-          button.disabled = true;
-          button.id = 'quiz-ans-' + i;
-          button.classList.add(
-            'btn',
-            'quiz-ans-btn',
-            'animated',
-            i % 2 === 0 ? 'fadeInLeft' : 'fadeInRight',
-          );
-          button.innerHTML = allAnswers[i];
-          quizOptions.appendChild(button);
-          setTimeout(() => {
-            button.disabled = false;
-            button.classList.remove(i % 2 === 0 ? 'fadeInLeft' : 'fadeInRight');
-          }, 500);
-        }
-      } else {
-        console.log('Invalid question object or missing answers property.');
-      }
-    }, 0.01);
-  }, 1000);
-}
-
 function nextQuestion() {
   document.querySelector('#quiz-question').classList.add('fadeOut');
 
   if (questions.length > 0) {
-    const quizOptions = document.querySelector('#quiz-options');
-    while (quizOptions.firstChild) {
-      quizOptions.removeChild(quizOptions.firstChild);
-    }
-    questions.shift();
-    if (questions.length > 0) {
-      displayQuestion(questions[0]);
-      setTimeout(() => {
-        document.querySelector('#quiz-question').classList.remove('fadeOut');
-      }, 500);
-    } else {
-      document.querySelector('#quiz-play-again').style.display = 'block';
-      document.querySelector('#quiz-play-again-btn').classList.add('flipInX');
-      setTimeout(() => {
-        document
-          .querySelector('#quiz-play-again-btn')
-          .classList.remove('flipInX');
-        document
-          .querySelector('#quiz-play-again-btn')
-          .classList.add('infinite', 'pulse');
-      }, 0);
-    }
+      const quizOptions = document.querySelector('#quiz-options');
+      while (quizOptions.firstChild) {
+          quizOptions.removeChild(quizOptions.firstChild);
+      }
+      questions.shift();
+      if (questions.length > 0) {
+          displayQuestion(questions[0]);
+          setTimeout(() => {
+              document.querySelector('#quiz-question').classList.remove('fadeOut');
+          }, 500);
+      } else {
+          document.querySelector('#quiz-play-again').style.display = 'block';
+          document.querySelector('#quiz-play-again-btn').classList.add('flipInX');
+          setTimeout(() => {
+              document
+                  .querySelector('#quiz-play-again-btn')
+                  .classList.remove('flipInX');
+              document
+                  .querySelector('#quiz-play-again-btn')
+                  .classList.add('infinite', 'pulse');
+          }, 0);
+      }
   }
 }
 
 function displayStats() {
   document
-    .querySelectorAll('#quiz-stats>div>span')
-    .forEach(el => el.classList.add('fadeOut'));
+      .querySelectorAll('#quiz-stats>div>span')
+      .forEach(el => el.classList.add('fadeOut'));
   setTimeout(() => {
-    document.querySelector('#rate-span').innerHTML =
-      stats.correct + '/' + stats.questionsAsked;
-    document.querySelector('#streak-span').innerHTML = stats.correctStreak;
-    document.querySelector('#response-time-span').innerHTML =
-      stats.averageResponseTime;
-    document.querySelectorAll('#quiz-stats>div>span').forEach(el => {
-      el.classList.remove('fadeOut');
-      el.classList.add('fadeIn');
-    });
-    setTimeout(() => {
-      document
-        .querySelectorAll('#quiz-stats>div>span')
-        .forEach(el => el.classList.remove('fadeIn'));
-    }, 375);
+      document.querySelector('#rate-span').innerHTML =
+          stats.correct + '/' + stats.questionsAsked;
+      document.querySelector('#streak-span').innerHTML = stats.correctStreak;
+      document.querySelector('#response-time-span').innerHTML =
+          stats.averageResponseTime;
+      document.querySelectorAll('#quiz-stats>div>span').forEach(el => {
+          el.classList.remove('fadeOut');
+          el.classList.add('fadeIn');
+      });
+      setTimeout(() => {
+          document
+              .querySelectorAll('#quiz-stats>div>span')
+              .forEach(el => el.classList.remove('fadeIn'));
+      }, 375);
   }, 375);
 }
 

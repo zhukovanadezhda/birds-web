@@ -2221,7 +2221,7 @@ z-index: 999999;
     margin-bottom: 20px;
 }
 
-/* Media query pour les tailles d'écran inférieures à 1300px */
+/* Media query pour les tailles d'écran inférieures à 1800px */
 @media screen and (max-width: 1800px) {
     .main-content {
         flex-direction: column;
@@ -2234,6 +2234,10 @@ z-index: 999999;
     }
 
     .info-container {
+        width: 100%;
+    }
+
+    .description-container {
         width: 100%;
     }
 }
