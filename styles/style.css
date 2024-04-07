@@ -2221,17 +2221,18 @@ z-index: 999999;
     margin-bottom: 20px;
 }
 
-/* Media query pour les tailles d'écran inférieures à 1800px */
-@media screen and (max-width: 1800px) {
+/* Media query pour les tailles d'écran inférieures à 900px */
+@media screen and (max-width: 900px) {
     .main-content {
         flex-direction: column;
         margin-top: 300px;
+        margin-bottom: 100px;
     }
 
     .cart-container {
         width: 100%;
         margin-right: 0;
-        margin-bottom: 20px;
+        
     }
 
     .info-container {

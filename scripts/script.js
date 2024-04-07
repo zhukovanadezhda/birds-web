@@ -54,8 +54,6 @@ function switchMode() {
     }
 }
 
-
-
 // Function to initialize stars animation for night mode
 function initStars() {
     if (!document.getElementById('star')) {
