@@ -27,8 +27,8 @@ function showTip(event, text) {
     tip.style.fontSize = "15px";                            // smaller text size
     
 
-    tip.style.left = (event.clientX + 10) + "px";           
-    tip.style.top = (event.clientY + 10) + "px";            
+    tip.style.left = (event.clientX - 100) + "px";           
+    tip.style.top = (event.clientY) + "px";            
 }
 
 function hideTip() {

@@ -1,5 +1,5 @@
-var mapfill = "#70ABF3";		 // Couleur de remplissage des régions
-var maphover_fill = "#70abf386"; // Couleur de survol au passage de la souris
+var mapfill = "#70abf3b2";		 // Couleur de remplissage des régions
+var maphover_fill = "#f3b870ac"; // Couleur de survol au passage de la souris
 var mapstroke = "#FFFFFF";		 // Couleur des lignes de séparation des régions
 var mapstroke_width = 1;		 // Epaisseur des lignes de séparation des régions (en points)
 var mapWidthPercentage = 50;     // Largeur de la carte en pourcentage de la largeur de l'écran
