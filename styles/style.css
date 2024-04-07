@@ -2150,6 +2150,7 @@ z-index: 999999;
 
 
 /* Main page */
+/* Styles pour les tailles d'écran supérieures à 1300px */
 .main {
     width: 100%;
     margin: 0 auto;
@@ -2218,6 +2219,23 @@ z-index: 999999;
     text-align: left;
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+/* Media query pour les tailles d'écran inférieures à 1300px */
+@media screen and (max-width: 1800px) {
+    .main-content {
+        flex-direction: column;
+    }
+
+    .cart-container {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .info-container {
+        width: 100%;
+    }
 }
 
 .stat-title span{
