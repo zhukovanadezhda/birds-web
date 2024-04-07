@@ -53,11 +53,11 @@
 
 
 .bird-grid {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-gap: 10px;
+  display: flex;
+  flex-wrap: wrap; /* Permet aux éléments de revenir à la ligne */
+  justify-content: left; /* Centre les éléments horizontalement */
+  gap: 20px; /* Espacement entre les cartes */
 }
-
 .bird-grid img {
   max-width: 100%;
   height: auto;
@@ -82,7 +82,7 @@
 
 .bird-card img {
   height: 140px; /* Adjusted image height */
-  width: 150px;
+  width: 100%;
   object-fit: cover; /* Ajustement de l'image à la taille du cadre */
   border-radius: 10px; /* Rendre l'image ronde */
   transition: filter 0.4s; /* Temps que le flou apparaisse avec la rotation */
@@ -131,9 +131,12 @@
 }
 
 .letters-bar {
-  text-align: center; 
-  padding: 10px;
-  white-space: nowrap; /* Prevent line breaks */
+  display: flex;
+  flex-wrap: wrap; /* Permet aux éléments de revenir à la ligne */
+  justify-content: center; /* Centre les éléments horizontalement */
+  gap: 10px; /* Espacement entre les lettres */
+  text-align: center; /* Centre le texte horizontalement */
+  padding: 10px; /* Ajoute un padding */
 }
 
 .letters-bar h2 {

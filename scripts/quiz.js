@@ -188,12 +188,10 @@ document.addEventListener('click', function (event) {
           event.target.classList.add('pulse', 'correct');
           stats.correct++;
           stats.correctStreak++;
-          //here regardless of whether the selected answer is true or false, it is ensured that the correct answer is highlighted in green
       } else {
           console.log('incorrect answer');
           event.target.classList.add('shake', 'incorrect');
           stats.correctStreak = 0;
-          // Highlighting the correct answer in green in this one, same as before ig
           const correctAnswerId = 'quiz-ans-' + Array.from(event.target.parentNode.children).findIndex(child => child.dataset.isCorrect === 'true');
           document.querySelector('#' + correctAnswerId).classList.add('correct');
       }
