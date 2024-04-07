@@ -11,53 +11,38 @@
   <script src="../../scripts/regions.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <link rel="icon" href="../../styles/images/humming-bird.png" type="image/x-icon">
-  <title>Oiseaux Auvergne Rhone Alpes</title>
+  <title>Oiseaux d'Auvergne-Rhône-Alpes</title>
 </head>
 
 <body>
-  <div class="top-page-container">
-    <nav>
-      <ul>
-          <li><a href="../index.html" class="highlight">Accueil</a></li>
-          <li><a href="../quiz.html">Quiz</a></li>
-          <li><a href="../sommaire.html">Sommaire</a></li>
-          <li><a>Associations</a>
-            <ul class="dropdown">
-              <li><a href="https://www.lpo.fr/">LPO</a></li>
-            </ul>
-          </li>
-          <li>
-              <a>Contacts</a>
-              <ul class="dropdown">
-                  <li><a href="../cv_nadya.html">Nadezhda ZHUKOVA</a></li>
-                  <li><a href="../cv_theo.html">Théo SERRALTA</a></li>
-              </ul>
-          </li>
-      </ul>
-    </nav>
-  
-    <div class="bird-container bird-container-one">
-      <div class="bird bird-one"></div>
-    </div>        
-    <div class="bird-container bird-container-two">
-      <div class="bird bird-two"></div>
-    </div>  
-    <div class="bird-container bird-container-three">
-      <div class="bird bird-three"></div>
-    </div> 
-    <div class="bird-container bird-container-four">
-      <div class="bird bird-four"></div>
-    </div>
-  
-    <div class="night-toggle" onClick="switchMode()">
-      <div id="moon" class="moon"></div>
-    </div>
+  <nav>
+    <ul>
+      <li><a href="../index.html" class="highlight">Accueil</a></li>
+      <li><a href="../quiz.html">Quiz</a></li>
+      <li><a href="../sommaire.html">Sommaire</a></li>
+      <li><a>Associations</a>
+        <ul class="dropdown">
+          <li><a href="https://www.lpo.fr/">LPO</a></li>
+        </ul>
+      </li>
+      <li>
+        <a>Contacts</a>
+        <ul class="dropdown">
+          <li><a href="../cv_nadya.html">Nadezhda ZHUKOVA</a></li>
+          <li><a href="../cv_theo.html">Théo SERRALTA</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="night-toggle" onClick="switchMode()">
+    <div id="moon" class="moon"></div>
   </div>
 
   <div id="sky"></div>
 
-  <div class="background-img" style="--bg-image: url('Paysages/Paysage_Auvergne.jpg');">
-    <h1>Oiseaux les plus communs d'Auvergne-Rhone-Alpes</h1>
+  <div class="background-img" style="--bg-image: url('../styles/Paysages/Paysage_Auvergne.jpg');">
+    <h1>Oiseaux les plus communs d'Auvergne-Rhône-Alpes</h1>
       <div class="scroll-down-arrow" onclick="scrollToContent()">
         <div class="arrow"></div>
       </div>
