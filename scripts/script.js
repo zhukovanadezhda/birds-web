@@ -54,6 +54,8 @@ function switchMode() {
     }
 }
 
+
+
 // Function to initialize stars animation for night mode
 function initStars() {
     if (!document.getElementById('star')) {
@@ -106,8 +108,3 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Call init() function when the page loads
 init();
-
-document.addEventListener('DOMContentLoaded', function() {
-    AOS.init();
-  });
-  
