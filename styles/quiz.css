@@ -322,7 +322,7 @@ button:visited,
   letter-spacing: 5px;
   transition: 700ms ease;
   font-variation-settings: "wght" 311;
-  color: PaleGoldenRod;
+  color: #275E8E;
   text-align: center;
   margin: 0;
   -webkit-text-stroke-width: 0.5px; /* Width of the black border */
@@ -344,7 +344,7 @@ button:visited,
 }
 
 .container-heading p span {
-  color: PaleGoldenRod;
+  color: #275E8E;
   font-weight: bold;
   font-style: italic;
   text-transform: uppercase;
