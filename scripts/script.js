@@ -1,20 +1,19 @@
-// Function to switch between dark and light mode
 function switchMode() {
     let moon = document.getElementById("moon");
     let navLinks = document.querySelectorAll("nav ul li a");
-    let footerText = document.querySelectorAll(".footer-text, .footer-list li a, .footer-text-cr");
+	let footerText = document.querySelectorAll(".footer-text, .footer-list li a, .footer-text-cr");
     let container = document.querySelector(".container");
-    let quizContainer = document.querySelector(".container-fluid");
-    let footer = document.querySelector(".footer-container"); // Select the footer element
+    let footer = document.querySelector(".footer"); // Select the footer element
     let menu = document.querySelector(".top-page-container"); // Select the menu element
+
 
     if (moon.className == "moon") {
         moon.className = "sun";
         document.body.style.backgroundImage = "url('../styles/images/back_night.jpg')";
         menu.style.backgroundImage = "url('../styles/images/back_night.jpg')";
-        container.style.color = "#FFFFFF"; 
-        quizContainer.style.color = "#FFFFFF";
+		document.body.style.backgroundColor = "#070B17";
         document.body.style.color = "#FFFFFF";
+        container.style.backgroundColor = "#070B17"; // Background color of the container in night mode
         // Update menu text color to white
         navLinks.forEach(link => {
             link.style.color = "#FFFFFF";
@@ -24,6 +23,7 @@ function switchMode() {
             text.style.color = "#FFFFFF";
         });
         // Set padding color to match the background color
+        footer.style.padding = "15px";
         footer.style.backgroundColor = "#070B17"; // Set footer background color to match container
         // Save mode selection to localStorage
         localStorage.setItem('mode', 'dark');
@@ -32,11 +32,10 @@ function switchMode() {
     } else {
         moon.className = "moon";
         document.body.style.backgroundImage = "url('../styles/images/back_day.jpg')";
-        menu.style.backgroundImage = "url('../styles/images/back_day.jpg')"; // Reset background color of the menu in day mode
+        menu.style.backgroundImage = "url('../styles/images/back_day.jpg')";
+		document.body.style.backgroundColor = "#FFFFFF";
         document.body.style.color = "#000000";
         container.style.backgroundColor = ""; // Reset background color of the container in day mode
-        container.style.color = ""; // Reset text color of the container in day mode
-        quizContainer.style.color = ""; // Reset text color of the quiz container in day mode
         // Update menu text color to black
         navLinks.forEach(link => {
             link.style.color = "#000000";
@@ -46,6 +45,7 @@ function switchMode() {
             text.style.color = "#555";
         });
         // Reset padding color to default (white)
+        footer.style.padding = "15px";
         footer.style.backgroundColor = ""; // Reset footer background color
         // Save mode selection to localStorage
         localStorage.setItem('mode', 'light');
