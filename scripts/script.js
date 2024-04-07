@@ -106,3 +106,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Call init() function when the page loads
 init();
+
+document.addEventListener('DOMContentLoaded', function() {
+    AOS.init();
+  });
+  

@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">  
   <link rel="stylesheet" href="../styles/style.css">
   <script src="../scripts/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <link rel="icon" href="../styles/images/humming-bird.png" type="image/x-icon">
   <title>Oiseaux en France</title>
 </head>
@@ -55,7 +57,7 @@
 <br><br><br><br><br><br>
 
 <div class="main">
-  <div class="main-content">
+  <div class="main-content" data-aos="fade-up">
     <div class="cart-container">
       <div id="tip" style="position: absolute;"></div>
       <div id="cmap"></div>
@@ -64,7 +66,7 @@
     </div>
     <div class="info-container">
       <h1 class="main-title"><span>Êtes vous prets à découvrir</span> <br>les oiseaux de France ?</h1>
-      <p class="main-text">La France est un pays riche en biodiversité. Elle abrite de nombreuses espèces d'oiseaux. Découvrez les oiseaux les plus communs de France et apprenez à les reconnaître grace à notre site interactif. Cliquez sur une région de la carte pour voir les oiseaux qui y vivent.</p>
+      <p class="main-text">La France est un pays riche en biodiversité. Elle abrite de nombreuses espèces d'oiseaux. Découvrez les oiseaux les plus communs de France et apprenez à les reconnaître grace à notre site interactif. Cliquez sur une région de la carte pour voir les oiseaux qui y vivent. Participez à notre quiz pour tester vos connaissances sur les oiseaux de France.</p>
       <div class="stat-container">
         <div class="stat">
           <img src="../styles/images/birds.png" alt="birds" class="stat-image">
@@ -73,14 +75,40 @@
           <h1 class="stat-title">~578 <br> <span>espèces en France</span></h1>
         </div>
       </div>
-
     </div>
   </div>
-  <div class="description-container">
-    <br><br><br><br><br><br>
+
+  <div class="description-container" data-aos="fade-up">
+    <div class="about-authors">
+      <blockquote>J'ai appris à connaître les oiseaux il y a un an et j'ai depuis développé une réel passion pour ces êtres fascinants. Ils sont extrêmement variés en tout points, beaux et agréables à écouter. J'ai alors voulu réaliser un site web permettant de partager ma passion et aider les personnes à reconnaître les oiseaux en fonction de là où ils se situent. À travers ce regroupement des 10 oiseaux les plus communs de chaque région, je pense réussir à permettre aux personnes de découvrir certains oiseaux. 
+        <br><br>Je suis très fier de ce site que je trouve beau, dynamique et complet. Ça n'a pas été facile de le réaliser mais le résultat est comme je l'imaginais.
+        Je remercie aussi ma binôme, Nadya d'avoir travaillé avec moi sur ce site.</blockquote>
+      <cite>Théo SERRALTA</cite>
+    </div>
+    <div class="fav-bird">
+      <img src="../styles/images/mp.png" class="fav-bird-image">
+      <p class="fav-bird-text">le Martin-Pêcheur <br>(l'oiseau préféré de Théo)
+    </div>
+  </div>
+
+  <div><br></div>
+
+  <div class="description-container" data-aos="fade-up">
+    <div class="fav-bird">
+      <img src="../styles/images/prt.png" class="fav-bird-image">
+      <p class="fav-bird-text">le Perruche Ondulée <br>(l'oiseau préféré de Nadya)
+    </div>
+    <div class="about-authors">
+      <blockquote>
+        J'ai jamais été très intéressée par les oiseaux mais en travaillant sur ce site, j'ai appris à les apprécier. Ils sont vraiment fascinants et beaux. J'ai appris beaucoup de choses sur les oiseaux en France et j'ai également aquis des compétences en programmation web. 
+        <br><br>Merci à Théo d'avoir partagé sa passion avec moi et d'avoir travaillé avec moi sur ce site.
+      </blockquote>
+      <cite>Nadya ZHUKOVA</cite>
+    </div>
   </div>
 
 </div>
+<script src="../scripts/script.js"></script>
 
 <footer class="footer">
   <div class="footer-container">

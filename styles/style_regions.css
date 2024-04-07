@@ -1,3 +1,43 @@
+/* ##############################################
+   MENU DE NAVIGATION
+   ############################################## 
+*/
+
+.menu-regions {
+  text-align: center; 
+  margin-left: 40%; 
+  top: 9%;
+  position: absolute;
+  z-index: 100;
+}
+
+.menu-regions ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-regions ul li {
+  display: inline-block;
+  margin-right: 10px;             /* space between menu items */
+}
+
+.menu-regions ul li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 30px 10px;       /* oval shape */
+  transition: border-radius 0.3s; /* smooth transition effect */
+}
+
+.menu-regions ul li a:hover {
+  background-color: #70abf386;
+  border-radius: 10px 30px;       /* oval shape on hover */
+}
+
+
 h1 {
     position: absolute;
     top: 40%; /* Ajustez cette valeur pour déplacer le titre verticalement */

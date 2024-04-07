@@ -19,7 +19,6 @@ function showPage(pageId) {
 });
 
 
-
 function scrollToContent() {
   window.scrollBy({
       top: window.innerHeight,

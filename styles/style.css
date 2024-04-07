@@ -2185,7 +2185,7 @@ z-index: 999999;
     background-color: #2c4a7550;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 40px;
+    padding: 35px;
     outline: #2c4a7550 solid 3px;
 }
 
@@ -2197,6 +2197,11 @@ z-index: 999999;
     margin: 0 auto;
     font-size: 40px;
 }
+
+.main-title:hover {
+    font-variation-settings: "wght" 582; 
+    letter-spacing: 3px;
+  }
 
 .main-title span{
     font-size: 15px;
@@ -2258,9 +2263,10 @@ z-index: 999999;
 
 .description-container {
     display: flex;
+    position: relative;
     justify-content: space-between;
     align-items: center;
-    margin: 0 auto;
+    margin: 20px auto;
     width: 80%;
     background-color: #2c4a7550;
     border-radius: 10px;
@@ -2269,3 +2275,62 @@ z-index: 999999;
     outline: #2c4a7550 solid 3px;
 }
 
+
+@import url('https://fonts.googleapis.com/css?family=Special+Elite');
+
+
+blockquote {
+    font-family: 'Special Elite', cursive;
+	font-weight: 100;
+	font-size: 1rem;
+	max-width: 600px;
+	line-height: 1.2;
+	position: relative;
+    display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+	padding: .5rem;
+}
+
+blockquote:before,
+blockquote:after {
+	position: absolute;
+	color: #f1efe6;
+	font-size: 5rem;
+	width: 4rem;
+	height: 4rem;
+}
+
+blockquote:before {
+	content: '“';
+	left: -2rem;
+	top: -2rem;
+}
+
+blockquote:after {
+	content: '”';
+	right: -3rem;
+	bottom: -2rem;
+}
+
+cite {
+	line-height: 3;
+	text-align: left;
+}
+
+.fav-bird-image {
+    width: 80%;
+    max-width: 300px;
+    margin: 0 auto;
+    display: block;
+}
+
+.fav-bird {
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}
