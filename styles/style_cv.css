@@ -251,5 +251,27 @@ hr{
 	margin-bottom: 0;
 }
 
+.section-heading {
+	font-size: 1.5em;
+	margin-top: 20px;
+}
+
+.skill-list, .subskill-list, .specialization-list {
+list-style-type: none;
+padding-left: 0;
+}
+
+.skill-list li, .subskill-list li, .specialization-list li {
+margin-bottom: 5px;
+}
+
+.subskill-list li {
+margin-left: 20px;
+}
+
+.specialization-list li {
+font-weight: bold;
+}
+
 
 
