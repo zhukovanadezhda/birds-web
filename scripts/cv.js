@@ -22,24 +22,19 @@ function checkAnswer(button) {
         setTimeout(() => {
             feedback.remove();
         }, 1000); // Remove feedback after 2 seconds
-    }
+}
 
-    function showPage(pageId) {
-        // Hide all pages
-        var pages = document.getElementsByClassName("cv_page");
-        for (var i = 0; i < pages.length; i++) {
-          pages[i].style.display = "none";
-        }
-        // Show the selected page
-        document.getElementById(pageId).style.display = "block";
-      }
-      
-      window.addEventListener('scroll', function() {
-        var scrollPosition = window.scrollY;
-        var background = document.getElementById('background-image');
-        var opacity = 1 - scrollPosition / 500; // Change 500 to adjust fade-out speed
-        
-        if (opacity >= 0) {
-            background.style.opacity = opacity;
-        }
-    });
+
+function showPage(pageId) {
+    // Hide all cv_page divs
+    var pages = document.getElementsByClassName('cv_page');
+    for (var i = 0; i < pages.length; i++) {
+        pages[i].style.display = 'none';
+    }
+    
+    // Display the selected page
+    var selectedPage = document.getElementById(pageId);
+    if (selectedPage) {
+        selectedPage.style.display = 'block';
+    }
+    }

@@ -120,12 +120,13 @@ nav ul li:hover .dropdown {
         transform: translateX(-50%); /* Adjust to center it perfectly */
         top: 100%; /* Position dropdowns below their parent */
         display: none;
+        text-align: left;
         width: 100%; /* Full width dropdown */
     }
     
     .dropdown li {
         display: block;
-        text-align: center; /* Center the text within dropdown items */
+        text-align: left; /* Center the text within dropdown items */
     }
     
 

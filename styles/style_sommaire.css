@@ -37,20 +37,18 @@
 }
 
 
-
 /* Styles for the alphabetical sommaire */
 .alphabetical-sommaire {
   background-color: rgba(255, 255, 255, 0.3); /* Fond blanc transparent */
-  padding: 10px;
+  padding: 20px;
   border-radius: 10px;
-  margin: 1%;
+  margin: 2%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .alphabetical-sommaire h1 {
   display: block;
 }
-
 
 .bird-grid {
   display: flex;
