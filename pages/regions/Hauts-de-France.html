@@ -1,55 +1,344 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../../styles/style.css">
+  <link rel="stylesheet" href="../../styles/style_regions.css">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <script src="../../scripts/script.js"></script>
-  <link rel="icon" href="../../styles/humming-bird.png" type="image/x-icon">
-  <title>Oiseaux Hauts de France</title>
-
+  <script src="../../scripts/regions.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <link rel="icon" href="../../styles/images/humming-bird.png" type="image/x-icon">
+  <title>Oiseaux Bretagne</title>
 </head>
-<body>
 
-  <nav>
-    <ul>
-        <li><a href="../index.html" class="highlight">Accueil</a></li>
-        <li><a href="../quiz.html">Quiz</a></li>
-        <li><a href="../sommaire.html">Sommaire</a></li>
-        <li><a>Associations</a>
-          <ul class="dropdown">
-            <li><a href="https://www.lpo.fr/">LPO</a></li>
-          </ul>
+<body>
+  <div class="top-page-container">
+    <nav>
+      <ul>
+          <li><a href="../index.html" class="highlight">Accueil</a></li>
+          <li><a href="../quiz.html">Quiz</a></li>
+          <li><a href="../sommaire.html">Sommaire</a></li>
+          <li><a>Associations</a>
+            <ul class="dropdown">
+              <li><a href="https://www.lpo.fr/">LPO</a></li>
+            </ul>
+          </li>
+          <li>
+              <a>Contacts</a>
+              <ul class="dropdown">
+                  <li><a href="../cv_nadya.html">Nadezhda ZHUKOVA</a></li>
+                  <li><a href="../cv_theo.html">Théo SERRALTA</a></li>
+              </ul>
+          </li>
+      </ul>
+    </nav>
+  
+    <div class="bird-container bird-container-one">
+      <div class="bird bird-one"></div>
+    </div>        
+    <div class="bird-container bird-container-two">
+      <div class="bird bird-two"></div>
+    </div>  
+    <div class="bird-container bird-container-three">
+      <div class="bird bird-three"></div>
+    </div> 
+    <div class="bird-container bird-container-four">
+      <div class="bird bird-four"></div>
+    </div>
+  
+    <div class="night-toggle" onClick="switchMode()">
+      <div id="moon" class="moon"></div>
+    </div>
+  </div>
+
+  <div id="sky"></div>
+
+  <div class="background-img" style="--bg-image: url('Paysages/Paysage_Bretagne.jpg');">
+    <h1>Oiseaux les plus communs de Bretagne</h1>
+      <div class="scroll-down-arrow" onclick="scrollToContent()">
+        <div class="arrow"></div>
+      </div>
+          </div>
+
+  <script src="regions.js"></script>
+<br>
+  <div class="introduction" data-aos="fade-up">
+    <h2>À propos de la région Auvergne-Rhône-Alpes</h2>
+    <p>L'Auvergne-Rhône-Alpes est une région située dans le centre-est de la France. Connue pour sa diversité géographique, cette région abrite une grande variété d'habitats naturels, des montagnes majestueuses aux vastes plaines, en passant par les lacs et les rivières pittoresques.</p>
+    <p>Grâce à sa topographie variée et à son climat favorable, l'Auvergne-Rhône-Alpes est un lieu de prédilection pour de nombreuses espèces d'oiseaux, en particulier les rapaces. Ces majestueux prédateurs dominent les cieux de la région et sont souvent observés dans leur habitat naturel.</p>
+    <p>Découvrez ci-dessous quelques-uns des oiseaux les plus emblématiques de l'Auvergne-Rhône-Alpes.</p>
+    <div class="highlights">
+        <h3>Ce que vous trouverez dans cette région :</h3>
+        <ul>
+            <li>Rapaces tels que l'Aigle royal et le Faucon pelerin</li>
+            <li>Oiseaux des plaines et des forêts comme le Grand corbeau</li>
+            <li>Oiseaux aquatiques comme le Courlis cendré</li>
+        </ul>
+    </div>
+  </div>
+
+  <br>
+
+  <div id="all-bird" data-aos="fade-up"> 
+    <div class="bird-card" onclick="toggleCard('Accenteur mouchet', 'Prunellidés', '14 cm', '20 g', 'L\'espèce a un spectre d\'habitat assez large. Il occupe toutes sortes de boisements, feuillus ou sempervirents, pourvu qu\'ils soient suffisamment clairièrés, mais son habitat optimal est la forêt avec conifères.', 'L\'Accenteur mouchet est un oiseau discret menant une vie cachée dans les fourrés qu\'il fréquente. Mais pour peu qu\'il se sente en sécurité, on pourra l\'observer à loisir lorsqu\'il se déplace au sol en milieu ouvert à la recherche de nourriture, car il n\'est pas spécialement farouche.')">
+      <div class="bird-card-inner">
+          <img src="../../styles/Oiseaux/Accenteur_mouchet.jpg" alt="Accenteur mouchet">
+          <div class="bird-name">Accenteur mouchet</div>
+          <div class="bird-info">
+            La famille des Prunellidés regroupe une douzaine d'espèces d'oiseaux présentes principalement dans le domaine paléarctique, avec une espèce notable dans le sud de la péninsule arabique. 
+            Les accenteurs, petits passereaux d'environ 15 centimètres de long, arborent un plumage discret, généralement brun avec parfois des nuances orange sur la poitrine. Ils affectionnent les milieux ouverts en altitude ou à latitude élevée, où ils fouillent le sol à la recherche de nourriture. 
+            Leur reproduction, souvent complexe, se déroule au sol ou dans des buissons à faible hauteur, sans jamais choisir les arbustes élevés ou les arbres. Certaines espèces adoptent un comportement grégaire pendant la saison de reproduction, mais cette tendance n'est pas universelle. 
+            De plus, leur régime migratoire varie en fonction de l'environnement. L'Accenteur mouchet, espèce la plus adaptable, montre une proximité avec l'homme et dépend de la gestion des habitats.
+          </div>
+        </div>
+      </div>
+
+      <div class="bird-card" onclick="toggleCard('Aigle Royal', 'Accipitridés', '90 cm', '3630 à 6700 g', 'Grands espaces ouverts où il peut chasser des proies de grande taille', 'L\'Aigle royal est un rapace puissant qui se comporte en superprédateur. La majorité d\'entre eux sont sédentaires et occupent un territoire défendu à longueur d\'année.')">
+        <div class="bird-card-inner">
+          <img src="../../styles/Oiseaux/Aigle_royal.jpg" alt="Aigle Royal">
+          <div class="bird-name">Aigle royal</div>
+          <div class="bird-info">
+            Les Accipitridés sont une famille de rapaces diurnes présente sur tous les continents, excepté l'Antarctique. Leur taille va de petite à grande.
+Ils ont en commun un dimorphisme sexuel(le mâle étant plus petit que la femelle), une vision binoculaire importante (permettant un repérage efficace des proies), un bec dont la mâchoire supérieure est recourbée en crochet apte à déchirer des chairs, des pattes munies de 4 doigts aux ongles le plus souvent longs, recourbés et acérés, capables de capturer une proie.
+Il y a une exception au régime carnivore de la famille, celle du Vautour palmiste qui consomme les fruits du palmier à huile.
+Ils sont le plus souvent monogames. Le poussin est nidicole et couvert de duvet.
+Ils sont situés en bout de chaines alimentaires et près de 12% des espèces sont en très mauvais état de conservation.
+          </div>
+        </div>
+      </div>
+
+      <div class="bird-card" onclick="toggleCard('Cygne tuberculé', 'Accipitridés', '160 cm', '9000 à 13000 g', 'À l\'état sauvage ou en semi-liberté, le Cygne tuberculé a besoin d\'un territoire assez vaste (1,5 à 4 hectares), qui doit inclure tout ou partie d\'un plan d\'eau douce pour l\'alimentation et la reproduction, soit les marais, les plans d\'eau (lacs et étangs) et les parties favorables des cours d\'eau.', 'C\'est un oiseau bien connu, pas du tout timide. Il peut devenir agressif, surtout au moment de la nidification. Il a une démarche assez lourdaude et il se dandine. En hiver, le Cygne tuberculé se nourrit de jour, en plongeant sa tête dans l\'eau avec le cou tendu, quand la profondeur dépasse 45 cm, afin d\'aller chercher les végétaux aquatiques au fond. Les jeunes consomment la végétation coupée par les parents. Il utilise des signes évidents pour communiquer avec ses postures. Durant la saison de nidification, le mâle se montre hautement territorial et agressif.')">
+        <div class="bird-card-inner">
+          <img src="../../styles/Oiseaux/Cygne_tuberculé.jpg" alt="Cygne tuberculé">
+          <div class="bird-name">Cygne tuberculé</div>
+          <div class="bird-info">
+            Le Cygne tuberculé est le plus gros de nos anatidés. Sa silhouette nous est familière car c'est un oiseau très présent dans notre environnement, naturel ou non.
+L'adulte a le plumage entièrement blanc de neige. Son bec est orange-rouge vif avec l'onglet et les narines noirs. Souvent un peu de rose vers l'onglet. Noir également le triangle entre l'œil et le bec. Les pattes sont noires elles aussi. Le mâle nuptial a un gros tubercule noir à la base du bec devant le front. La femelle l'a réduit.
+          </div>
+        </div>
+      </div>
+
+      <div class="bird-card" onclick="toggleCard('Cigogne blanche', 'Ciconiidés', '102 cm', '3000 à 3500 g', 'La Cigogne blanche est une espèce des milieux ouverts couverts de végétation herbacée, surtout sur substrat humide, mais aussi en contexte sec.', 'La Cigogne blanche est un oiseau bien connu du grand public (n\'est-ce pas elle en effet qui apporte les bébés ?). C\'est un oiseau qui ne passe pas inaperçu, est facile à reconnaître, n\'est pas très craintif et fait partie de l\'histoire humaine en bien des régions, par exemple en Alsace où les claquements de bec des cigognes font partie du paysage sonore de bien des villages. En effet, les adultes au nid ont l\'habitude de se saluer mutuellement en claquant bruyamment du bec.')">
+        <div class="bird-card-inner">
+          <img src="../../styles/Oiseaux/Cigogne_blanche.jpg" alt="Cigogne blanche">
+          <div class="bird-name">Cigogne blanche</div>
+          <div class="bird-info">
+            La Cigogne blanche est un grand échassier au plumage blanc et noir, sans dimorphisme sexuel. C'est un oiseau bien connu et qui ne passe pas inaperçu dans son environnement.
+Le plumage de contour et la queue sont blancs tandis que les ailes sont bicolores. Les rémiges, l'alule, les grandes couvertures et les couvertures primaires supérieures sont noires, le reste blanc. En vue supérieure d'une cigogne en vol, on voit que le noir de l'aile n'est pas homogène, mais que les rémiges primaires internes et les secondaires montrent un net éclaircissement le long du rachis, d'où un aspect strié typique de l'arrière de l'aile. En période nuptiale, des plumes blanches allongées apparaissent à la base du cou.
+Le bec, fort et en poignard, est rouge sang, de même que les longues pattes. À la base inférieure du bec, la zone gulaire dénudée est rouge et noire.
+          </div>
+        </div>
+      </div>
+
+      <div class="bird-card" onclick="toggleCard('Cygne tuberculé', 'Accipitridés', '160 cm', '9000 à 13000 g', 'À l\'état sauvage ou en semi-liberté, le Cygne tuberculé a besoin d\'un territoire assez vaste (1,5 à 4 hectares), qui doit inclure tout ou partie d\'un plan d\'eau douce pour l\'alimentation et la reproduction, soit les marais, les plans d\'eau (lacs et étangs) et les parties favorables des cours d\'eau.', 'C\'est un oiseau bien connu, pas du tout timide. Il peut devenir agressif, surtout au moment de la nidification. Il a une démarche assez lourdaude et il se dandine. En hiver, le Cygne tuberculé se nourrit de jour, en plongeant sa tête dans l\'eau avec le cou tendu, quand la profondeur dépasse 45 cm, afin d\'aller chercher les végétaux aquatiques au fond. Les jeunes consomment la végétation coupée par les parents. Il utilise des signes évidents pour communiquer avec ses postures. Durant la saison de nidification, le mâle se montre hautement territorial et agressif.')">
+        <div class="bird-card-inner">
+          <img src="../../styles/Oiseaux/Cygne_tuberculé.jpg" alt="Cygne tuberculé">
+          <div class="bird-name">Cygne tuberculé</div>
+          <div class="bird-info">
+            Le Cygne tuberculé est le plus gros de nos anatidés. Sa silhouette nous est familière car c'est un oiseau très présent dans notre environnement, naturel ou non.
+L'adulte a le plumage entièrement blanc de neige. Son bec est orange-rouge vif avec l'onglet et les narines noirs. Souvent un peu de rose vers l'onglet. Noir également le triangle entre l'œil et le bec. Les pattes sont noires elles aussi. Le mâle nuptial a un gros tubercule noir à la base du bec devant le front. La femelle l'a réduit.
+          </div>
+        </div>
+      </div>
+
+      <div class="bird-card" onclick="toggleCard('Faucon pelerin', 'Falconidés', '50 cm', '750 à 1300 g', 'Le Faucon pèlerin est un oiseau rupestre. Il utilise les falaises aussi bien comme point d\'observation élevé pour la chasse que pour nicher.', 'Le Faucon pèlerin est remarquable par ses capacités de vol. En période nuptiale, les deux partenaires se livrent à des jeux aériens : poursuites, piqués vertigineux, loopings, tout à fait spectaculaires. Lors de piqués verticaux depuis une très grande hauteur, sa vitesse peut dépasser 350 km/h.')">
+        <div class="bird-card-inner">
+          <img src="../../styles/Oiseaux/Faucon_pelerin.jpg" alt="Faucon pelerin">
+          <div class="bird-name">Faucon pelerin</div>
+          <div class="bird-info">
+            Les Falconidés sont une famille de rapaces diurnes de taille petite à moyenne, comportant les caracaras et les faucons. Falco vient du latin "falx" qui désigne la faux. Il fait référence aux ailes falciformes des faucons, longues, étroites et pointues. Les Falconiformes ont été séparés systématiquement des autres rapaces diurnes, les Accipitriformes, près desquels ils étaient classés auparavant. A présent, ils voisinent avec les Psittaciformes (perroquets au sens large) avec lesquels ils ont en commun le bec crochu. On les trouve dans tous les habitats, mais ce sont en moyenne plutôt des prédateurs agiles de milieux ouverts où ils capturent leurs proies grâce à un ongle postérieur développé. Certains d'entre eux sont utilisés pour la chasse au vol, activité qui porte le nom de fauconnerie.
+          </div>
+        </div>
+      </div>
+
+      <div class="bird-card" onclick="toggleCard('Grèbe huppé', 'Podicipédidés', '61 cm', '750 à 1200 g', 'Le Grèbe huppé est un oiseau qui se trouve dans une grande variété de milieux aquatiques. Qu\'elles soient artificielles ou non, il a une préférence pour les étendues d\'eau douce bordées de végétation émergente et submergée abondante.', 'Le Grèbe huppé est célèbre pour ses impressionnantes parades nuptiales. Dès février-mars, les couples se forment et leurs danses dignes du Bolchoï peuvent débuter. Les partenaires se font face, cou tendu, étalent leur collerette, se saluent avec des mouvements de tête tout en émettant une série de caquètements.')">
+        <div class="bird-card-inner">
+          <img src="../../styles/Oiseaux/grebe_huppé.jpg" alt="Grèbe huppé">
+          <div class="bird-name">Grèbe huppé</div>
+          <div class="bird-info">
+            Le Grèbe huppé est le plus grand de nos grèbes européens. C'est un oiseau plongeur piscivore qui fréquente les plans d'eau bordés de végétation et se distingue aisément par son allure gracieuse et élancée. De loin, son long cou mince et blanc contraste avec sa tête triangulaire foncée.
+            Une caractéristique marquante réside dans sa calotte noire ornée d'une crête huppée à l'origine de son nom. Les plumes noirâtres qui la composent sont plus ou moins longues en fonction de l'âge de l'individu et de la période. Elles s'élèvent de manière majestueuse au sommet de sa tête et deviennent particulièrement visibles pendant la saison de reproduction.
+          </div>
+        </div>
+      </div>
+
+      <div class="bird-card" onclick="toggleCard('Grand corbeau', 'Corvidés', '69 cm', '690 à 1600 g', 'Le Grand Corbeau est un généraliste, habitant des milieux variés allant de la toundra et de la forêt boréale au nord à des milieux arides ou semi-arides au sud en passant par la steppe, les moyennes et hautes montagnes, les espaces littoraux, les espaces agricoles, etc.', 'Chez le Grand Corbeau, il est un comportement fréquent dans la famille, le grégarisme, la tendance au regroupement, le jour pour vaquer aux occupations quotidiennes, la nuit pour dormir ensemble en dortoirs. Ce comportement ne s\'observe chez les adultes qu\'en dehors de la période de reproduction pendant laquelle ils défendent un territoire.')">
+        <div class="bird-card-inner">
+          <img src="../../styles/Oiseaux/Grand_Corbeau.jpg" alt="Grand corbeau">
+          <div class="bird-name">Grand corbeau</div>
+          <div class="bird-info">
+            Les Corvidés sont des passereaux de taille moyenne à grande. C'est dans cette famille que se trouvent les plus grandes espèces (L max. 69 cm). Le bec est fort et les pattes robustes.
+            Une majorité d'entre eux ont un plumage sobre, noir, gris ou blanc et noir, souvent avec des reflets. Mais des oiseaux vivement colorés, de vert, bleu, jaune, s'observent aussi.
+            On les trouve sur tous les continents, excepté le continent antarctique et le sud du continent sud-américain.
+            Ils occupent tous les habitats, du désert à la forêt. Certains se sont bien adaptés aux milieux urbanisés. Ce sont des oiseaux réputés "intelligents", que l'on peut apprivoiser assez facilement et qui sont capables de jouer.
+          </div>
+        </div>
+      </div>
+
+      <div class="bird-card" onclick="toggleCard('Milan royal', 'Accipitridés', '66 cm', '800 à 1600 g', 'Le Milan royal a deux exigences pour être présent en tant que nicheur. Il a tout d\'abord besoin d\'espaces très ouverts pour la chasse à vue avec capture au sol.', 'Les milans se comportent en vol un peu comme les vautours. Comme eux, ils cerclent longuement au-dessus de leur domaine en utilisant de la même façon les courants ascendants. Ils planent aisément en recourant rarement au vol battu quand le temps s\'y prête. Ils utilisent leur queue étalée, très mobile, de façon unique dans le monde des rapaces.')">
+        <div class="bird-card-inner">
+          <img src="../../styles/Oiseaux/milan_royal.jpg" alt="Milan royal">
+          <div class="bird-name">Milan Royal</div>
+          <div class="bird-info">
+            Les Accipitridés sont une famille de rapaces diurnes présente sur tous les continents, excepté l'Antarctique. Leur taille va de petite à grande.
+            Ils ont en commun un dimorphisme sexuel(le mâle étant plus petit que la femelle), une vision binoculaire importante (permettant un repérage efficace des proies), un bec dont la mâchoire supérieure est recourbée en crochet apte à déchirer des chairs, des pattes munies de 4 doigts aux ongles le plus souvent longs, recourbés et acérés, capables de capturer une proie.
+            Il y a une exception au régime carnivore de la famille, celle du Vautour palmiste qui consomme les fruits du palmier à huile.
+            Ils sont le plus souvent monogames. Le poussin est nidicole et couvert de duvet.
+            Ils sont situés en bout de chaines alimentaires et près de 12% des espèces sont en très mauvais état de conservation.
+          </div>
+        </div>
+      </div>
+
+      <div class="bird-card" onclick="toggleCard('Vautour fauve', 'Accipitridés', '110 cm', '8000 à 11000 g', 'Le vautour fauve fréquente les paysages ouverts avec falaises et dénivelés importants. Ceci correspond à ce que l\'on pourrait appeler région de moyenne montagne. Il apprécie les climats chauds et ensoleillés, aussi peut-on fréquemment l\observer sur les corniches, les rebords des failles et dans les cavernes des massifs méditerranéens.', 'Les vautours fauves vivent en colonies et prospectent en grandes orbes. Quittant la colonie dès l\'aurore, ils ne la réintègrent qu\'en fin d\'après-midi. Les couples se forment à vie. Les adultes sont sédentaires tandis que les juvéniles et les immatures entament une migration à partir de l\'automne vers l\'Afrique et jusqu\'au sud du Sahara.')">
+        <div class="bird-card-inner">
+          <img src="../../styles/Oiseaux/Vautour_Fauve.jpg" alt="Vautour fauve">
+          <div class="bird-name">Vautour fauve</div>
+          <div class="bird-info">
+            Les Accipitridés sont une famille de rapaces diurnes présente sur tous les continents, excepté l'Antarctique. Leur taille va de petite à grande.
+            Ils ont en commun un dimorphisme sexuel(le mâle étant plus petit que la femelle), une vision binoculaire importante (permettant un repérage efficace des proies), un bec dont la mâchoire supérieure est recourbée en crochet apte à déchirer des chairs, des pattes munies de 4 doigts aux ongles le plus souvent longs, recourbés et acérés, capables de capturer une proie.
+            Il y a une exception au régime carnivore de la famille, celle du Vautour palmiste qui consomme les fruits du palmier à huile.
+            Ils sont le plus souvent monogames. Le poussin est nidicole et couvert de duvet.
+            Ils sont situés en bout de chaines alimentaires et près de 12% des espèces sont en très mauvais état de conservation.
+          </div>
+        </div>
+      </div>
+    </div>
+        
+    <div id="bird-modal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="bird-name"></h2>
+        <div id="bird-description"></div>
+    <br>
+        <div class="rectangle1">
+          <table>
+            <tr>
+              <td></td>
+              <td id="bird-name-cell"></td>
+            </tr>
+          </table>
+        </div>
+    
+        <div class="rectangle2">
+          <table>
+            <tr>
+              <td>Famille</td>
+              <td id="bird-family-cell"></td>
+            </tr>
+            <tr>
+              <td>Taille moyenne</td>
+              <td id="bird-size-cell"></td>
+            </tr>
+            <tr>
+              <td>Poids moyen</td>
+              <td id="bird-weight-cell"></td>
+            </tr>
+          </table>
+        </div>
+        
+        <div class="rectangle3">
+          <table>
+            <tr>
+              <td></td>
+              <td id="bird-habitat-cell"></td>
+            </tr>
+          </table>
+        </div>
+    
+        <div class="rectangle4">
+          <table>
+            <tr>
+              <td></td>
+              <td id="bird-description-cell"></td>
+            </tr>
+          </table>
+        </div>
+    
+      </div>
+    </div>
+<br>
+    <div class="bird-observation-section" data-aos="fade-up">
+      <h2>Où observer les oiseaux en Auvergne-Rhône-Alpes</h2>
+      <ul>
+        <li>
+          <h3>Parcs naturels et réserves ornithologiques</h3>
+          <p>Afin de d'oberver le plus d'oiseaux sans être dérangé par les bruits environnants, n'hésitez pas à aller dans des réserves naturelles ou même dans des parcs. Mais attention, certaines réserves naturelles sont privées et vous n'avez pas le droit d'y aller sans autorisation. C'est pour ne pas déranger les oiseaux ni même détruire leurs espaces d'habitation. N'hésitez pas à vous rapprocher de certaines associations telles que la LPO qui organisent régulièrement des sorties dans ces réserves. </p>
         </li>
         <li>
-            <a>Contacts</a>
-            <ul class="dropdown">
-                <li><a href="../cv_nadya.html">Nadezhda ZHUKOVA</a></li>
-                <li><a href="../cv_theo.html">Théo SERRALTA</a></li>
-            </ul>
+          <h3>Zones humides et lacs</h3>
+          <p>Les lacs et les zones humides sont de très bons endroits pour observer les oiseaux marins. Deplus vous pourrez vous y balader en famille ou entre amis tout en profitant de la beauté de ces paysages. Alors surtout, n'oubliez pas vos jumelles !</p>
         </li>
-    </ul>
-</nav>
+        <li>
+          <h3>Conseils de lieux d'observation</h3>
+          <ul>
+            <li>
+              <strong>Le Site de Motz en Savoie :</strong> Un sentier ludique et pédagogique.
+            </li>
+            <li>
+              <strong>Le Lac du Bourget en Savoie :</strong> Une tour d’observation nichée au cœur de la nature.
+            </li>
+            <li>
+              <strong>L’Étang de Crosagny en Haute-Savoie :</strong> Un parc des oiseaux protégé Natura 2000.
+            </li>
+            <li>
+              <strong>Parc des Oiseaux dans les Dombes :</strong> Tous les oiseaux du monde en une journée.
+            </li>
+            <li>
+              <strong>Observer les oiseaux en bord Loire :</strong> Entre musée et observation.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
 
-
-<div class="bird-container bird-container-one">
-  <div class="bird bird-one"></div>
-</div>        
-<div class="bird-container bird-container-two">
-  <div class="bird bird-two"></div>
-</div>  
-<div class="bird-container bird-container-three">
-  <div class="bird bird-three"></div>
-</div> 
-<div class="bird-container bird-container-four">
-  <div class="bird bird-four"></div>
-</div>
-
-<div class="night-toggle" onClick="switchMode()">
-  <div id="moon" class="moon"></div>
-</div>
-
-<div id="sky"></div>
+    <footer class="footer" data-aos="fade-up">
+      <div class="container">
+          <div class="footer-content">
+              <div class="footer-info">
+                  <h3 class="footer-title">À propos de nous</h3>
+                  <p class="footer-text">Nous sommes passionnés par les oiseaux et dédiés à partager des connaissances et à encourager l'appréciation pour ces magnifiques créatures.</p>
+    
+              </div>
+              <div class="footer-links">
+                <h3 class="footer-title">Liens utiles</h3>
+                <ul class="footer-list">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                    <li><a href="sommaire.html">Sommaire</a></li>
+                    <li><a href="https://www.lpo.fr/">LPO</a></li>
+                    <li><a href="cv_nadya.html">Nadezhda ZHUKOVA</a></li>
+                    <li><a href="cv_theo.html">Théo SERRALTA</a></li>
+                </ul>
+                </div>
+              <div class="footer-form">
+                  <h3 class="footer-title">Fournir un feedback</h3>
+                  <form id="feedback-form">
+                      <div class="form-group">
+                          <input class="input-field" type="text" name="name" placeholder="Votre nom" required>
+                      </div>
+                      <div class="form-group">
+                          <input class="input-field" type="email" name="email" placeholder="Votre adresse e-mail" required>
+                      </div>
+                      <div class="form-group">
+                          <textarea class="textarea-field" name="message" placeholder="Votre message" required></textarea>
+                      </div>
+                      <div class="form-group">
+                          <button type="submit" class="submit-btn">Soumettre</button>
+                      </div>
+                  </form>
+              </div>
+          </div>
+        <div class="footer-cr">
+            <hr class="footer-line">
+            <p class="footer-text-cr">&copy; 2024 N. Zhukova & T. Serralta. Tous droits réservés.</p>
+            <hr class="footer-line">
+        </div> 
+      </div> 
+    </footer>
 
 </body>
+
 </html>
