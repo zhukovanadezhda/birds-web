@@ -15,7 +15,7 @@ div{
 }
 .bl_area {
 	width: 20%;
-	background: #FFFFFF;
+	background: #ffffff86;
 	box-shadow: 5px 4px 18px -5px rgba(0, 0, 0, 0.73);
 	border-radius: 10px;
 	text-align: center;
@@ -28,7 +28,7 @@ div{
 }
 .br_area {
 	width: 60%;
-	background: #FFFFFF;
+	background: #ffffff86;
 	box-shadow: 5px 4px 18px -5px rgba(0, 0, 0, 0.73);
 	border-radius: 15px;
 	padding-bottom: 15px;
@@ -95,7 +95,7 @@ hr{
 	color:gray;
 	font-size: 22px;
 }
-.b_deatil,.b_detailr{
+.b_deatil, .b_detailr{
 	width: 100%;
 	text-align: left;
 }
@@ -250,3 +250,6 @@ hr{
 	line-height: 149%;
 	margin-bottom: 0;
 }
+
+
+
