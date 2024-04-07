@@ -149,7 +149,6 @@ nav ul li:hover .dropdown {
     background-size: cover;
     background-position: center;
     background-attachment: fixed; /* Ensures the background doesn't scroll */
-    z-index: 99; /* Set a z-index to position the overlay below the content */
 }
 
 
