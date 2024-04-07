@@ -2225,6 +2225,7 @@ z-index: 999999;
 @media screen and (max-width: 1800px) {
     .main-content {
         flex-direction: column;
+        margin-top: 300px;
     }
 
     .cart-container {
