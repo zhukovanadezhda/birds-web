@@ -52,83 +52,105 @@
       <div id="moon" class="moon"></div>
     </div>
 
-
-
-<div class="bio_area">
-  <div class="bl_area">
-    <img src="../styles/images/theo.png" alt="img">
-    <h3 class="t_color t_center">Théo <span>SERRALTA</span></h3>
-    <p class="t_color t_center pm">Bioinformaticien</p>
-    <div class="social_links">
-      <a href="#" class="cr_bg"><i class="fa-solid fa-envelope"></i></a>
-      <a href="#" class="cr_bg"><i class="fa-brands fa-linkedin"></i></a>
-      <a href="#" class="cr_bg"><i class="fa-brands fa-github"></i></a>
-    </div>
-  </div>
-  <div class="br_area">
-      <button class="cv_button" onclick="showPage('pageAbout')">About</button>
-      <button class="cv_button" onclick="showPage('pageSkills')">Skills</button>
-      <button class="cv_button" onclick="showPage('pageEducation')">Education</button>
-      <button class="cv_button" onclick="showPage('pageExperience')">Experience</button>
-      <button class="cv_button" onclick="showPage('pageProjects')">Projets</button>
-      <div id="pageAbout" class="cv_page">
-            <h3 class="t_color">
-            Étudiant en Master de Bioinformatique à l'<a href="https://u-paris.fr/">Université Paris Cité</a><br>
-            Alternant en bioinformatique à 
-            </h3>
-            <div class="t_color pm">
-
-              <div class="details">
-                
-                <div class="left-column">
-                  <h3><i class="fa-solid fa-computer"></i> Intérêts pro :</h3>
-                  <h3><i class="fa-solid fa-palette"></i> Intérêts perso :</h3>
-                  <h3><i class="fa-solid fa-language"></i> Langues : </h3>
-                </div>
-
-                <div class="right-column">
-                  <p> </p>
-                  <p> </p>
-                  <p> </p>
-                </div>
-              </div>
-
-              <h3 class="t_color t_center">❓Choisissez le mensonge 🤔</h3>
-              
-              <div class="button-row">
-                <button onclick="checkAnswer(this)">🤝<br> J'ai organisé une collecte de dons à 14 ans</button>
-                <button onclick="checkAnswer(this)">🥇<br> Je progresse très vite dans les sports</button>
-                <button onclick="checkAnswer(this)" >🥋 <br> J'ai fait les championnats de France de karaté combat</button>
-                <button onclick="checkAnswer(this)" id="correctAnswer">🐾 <br>  Je gère une association des animaux</button>
-                <button onclick="checkAnswer(this)">🤗 <br> Je me suis investi des années pour aider des personnes</button>
-              </div>
-              <div class="feedback"></div>
-            </div>
+    <div class="bio_area">
+      <div class="bl_area">
+        <img src="../styles/images/theo.png" alt="img">
+        <h3 class="t_color t_center">Théo <span>SERRALTA</span></h3>
+        <p class="t_color t_center pm">Bioinformaticien</p>
+        <div class="social_links">
+          <a href="mailto:theo.serralta@gmail.com" class="cr_bg"><i class="fa-solid fa-envelope"></i></a>
+          <a href="https://www.linkedin.com/in/theo-serralta-7341751a3/" class="cr_bg"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://github.com/TheoS71" class="cr_bg"><i class="fa-brands fa-github"></i></a>
+        </div>
       </div>
-  <div id="pageSkills" class="cv_page" style="display: none;">
-    <!-- Content for Skills page -->
-    <!-- You can add content specific to the Skills page here -->
-    <!-- Add content specific to Skills page -->
-  <div id="pageEducation" class="cv_page" style="display: none;">
-    <!-- Content for Education page -->
-    <!-- You can add content specific to the Education page here -->
-    <!-- Add content specific to Education page -->
-  </div>
-  <div id="pageExperience" class="cv_page" style="display: none;">
-    <!-- Content for Experience page -->
-    <!-- You can add content specific to the Experience page here -->
-    <!-- Add content specific to Experience page -->
-  </div>
-  <div id="pageProjects" class="cv_page" style="display: none;">
-      <!-- Content for Skills page -->
-      <!-- You can add content specific to the Skills page here -->
-      <!-- Add content specific to Skills page -->
-  </div>
-</div>
-  </div>
-</div>
-
-<div id="sky"></div>
+      <div class="br_area">
+          <button class="cv_button" onclick="showPage('pageAbout')">About</button>
+          <button class="cv_button" onclick="showPage('pageSkills')">Skills</button>
+          <button class="cv_button" onclick="showPage('pageEducation')">Education</button>
+          <button class="cv_button" onclick="showPage('pageExperience')">Experience</button>
+          <button class="cv_button" onclick="showPage('pageProjects')">Projets</button>
+          <div id="pageAbout" class="cv_page">
+                <h3 class="t_color">
+                Étudiant en Master de Bioinformatique à l'<a href="https://u-paris.fr/">Université Paris Cité</a><br>
+                Alternant en bioinformatique au CHU de Dijon dans l'<a href="https://www.gad-bfc.org/">équipe GAD</a>
+                </h3>
+                <div class="t_color pm">
+    
+                  <div class="details">
+                    
+                    <div class="left-column">
+                      <h3><i class="fa-solid fa-computer"></i> Intérêts pro :</h3>
+                      <h3><i class="fa-solid fa-palette"></i> Intérêts perso :</h3>
+                      <h3><i class="fa-solid fa-language"></i> Langues : </h3>
+                    </div>
+    
+                    <div class="right-column">
+                      <p> Mathématiques, Informatique, Statistique, Biologie, Management, Santé, NGS, IA</p>
+                      <p> Nature, Oiseaux, Karaté, Culture générale, Sorties entre amis</p>
+                      <p> Anglais, Francais, Russe, (je sais reconnaître quel oiseau chante)</p>
+                    </div>
+                  </div>
+    
+                  <h3 class="t_color t_center">❓Choisissez le mensonge 🤔</h3>
+                  
+                  <div class="button-row">
+                    <button onclick="checkAnswer(this)">🤝<br> J'ai organisé une collecte de dons à 14 ans</button>
+                    <button onclick="checkAnswer(this)">🚗<br> Je sais faire des créneaux les yeux fermés</button>
+                    <button onclick="checkAnswer(this)" >🥋 <br> J'ai fait les championnats de France de karaté combat</button>
+                    <button onclick="checkAnswer(this)" id="correctAnswer">🐾 <br>  Je gère une association des animaux</button>
+                    <button onclick="checkAnswer(this)">🤗 <br> Je me suis investi des années pour aider des personnes</button>
+                  </div>
+                  <div class="feedback"></div>
+                </div>
+          </div>
+      <div id="pageSkills" class="cv_page" style="display: none;">
+        <!-- Content for Skills page -->
+        <!-- You can add content specific to the Skills page here -->
+        <!-- Add content specific to Skills page -->
+        <p>testtttttttttttttttttttttttttttttttt</p>
+      </div>
+      <div id="pageEducation" class="cv_page" style="display: none;">
+        <h3 class="t_color">Formation</h3>
+        
+        <div class="education-item">
+          <span class="education-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+          <h4>Master 1 en Bioinformatique</h4>
+          <p><span class="education-info">Université Paris Cité</span> - <span class="education-date">2023-aujourd'hui</span></p>
+        </div>
+        
+        <div class="education-item">
+          <span class="education-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+          <h4>Bachelor of Science degree in Biology of Organisms</h4>
+          <p><span class="education-info">University of Burgundy</span> - <span class="education-date">2019-2023</span></p>
+        </div>
+      
+        <div class="education-item">
+          <span class="education-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+          <h4>Diplôme du Baccalauréat en Sciences de la Vie et de la Terre</h4>
+          <p><span class="education-info">Lycée scientifique Niepce</span> - <span class="education-date">2016-2019</span></p>
+        </div>
+      
+        <div class="education-item">
+          <span class="education-icon"><i class="fa-solid fa-book"></i></span>
+          <h4>Auto-formation (OpenClassroom) - Python</h4>
+          <p><span class="education-info">2022</span></p>
+        </div>
+      </div>
+      <div id="pageExperience" class="cv_page" style="display: none;">
+        <!-- Content for Experience page -->
+        <!-- You can add content specific to the Experience page here -->
+        <!-- Add content specific to Experience page -->
+        <p>testtttttttttttttttttttttttttttttttt</p>
+      </div>
+      <div id="pageProjects" class="cv_page" style="display: none;">
+          <!-- Content for Skills page -->
+          <!-- You can add content specific to the Skills page here -->
+          <!-- Add content specific to Skills page -->
+          <p>hvvbvvjvbdj</p>
+      </div>
+    </div>
+      </div>
+    </div>
 
 <footer class="footer">
   <div class="container">
