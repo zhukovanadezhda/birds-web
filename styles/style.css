@@ -2150,27 +2150,6 @@ z-index: 999999;
 
 
 /* Main page */
-@media screen and (max-width: 1900px) {
-    .main-content {
-      flex-direction: column;
-    }
-  
-    .cart-container {
-      width: 100%;
-      margin-right: 0;
-      margin-bottom: 20px; /* Espacement entre les containers */
-    }
-  
-    .info-container {
-      width: 100%;
-    }
-  
-    .description-container {
-      width: 100%;
-    }
-  }
-
-
 .main {
     width: 100%;
     margin: 0 auto;
@@ -2221,7 +2200,7 @@ z-index: 999999;
 .main-title:hover {
     font-variation-settings: "wght" 582; 
     letter-spacing: 3px;
-  }
+}
 
 .main-title span{
     font-size: 15px;
