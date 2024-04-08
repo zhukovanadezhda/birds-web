@@ -1,61 +1,66 @@
 <!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-  <link rel="stylesheet" href="../styles/style.css">
-  <link rel="stylesheet" href="../styles/style_cv.css"> 
-  <link rel="stylesheet" href="../styles/style_regions.css">
-  <script src="https://kit.fontawesome.com/d14e45815f.js" crossorigin="anonymous"></script>
-  <script src="../scripts/script.js"></script>
-  <script src="../scripts/cv.js"></script>
-  <link rel="icon" href="../styles/images/humming-bird.png" type="image/x-icon">
-  <title>CV Nadezhda ZHUKOVA</title>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/style_cv.css"> 
+    <link rel="stylesheet" href="../styles/style_regions.css">
+    <script src="https://kit.fontawesome.com/d14e45815f.js" crossorigin="anonymous"></script>
+    <script src="../scripts/script.js"></script>
+    <script src="../scripts/cv.js"></script>
+    <link rel="icon" href="../styles/images/humming-bird.png" type="image/x-icon">
+    <title>CV Nadezhda ZHUKOVA</title>
+  </head>
 
-</head>
-<body>
+  <body>
 
-  <div class="top-page-container">
-    <nav>
-      <ul>
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="quiz.html">Quiz</a></li>
-          <li><a href="sommaire.html">Sommaire</a></li>
-          <li><a>Associations</a>
-            <ul class="dropdown">
-              <li><a href="https://www.lpo.fr/">LPO</a></li>
-              <li><a href="https://www.oiseaux.net/">Oiseaux.net</a></li>
-              <li><a href="https://www.faune-france.org/">Faune-France</a></li>
-              <li><a href="https://oiseauxdefrance.org/">Oiseaux de France</a></li>
-            </ul>
-          </li>
-          <li>
-              <a class="highlight">Contacts</a>
+    <div class="top-page-container">
+      <!-- Navigation bar -->
+      <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+            <li><a href="sommaire.html">Sommaire</a></li>
+            <li><a>Associations</a>
               <ul class="dropdown">
-                  <li><a href="cv_nadya.html">Nadezhda ZHUKOVA</a></li>
-                  <li><a href="cv_theo.html">Théo SERRALTA</a></li>
+                <li><a href="https://www.lpo.fr/">LPO</a></li>
+                <li><a href="https://www.oiseaux.net/">Oiseaux.net</a></li>
+                <li><a href="https://www.faune-france.org/">Faune-France</a></li>
+                <li><a href="https://oiseauxdefrance.org/">Oiseaux de France</a></li>
               </ul>
-          </li>
-      </ul>
-    </nav>
-  
-    <div class="bird-container bird-container-one">
-      <div class="bird bird-one"></div>
-    </div>        
-    <div class="bird-container bird-container-two">
-      <div class="bird bird-two"></div>
-    </div>  
-    <div class="bird-container bird-container-three">
-      <div class="bird bird-three"></div>
-    </div> 
-    <div class="bird-container bird-container-four">
-      <div class="bird bird-four"></div>
-    </div>
-  
-    <div class="night-toggle" onClick="switchMode()">
-      <div id="moon" class="moon"></div>
+            </li>
+            <li>
+                <a class="highlight">Contacts</a>
+                <ul class="dropdown">
+                    <li><a href="cv_nadya.html">Nadezhda ZHUKOVA</a></li>
+                    <li><a href="cv_theo.html">Théo SERRALTA</a></li>
+                </ul>
+            </li>
+        </ul>
+      </nav>
+
+      <!-- Hummingbird animation -->
+      <div class="bird-container bird-container-one">
+        <div class="bird bird-one"></div>
+      </div>        
+      <div class="bird-container bird-container-two">
+        <div class="bird bird-two"></div>
+      </div>  
+      <div class="bird-container bird-container-three">
+        <div class="bird bird-three"></div>
+      </div> 
+      <div class="bird-container bird-container-four">
+        <div class="bird bird-four"></div>
+      </div>
+
+      <!-- Night mode toggle -->
+      <div class="night-toggle" onClick="switchMode()">
+        <div id="moon" class="moon"></div>
+      </div>
     </div>
 
+    <!-- Biography section -->
     <div class="bio_area">
       <div class="bl_area">
         <img src="../styles/images/theo.png" alt="img">
@@ -67,6 +72,7 @@
           <a href="https://github.com/TheoS71" class="cr_bg"><i class="fa-brands fa-github"></i></a>
         </div>
       </div>
+      <!-- Buttons to switch between different sections -->
       <div class="br_area">
           <button class="cv_button" onclick="showPage('pageAbout')">About</button>
           <button class="cv_button" onclick="showPage('pageSkills')">Skills</button>
@@ -78,24 +84,21 @@
                 Alternant en bioinformatique au CHU de Dijon dans l'<a href="https://www.gad-bfc.org/">équipe GAD</a>
                 </h3>
                 <div class="t_color pm">
-    
+                  <!-- Personal details and interests -->
                   <div class="details">
-                    
                     <div class="left-column">
                       <h3><i class="fa-solid fa-computer"></i> Intérêts pro :</h3>
                       <h3><i class="fa-solid fa-palette"></i> Intérêts perso :</h3>
                       <h3><i class="fa-solid fa-language"></i> Langues : </h3>
                     </div>
-    
                     <div class="right-column">
                       <p> Mathématiques, Informatique, Statistique, Biologie, Management, Santé, NGS, IA</p>
                       <p> Nature, Oiseaux, Karaté, Culture générale, Sorties entre amis</p>
                       <p> Anglais, Francais, Russe, (je sais reconnaître quel oiseau chante)</p>
                     </div>
                   </div>
-    
+                  <!-- Choose the lie quiz -->
                   <h3 class="t_color t_center">❓Choisissez le mensonge 🤔</h3>
-                  
                   <div class="button-row">
                     <button onclick="checkAnswer(this)">🤝<br> J'ai organisé une collecte de dons à 14 ans</button>
                     <button onclick="checkAnswer(this)">🚗<br> Je sais faire des créneaux les yeux fermés</button>
@@ -106,8 +109,7 @@
                   <div class="feedback"></div>
                 </div>
           </div>
-
-
+          <!-- Skills section -->
           <div id="pageSkills" class="cv_page" style="display: none;">
             <h3 class="t_color">Compétences</h3>
         
