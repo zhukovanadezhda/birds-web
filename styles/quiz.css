@@ -12,7 +12,7 @@ body {
 }
 
 img {
-  margin: auto; /* Centrer l'image horizontalement */
+  margin-top: 10px; /* Centrer l'image horizontalement */
   max-width: 100%; /* La largeur maximale de l'image est égale à la largeur de son conteneur */
   max-height: 200px; /* La hauteur maximale de l'image est de 300 pixels */
   border-radius: 10px; /* Coins arrondis de l'image */
