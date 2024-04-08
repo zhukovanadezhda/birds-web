@@ -1,5 +1,6 @@
 div{
-	float: center; 
+	float: none; 
+	margin: 0 auto;
 	box-sizing: border-box;
 }
 .tu{
@@ -71,7 +72,6 @@ div{
 	padding: 10px 14px;
 }
 .cr_bg:hover{
-	border-color: #70ABF3;
 	background: #70ABF3;
 	color:#fff;
 }

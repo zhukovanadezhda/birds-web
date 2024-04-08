@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Special+Elite');
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -84,7 +86,7 @@ nav ul li:hover .dropdown {
 }
 
 .dropdown li a:hover {
-    background-color: none;
+    background-color: transparent;
 }
 
 
@@ -257,7 +259,7 @@ z-index: 999999;
     
 .bird-container-one{
     animation-duration: 15s;
-    animation-delay: 0;
+    animation-delay: 0s;
     z-index: 999;
     position: fixed;
 }
@@ -380,7 +382,7 @@ z-index: 999999;
     height: 125px;
     box-shadow: 0px 0px 20px 0px #fff;
     border-radius: 100%;
-    transform-origin: 0, 0;
+    transform-origin: 0;
     animation-timing-function: linear, linear !important;
     animation-iteration-count: infinite, infinite !important;
     animation-delay: -30s, -30s !important;
@@ -2298,9 +2300,6 @@ z-index: 999999;
     padding: 40px;
     outline: #2c4a7550 solid 3px;
 }
-
-
-@import url('https://fonts.googleapis.com/css?family=Special+Elite');
 
 
 blockquote {
