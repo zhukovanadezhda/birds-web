@@ -70,6 +70,7 @@
   transition: transform 0.3s;
   border-radius: 10px; /* Rendre le cadre rond */
   position: relative; /* Ajout de la position relative pour le contenu de la carte */
+  cursor: pointer;
   perspective: 1000px; /* Ajout de la perspective pour l'effet 3D */
   backface-visibility: hidden; /* Empêche l'affichage du visage arrière */
 }
@@ -112,8 +113,8 @@
   padding: 5px 10px; /* Espacement autour du texte */
   background-color: rgba(0, 0, 0, 0.5); /* Couleur de fond semi-transparente */
   border-radius: 5px; /* Coins arrondis */
+  z-index: 1; /* Ensure the name is above the card */
 }
-
 
 .bird-card:hover .bird-name {
   -moz-transform: scale(-1, 1);
