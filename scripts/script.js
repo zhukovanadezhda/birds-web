@@ -106,3 +106,23 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Call init() function when the page loads
 init();
+
+
+// Function to toggle the menu on mobile view
+var lastScrollTop = 0;
+window.addEventListener('scroll', function() {
+    var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+    var topMenu = document.querySelector('.top-menu');
+    var hamburgerMenu = document.querySelector('#menuToggle');
+    
+    if (currentScroll > lastScrollTop) {
+        // Scrolling down
+        topMenu.style.display = 'none';
+        hamburgerMenu.style.display = 'block';
+    } else {
+        // Scrolling up
+        topMenu.style.display = 'block';
+        hamburgerMenu.style.display = 'none';
+    }
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
+});

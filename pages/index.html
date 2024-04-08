@@ -4,7 +4,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">  
   <link rel="stylesheet" href="../styles/style.css">
-  <script src="../scripts/script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <link rel="icon" href="../styles/images/humming-bird.png" type="image/x-icon">
@@ -13,9 +12,9 @@
 
 <body>
 
-<div class="top-page-container">
-  <nav>
-    <ul>
+  <div class="top-menu">
+    <nav>
+      <ul>
         <li><a href="index.html" class="highlight">Accueil</a></li>
         <li><a href="quiz.html">Quiz</a></li>
         <li><a href="sommaire.html">Sommaire</a></li>
@@ -28,34 +27,65 @@
           </ul>
         </li>
         <li>
-            <a>Contacts</a>
-            <ul class="dropdown">
-                <li><a href="cv_nadya.html">Nadezhda ZHUKOVA</a></li>
-                <li><a href="cv_theo.html">Théo SERRALTA</a></li>
-            </ul>
+          <a>Contacts</a>
+          <ul class="dropdown">
+            <li><a href="cv_nadya.html">Nadezhda ZHUKOVA</a></li>
+            <li><a href="cv_theo.html">Théo SERRALTA</a></li>
+          </ul>
         </li>
-    </ul>
+      </ul>
+    </nav>
+  </div>
+  
+  <nav role="navigation" id="menuToggle">
+    <div>
+      <input type="checkbox" />
+      <span></span>
+      <span></span>
+      <span></span>
+      <ul id="menu">
+        <li><a href="index.html" class="highlight">Accueil</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="sommaire.html">Sommaire</a></li>
+        <li class="has-children">
+          <a>Associations</a>
+          <ul class="dropdown">
+            <li><a href="https://www.lpo.fr/">LPO</a></li><br>
+            <li><a href="https://www.oiseaux.net/">Oiseaux.net</a></li><br>
+            <li><a href="https://www.faune-france.org/">Faune-France</a></li><br>
+            <li><a href="https://oiseauxdefrance.org/">Oiseaux de France</a></li><br>
+          </ul>
+        </li>
+        <li class="has-children">
+          <a>Contacts</a>
+          <ul class="dropdown">
+            <li><a href="cv_nadya.html">Nadezhda ZHUKOVA</a></li>
+            <li><a href="cv_theo.html">Théo SERRALTA</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
   </nav>
+  
+  
+    <div class="bird-container bird-container-one">
+      <div class="bird bird-one"></div>
+    </div>        
+    <div class="bird-container bird-container-two">
+      <div class="bird bird-two"></div>
+    </div>  
+    <div class="bird-container bird-container-three">
+      <div class="bird bird-three"></div>
+    </div> 
+    <div class="bird-container bird-container-four">
+      <div class="bird bird-four"></div>
+    </div>
+  
+    <div class="night-toggle" onClick="switchMode()">
+      <div id="moon" class="moon"></div>
+    </div>
 
-  <div class="bird-container bird-container-one">
-    <div class="bird bird-one"></div>
-  </div>        
-  <div class="bird-container bird-container-two">
-    <div class="bird bird-two"></div>
-  </div>  
-  <div class="bird-container bird-container-three">
-    <div class="bird bird-three"></div>
-  </div> 
-  <div class="bird-container bird-container-four">
-    <div class="bird bird-four"></div>
-  </div>
-
-  <div class="night-toggle" onClick="switchMode()">
-    <div id="moon" class="moon"></div>
-  </div>
-</div>
-
-<div id="sky"></div>
+  <script src="../scripts/script.js"></script>
 
 <br><br><br><br><br><br>
 
