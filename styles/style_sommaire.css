@@ -109,11 +109,12 @@
   backface-visibility: hidden; /* Empêche l'affichage du nom à l'arrière de la carte */
   color: white; /* Couleur du texte */
   font-weight: bold; /* Style du texte */
-  font-size: 18px; /* Taille de la police */
+  font-size: 16px; /* Taille de la police */
   padding: 5px 10px; /* Espacement autour du texte */
   background-color: rgba(0, 0, 0, 0.5); /* Couleur de fond semi-transparente */
   border-radius: 5px; /* Coins arrondis */
-  z-index: 1; /* Ensure the name is above the card */
+  min-width: 90px; /* Largeur minimale du cadre */
+  z-index: 1; /* Assurez-vous que le texte est au-dessus de l'image */
 }
 
 .bird-card:hover .bird-name {
