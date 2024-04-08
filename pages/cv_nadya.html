@@ -1,238 +1,239 @@
 <!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-  <link rel="stylesheet" href="../styles/style.css">
-  <link rel="stylesheet" href="../styles/style_cv.css"> 
-  <link rel="stylesheet" href="../styles/style_regions.css">
-  <script src="https://kit.fontawesome.com/d14e45815f.js" crossorigin="anonymous"></script>
-  <script src="../scripts/script.js"></script>
-  <script src="../scripts/cv.js"></script>
-  <link rel="icon" href="../styles/images/humming-bird.png" type="image/x-icon">
-  <title>CV Nadezhda ZHUKOVA</title>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/style_cv.css"> 
+    <link rel="stylesheet" href="../styles/style_regions.css">
+    <script src="https://kit.fontawesome.com/d14e45815f.js" crossorigin="anonymous"></script>
+    <script src="../scripts/script.js"></script>
+    <script src="../scripts/cv.js"></script>
+    <link rel="icon" href="../styles/images/humming-bird.png" type="image/x-icon">
+    <title>CV Nadezhda ZHUKOVA</title>
+  </head>
 
-</head>
-<body>
+  <body>
 
-  <div class="top-page-container">
-    <nav>
-      <ul>
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="quiz.html">Quiz</a></li>
-          <li><a href="sommaire.html">Sommaire</a></li>
-          <li><a>Associations</a>
-            <ul class="dropdown">
-              <li><a href="https://www.lpo.fr/">LPO</a></li>
-              <li><a href="https://www.oiseaux.net/">Oiseaux.net</a></li>
-              <li><a href="https://www.faune-france.org/">Faune-France</a></li>
-              <li><a href="https://oiseauxdefrance.org/">Oiseaux de France</a></li>
-            </ul>
-          </li>
-          <li>
-              <a class="highlight">Contacts</a>
+    <div class="top-page-container">
+      <!-- Navigation bar -->
+      <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+            <li><a href="sommaire.html">Sommaire</a></li>
+            <li><a>Associations</a>
               <ul class="dropdown">
-                  <li><a href="cv_nadya.html">Nadezhda ZHUKOVA</a></li>
-                  <li><a href="cv_theo.html">Théo SERRALTA</a></li>
-              </ul>
-          </li>
-      </ul>
-    </nav>
-  
-    <div class="bird-container bird-container-one">
-      <div class="bird bird-one"></div>
-    </div>        
-    <div class="bird-container bird-container-two">
-      <div class="bird bird-two"></div>
-    </div>  
-    <div class="bird-container bird-container-three">
-      <div class="bird bird-three"></div>
-    </div> 
-    <div class="bird-container bird-container-four">
-      <div class="bird bird-four"></div>
-    </div>
-  
-    <div class="night-toggle" onClick="switchMode()">
-      <div id="moon" class="moon"></div>
-    </div>
-
-
-<div class="bio_area">
-  <div class="bl_area">
-    <img src="../styles/images/nadya.png" alt="img">
-    <h3 class="t_color t_center">Nadezhda <span>ZHUKOVA</span></h3>
-    <p class="t_color t_center pm">Bioinformaticienne</p>
-    <div class="social_links">
-      <a href="mailto:nadiajuckova@gmail.com" class="cr_bg"><i class="fa-solid fa-envelope"></i></a>
-      <a href="https://www.linkedin.com/in/nadezhdazhukova/" class="cr_bg"><i class="fa-brands fa-linkedin"></i></a>
-      <a href="https://github.com/zhukovanadezhda" class="cr_bg"><i class="fa-brands fa-github"></i></a>
-    </div>
-  </div>
-  <div class="br_area">
-      <button class="cv_button" onclick="showPage('pageAbout')">About</button>
-      <button class="cv_button" onclick="showPage('pageSkills')">Skills</button>
-      <button class="cv_button" onclick="showPage('pageEducation')">Education</button>
-      <button class="cv_button" onclick="showPage('pageExperience')">Experience</button>
-      <div id="pageAbout" class="cv_page">
-            <h3 class="t_color">
-            Étudiante en Master de Bioinformatique à l'<a href="https://u-paris.fr/">Université Paris Cité</a><br>
-            Alternante en bioinformatique à l'<a href="https://ipnp.paris5.inserm.fr/">Institut de Psychiatrie et Neurosciences</a>
-            </h3>
-            <div class="t_color pm">
-
-              <div class="details">
-                
-                <div class="left-column">
-                  <h3><i class="fa-solid fa-computer"></i> Intérêts pro :</h3>
-                  <h3><i class="fa-solid fa-palette"></i> Intérêts perso :</h3>
-                  <h3><i class="fa-solid fa-language"></i> Langues : </h3>
-                </div>
-
-                <div class="right-column">
-                  <p>Statistiques, ML/DL, psychiatrie, analyse de données NGS</p>
-                  <p>Santé mentale, voyages, photographie argentique, ski alpin, jeux sportifs</p>
-                  <p>Anglais, Français, Russe</p>
-                </div>
-              </div>
-
-              <h3 class="t_color t_center">❓Choisissez le mensonge 🤔</h3>
-              
-              <div class="button-row">
-                <button onclick="checkAnswer(this)">🌎 <br> J'ai visité 29 pays</button>
-                <button onclick="checkAnswer(this)">🥇<br> J'ai couru un semi-marathon</button>
-                <button onclick="checkAnswer(this)" id="correctAnswer">👔 <br> J'ai été directrice d'une entreprise</button>
-                <button onclick="checkAnswer(this)">📚 <br> J'ai appris une langue en 6 mois</button>
-                <button onclick="checkAnswer(this)">👩‍🏫 <br> J'ai été prof pendant 7 ans</button>
-              </div>
-              <div class="feedback"></div>
-            </div>
-      </div>
-      <div id="pageSkills" class="cv_page" style="display: none;">
-        <h3 class="t_color">Compétences en Informatique</h3>
-        <ul class="t_color pm">
-          <li><strong>Analyse de données et statistiques :</strong> R, Numpy, Pandas, SciPy, scikit-learn</li>
-          <li><strong>Machine Learning et Deep Learning :</strong> TensorFlow, Keras </li>
-          <li><strong>Base de données :</strong> MySQL/PostgreSQL</li>
-          <li><strong>Programmation :</strong> Python, C, R, Bash</li>
-          <li><strong>Web :</strong> HTML/CSS, PHP, JavaScript</li>
-          <li><strong>Gestion de versions :</strong> Git/GitHub</li>
-          <li><strong>Environnements de développement :</strong> Jupyter, RStudio, Visual Studio Code</li>
-          <li><strong>Autres :</strong> Conda, Snakemake</li>
-        </ul>
-      
-        <h3 class="t_color">Analyse de Données et Statistiques</h3>
-        <ul class="t_color pm">
-          <li>Méthodes descriptives ou exploratoires</li>
-          <li>Méthodes factorielles</li>
-          <li>Visualisations graphiques planes ou multidimensionnelles des données</li>
-          <li>Méthodes de classification hiérarchique ou de partitionnement</li>
-          <li>Méthodes de classification supervisée et non-supervisée</li>
-        </ul>
-
-        <h3 class="t_color">Bioinformatique structurale et génomique</h3>
-      </div>
-      <div id="pageEducation" class="cv_page" style="display: none;">
-          <h3 class="t_color">Formation</h3>
-          
-          <div class="education-item">
-            <div class="education-content">
-              <h4 style="color: black;"><i class="fa-solid fa-graduation-cap"></i> Master 1 en Bioinformatique</h4>
-              <p><span style="font-weight: bold; color: darkslategray;">Université Paris Cité</span> - <span style="font-style: italic; color: darkslategray;">2023-aujourd'hui</span></p>
-            </div>
-          </div>
-          
-          <div class="education-item">
-            <div class="education-content">
-              <h4 style="color: black;"><i class="fa-solid fa-graduation-cap"></i> Licence de Bioinformatique</h4>
-              <p><span style="font-weight: bold; color: darkslategray;">Université Paris Cité</span> - <span style="font-style: italic; color: darkslategray;">2022-2023</span></p>
-            </div>
-          </div>
-
-          <div class="education-item">
-            <div class="education-content">
-              <h4 style="color: black;"><i class="fa-solid fa-graduation-cap"></i> Licence de Bioinformatique</h4>
-              <p><span style="font-weight: bold; color: darkslategray;">Université d'Etat de Moscou</span> - <span style="font-style: italic; color: darkslategray;">2019-2022</span></p>
-            </div>
-          </div>
-
-        </div>
-  
-        <!--Page Experience -->
-        <div id="pageExperience" class="cv_page" style="display: none;">
-          <h3 class="t_color">Expériences</h3>
-      
-          <div class="education-item">
-            <div class="education-content">
-                <h4 style="color: black;"><i class="fa-solid fa-briefcase"></i> Institut de Psychiatrie et Neurosciences de Paris - Alternance Bioinformatique</h4>
-                <p><span style="font-weight: bold; color: darkslategray;">Septembre 2023 - Aujourd'hui</span> / Paris, France</p>
-            </div>
-          </div>
-  
-          <div class="education-item">
-              <div class="education-content">
-                  <h4 style="color: black;"><i class="fa-solid fa-briefcase"></i> Institut Jacques Monod (Camadro Lab) - Stagaire en bioinformatique</h4>
-                  <p><span style="font-weight: bold; color: darkslategray;">Fevrier 2023 - Juillet 2023</span> / Paris, France</p>
-              </div>
-          </div>
-      
-          <div class="education-item">
-              <div class="education-content">
-                  <h4 style="color: black;"><i class="fa-solid fa-briefcase"></i> Institut de la Biologie Chimique et Physique de Moscou  - Stagaire en bioinformatique</h4>
-                  <p><span style="font-weight: bold; color: darkslategray;">Septembre 2020 - Septembre 2021</span> / Moscou, Russie</p>
-              </div>
-          </div>
-
-        </div>  
-
-      </div>
-    </div>
-  </div>
-
-
-<footer class="footer">
-  <div class="container">
-      <div class="footer-content">
-          <div class="footer-info">
-              <h3 class="footer-title">À propos de nous</h3>
-              <p class="footer-text">Nous sommes passionnés par les oiseaux et dédiés à partager des connaissances et à encourager l'appréciation pour ces magnifiques créatures.</p>
-
-          </div>
-          <div class="footer-links">
-            <h3 class="footer-title">Liens utiles</h3>
-            <ul class="footer-list">
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="quiz.html">Quiz</a></li>
-                <li><a href="sommaire.html">Sommaire</a></li>
                 <li><a href="https://www.lpo.fr/">LPO</a></li>
-                <li><a href="cv_nadya.html">Nadezhda ZHUKOVA</a></li>
-                <li><a href="cv_theo.html">Théo SERRALTA</a></li>
-            </ul>
-            </div>
-          <div class="footer-form">
-              <h3 class="footer-title">Fournir un feedback</h3>
-              <form id="feedback-form">
-                  <div class="form-group">
-                      <input class="input-field" type="text" name="name" placeholder="Votre nom" required>
-                  </div>
-                  <div class="form-group">
-                      <input class="input-field" type="email" name="email" placeholder="Votre adresse e-mail" required>
-                  </div>
-                  <div class="form-group">
-                      <textarea class="textarea-field" name="message" placeholder="Votre message" required></textarea>
-                  </div>
-                  <div class="form-group">
-                      <button type="submit" class="submit-btn">Soumettre</button>
-                  </div>
-              </form>
-          </div>
-      </div>
-    <div class="footer-cr">
-        <hr class="footer-line">
-        <p class="footer-text-cr">&copy; 2024 N. Zhukova & T. Serralta. Tous droits réservés.</p>
-        <hr class="footer-line">
-    </div> 
-  </div> 
-</footer>
+                <li><a href="https://www.oiseaux.net/">Oiseaux.net</a></li>
+                <li><a href="https://www.faune-france.org/">Faune-France</a></li>
+                <li><a href="https://oiseauxdefrance.org/">Oiseaux de France</a></li>
+              </ul>
+            </li>
+            <li>
+                <a class="highlight">Contacts</a>
+                <ul class="dropdown">
+                    <li><a href="cv_nadya.html">Nadezhda ZHUKOVA</a></li>
+                    <li><a href="cv_theo.html">Théo SERRALTA</a></li>
+                </ul>
+            </li>
+        </ul>
+      </nav>
 
-</body>
+      <!-- Hummingbird animation -->
+      <div class="bird-container bird-container-one">
+        <div class="bird bird-one"></div>
+      </div>        
+      <div class="bird-container bird-container-two">
+        <div class="bird bird-two"></div>
+      </div>  
+      <div class="bird-container bird-container-three">
+        <div class="bird bird-three"></div>
+      </div> 
+      <div class="bird-container bird-container-four">
+        <div class="bird bird-four"></div>
+      </div>
+
+      <!-- Night mode toggle -->
+      <div class="night-toggle" onClick="switchMode()">
+        <div id="moon" class="moon"></div>
+      </div>
+    </div>
+
+    <!-- Biography section -->
+    <div class="bio_area">
+      <div class="bl_area">
+        <img src="../styles/images/nadya.png" alt="img">
+        <h3 class="t_color t_center">Nadezhda <span>ZHUKOVA</span></h3>
+        <p class="t_color t_center pm">Bioinformaticienne</p>
+        <div class="social_links">
+          <a href="mailto:nadiajuckova@gmail.com" class="cr_bg"><i class="fa-solid fa-envelope"></i></a>
+          <a href="https://www.linkedin.com/in/nadezhdazhukova/" class="cr_bg"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://github.com/zhukovanadezhda" class="cr_bg"><i class="fa-brands fa-github"></i></a>
+        </div>
+      </div>
+      <!-- Buttons to switch between different sections -->
+      <div class="br_area">
+          <button class="cv_button" onclick="showPage('pageAbout')">About</button>
+          <button class="cv_button" onclick="showPage('pageSkills')">Skills</button>
+          <button class="cv_button" onclick="showPage('pageEducation')">Education</button>
+          <button class="cv_button" onclick="showPage('pageExperience')">Experience</button>
+          <div id="pageAbout" class="cv_page">
+                <h3 class="t_color">
+                Étudiante en Master de Bioinformatique à l'<a href="https://u-paris.fr/">Université Paris Cité</a><br>
+                Alternante en bioinformatique à l'<a href="https://ipnp.paris5.inserm.fr/">Institut de Psychiatrie et Neurosciences</a>
+                </h3>
+                <div class="t_color pm">
+                  <!-- Personal details and interests -->
+                  <div class="details">
+                    <div class="left-column">
+                      <h3><i class="fa-solid fa-computer"></i> Intérêts pro :</h3>
+                      <h3><i class="fa-solid fa-palette"></i> Intérêts perso :</h3>
+                      <h3><i class="fa-solid fa-language"></i> Langues : </h3>
+                    </div>
+                    <div class="right-column">
+                      <p>Statistiques, ML/DL, psychiatrie, analyse de données NGS</p>
+                      <p>Santé mentale, voyages, photographie argentique, ski alpin, jeux sportifs</p>
+                      <p>Anglais, Français, Russe</p>
+                    </div>
+                  </div>
+                  <!-- Choose the lie quiz -->
+                  <h3 class="t_color t_center">❓Choisissez le mensonge 🤔</h3>
+                  <div class="button-row">
+                    <button onclick="checkAnswer(this)">🌎 <br> J'ai visité 29 pays</button>
+                    <button onclick="checkAnswer(this)">🥇<br> J'ai couru un semi-marathon</button>
+                    <button onclick="checkAnswer(this)" id="correctAnswer">👔 <br> J'ai été directrice d'une entreprise</button>
+                    <button onclick="checkAnswer(this)">📚 <br> J'ai appris une langue en 6 mois</button>
+                    <button onclick="checkAnswer(this)">👩‍🏫 <br> J'ai été prof pendant 7 ans</button>
+                  </div>
+                  <div class="feedback"></div>
+                </div>
+          </div>
+          <!-- Skills section -->
+          <div id="pageSkills" class="cv_page" style="display: none;">
+            <h3 class="t_color">Compétences en Informatique</h3>
+            <ul class="t_color pm">
+              <li><strong>Analyse de données et statistiques :</strong> R, Numpy, Pandas, SciPy, scikit-learn</li>
+              <li><strong>Machine Learning et Deep Learning :</strong> TensorFlow, Keras </li>
+              <li><strong>Base de données :</strong> MySQL/PostgreSQL</li>
+              <li><strong>Programmation :</strong> Python, C, R, Bash</li>
+              <li><strong>Web :</strong> HTML/CSS, PHP, JavaScript</li>
+              <li><strong>Gestion de versions :</strong> Git/GitHub</li>
+              <li><strong>Environnements de développement :</strong> Jupyter, RStudio, Visual Studio Code</li>
+              <li><strong>Autres :</strong> Conda, Snakemake</li>
+            </ul>
+            <h3 class="t_color">Analyse de Données et Statistiques</h3>
+            <ul class="t_color pm">
+              <li>Méthodes descriptives ou exploratoires</li>
+              <li>Méthodes factorielles</li>
+              <li>Visualisations graphiques planes ou multidimensionnelles des données</li>
+              <li>Méthodes de classification hiérarchique ou de partitionnement</li>
+              <li>Méthodes de classification supervisée et non-supervisée</li>
+            </ul>
+            <h3 class="t_color">Bioinformatique structurale et génomique</h3>
+          </div>
+          <!-- Education section -->
+          <div id="pageEducation" class="cv_page" style="display: none;">
+              <h3 class="t_color">Formation</h3>
+
+              <div class="education-item">
+                <div class="education-content">
+                  <h4 style="color: black;"><i class="fa-solid fa-graduation-cap"></i> Master 1 en Bioinformatique</h4>
+                  <p><span style="font-weight: bold; color: darkslategray;">Université Paris Cité</span> - <span style="font-style: italic; color: darkslategray;">2023-aujourd'hui</span></p>
+                </div>
+              </div>
+              
+              <div class="education-item">
+                <div class="education-content">
+                  <h4 style="color: black;"><i class="fa-solid fa-graduation-cap"></i> Licence de Bioinformatique</h4>
+                  <p><span style="font-weight: bold; color: darkslategray;">Université Paris Cité</span> - <span style="font-style: italic; color: darkslategray;">2022-2023</span></p>
+                </div>
+              </div>
+
+              <div class="education-item">
+                <div class="education-content">
+                  <h4 style="color: black;"><i class="fa-solid fa-graduation-cap"></i> Licence de Bioinformatique</h4>
+                  <p><span style="font-weight: bold; color: darkslategray;">Université d'Etat de Moscou</span> - <span style="font-style: italic; color: darkslategray;">2019-2022</span></p>
+                </div>
+              </div>
+
+            </div>
+      
+            <!--Page Experience -->
+            <div id="pageExperience" class="cv_page" style="display: none;">
+              <h3 class="t_color">Expériences</h3>
+          
+              <div class="education-item">
+                <div class="education-content">
+                    <h4 style="color: black;"><i class="fa-solid fa-briefcase"></i> Institut de Psychiatrie et Neurosciences de Paris - Alternance Bioinformatique</h4>
+                    <p><span style="font-weight: bold; color: darkslategray;">Septembre 2023 - Aujourd'hui</span> / Paris, France</p>
+                </div>
+              </div>
+      
+              <div class="education-item">
+                  <div class="education-content">
+                      <h4 style="color: black;"><i class="fa-solid fa-briefcase"></i> Institut Jacques Monod (Camadro Lab) - Stagaire en bioinformatique</h4>
+                      <p><span style="font-weight: bold; color: darkslategray;">Fevrier 2023 - Juillet 2023</span> / Paris, France</p>
+                  </div>
+              </div>
+          
+              <div class="education-item">
+                  <div class="education-content">
+                      <h4 style="color: black;"><i class="fa-solid fa-briefcase"></i> Institut de la Biologie Chimique et Physique de Moscou  - Stagaire en bioinformatique</h4>
+                      <p><span style="font-weight: bold; color: darkslategray;">Septembre 2020 - Septembre 2021</span> / Moscou, Russie</p>
+                  </div>
+              </div>
+
+            </div>  
+          </div>
+        </div>
+      </div>
+
+    <!-- Footer section -->
+    <footer class="footer">
+      <div class="container">
+          <div class="footer-content">
+              <div class="footer-info">
+                  <h3 class="footer-title">À propos de nous</h3>
+                  <p class="footer-text">Nous sommes passionnés par les oiseaux et dédiés à partager des connaissances et à encourager l'appréciation pour ces magnifiques créatures.</p>
+
+              </div>
+              <div class="footer-links">
+                <h3 class="footer-title">Liens utiles</h3>
+                <ul class="footer-list">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                    <li><a href="sommaire.html">Sommaire</a></li>
+                    <li><a href="https://www.lpo.fr/">LPO</a></li>
+                    <li><a href="cv_nadya.html">Nadezhda ZHUKOVA</a></li>
+                    <li><a href="cv_theo.html">Théo SERRALTA</a></li>
+                </ul>
+                </div>
+              <div class="footer-form">
+                  <h3 class="footer-title">Fournir un feedback</h3>
+                  <form id="feedback-form">
+                      <div class="form-group">
+                          <input class="input-field" type="text" name="name" placeholder="Votre nom" required>
+                      </div>
+                      <div class="form-group">
+                          <input class="input-field" type="email" name="email" placeholder="Votre adresse e-mail" required>
+                      </div>
+                      <div class="form-group">
+                          <textarea class="textarea-field" name="message" placeholder="Votre message" required></textarea>
+                      </div>
+                      <div class="form-group">
+                          <button type="submit" class="submit-btn">Soumettre</button>
+                      </div>
+                  </form>
+              </div>
+          </div>
+        <div class="footer-cr">
+            <hr class="footer-line">
+            <p class="footer-text-cr">&copy; 2024 N. Zhukova & T. Serralta. Tous droits réservés.</p>
+            <hr class="footer-line">
+        </div> 
+      </div> 
+    </footer>
+
+  </body>
 </html>
