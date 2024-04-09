@@ -202,22 +202,35 @@ hr{
 }
 
 .button-row {
-	color: black;
-	display: flex;
-	flex-wrap: wrap;
-	gap: 10px;
-	text-align: center;
+    color: black;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    text-align: center;
 }
 
 .button-row button {
-	flex-basis: calc(20% - 10px);
-	background-color: rgba(229, 229, 229, 0.3);
-	border: none;
-	padding: 1.5% 1.5%;
-	border-radius: 30px;
-	cursor: pointer;
-	justify-content: center;
+    flex-basis: calc(20% - 10px);
+    background-color: rgba(229, 229, 229, 0.701);
+    border: none;
+    padding: 1.5% 1.5%;
+    border-radius: 30px;
+    cursor: pointer;
+    justify-content: center;
+    transition: all 0.3s ease; /* Ajout de transition pour l'effet de grossissement */
+    position: relative; /* Ajout pour positionner correctement le texte */
 }
+
+.button-row button span {
+    display: inline-block; /* Permet d'appliquer la transformation sur le texte uniquement */
+    transition: transform 0.3s ease; /* Ajout de transition pour l'effet de grossissement */
+	color: black; /* Couleur du texte par défaut */
+}
+
+.button-row button:hover span {
+    transform: scale(1.1); /* Grossissement du texte au survol */
+}
+
 
 .feedback {
 	position: absolute;
