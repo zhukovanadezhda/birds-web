@@ -266,13 +266,13 @@ button:visited,
 
 
 /* Question sortante */
-.fadeOut {
-  animation-name: fadeOut;
-  animation-duration: 1s; /* Durée de l'animation */
+.fadeOutQuestion {
+  animation-name: fadeOutQuestion;
+  animation-duration: 0.5s; /* Durée de l'animation */
   animation-fill-mode: both;
 }
 
-@keyframes fadeOut {
+@keyframes fadeOutQuestion {
   from {
     opacity: 1;
   }
@@ -296,6 +296,7 @@ button:visited,
     opacity: 1;
   }
 }
+
 
 .intro-container {
   background-color: #2c4b757d; /* Couleur de fond blanche avec une opacité de 0.9 */

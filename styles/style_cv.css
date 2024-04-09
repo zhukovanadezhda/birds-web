@@ -248,7 +248,7 @@ hr{
 
 
 .details {
-    display: flex;
+    display: absolute;
     justify-content: space-between;
 }
 

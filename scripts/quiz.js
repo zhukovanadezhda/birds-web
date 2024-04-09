@@ -57,8 +57,8 @@ const myQuestions = [
         category: 'Animal',
         question: "Il n'y a pas de corbeaux à Paris.",
         image: '../styles/Oiseaux/Grand_Corbeau.jpg',
-        correct_answer: 'True',
-        incorrect_answers: ['False'],
+        correct_answer: 'Vrai',
+        incorrect_answers: ['Faux'],
       },
       {
         type: 'multiple',
@@ -95,68 +95,71 @@ function shuffleArray(array) {
 }
 
 function displayQuestion(questionObject) {
-  const quizQuestion = document.querySelector('#quiz-question');
-  const quizOptions = document.querySelector('#quiz-options');
-  const quizImage = document.querySelector('#quiz-image');
-  quizQuestion.innerHTML = '';
-  quizOptions.innerHTML = '';
+    const quizQuestion = document.querySelector('#quiz-question');
+    const quizOptions = document.querySelector('#quiz-options');
+    const quizImage = document.querySelector('#quiz-image');
+    quizQuestion.innerHTML = '';
+    quizOptions.innerHTML = '';
 
-  quizQuestion.classList.add('zoomOut');
-  quizOptions.classList.add('zoomOut');
+    quizQuestion.classList.remove('fadeIn'); // Retirez les classes d'animation précédentes
+    quizOptions.classList.remove('fadeIn'); // Retirez les classes d'animation précédentes
 
-  setTimeout(() => {
-      quizQuestion.innerHTML = questionObject.question;
+    quizQuestion.classList.add('fadeOut'); // Ajoutez la classe d'animation fadeOut
+    quizOptions.classList.add('fadeOut'); // Ajoutez la classe d'animation fadeOut
 
-      if (questionObject.image) {
-          const image = document.createElement('img');
-          image.src = questionObject.image;
-          image.className = 'fadeIn animated';
-          quizImage.innerHTML = '';
-          quizImage.appendChild(image);
-      } else {
-          quizImage.innerHTML = ''; // Clear if no image
-      }
+    setTimeout(() => {
+        quizQuestion.innerHTML = questionObject.question;
 
-      quizQuestion.classList.remove('zoomOut');
-      quizOptions.classList.remove('zoomOut');
+        if (questionObject.image) {
+            const image = document.createElement('img');
+            image.src = questionObject.image;
+            image.className = 'fadeIn animated';
+            quizImage.innerHTML = '';
+            quizImage.appendChild(image);
+        } else {
+            quizImage.innerHTML = ''; // Clear if no image
+        }
 
-      quizQuestion.classList.add('zoomIn');
-      quizOptions.classList.add('zoomIn');
+        quizQuestion.classList.remove('fadeOut'); // Retirez la classe d'animation fadeOut
+        quizOptions.classList.remove('fadeOut'); // Retirez la classe d'animation fadeOut
 
-      setTimeout(() => {
-          stats.questionsAsked++;
-          stats.currentTime = new Date();
+        quizQuestion.classList.add('fadeIn'); // Ajoutez la classe d'animation fadeIn
+        quizOptions.classList.add('fadeIn'); // Ajoutez la classe d'animation fadeIn
 
-          if (questionObject) {
-              const allAnswers = questionObject.incorrect_answers.slice(); // Copy incorrect answers
-              const correctAnswer = questionObject.correct_answer;
-              const correctAnswerIndex = Math.floor(Math.random() * (allAnswers.length + 1)); // Random index for correct answer
-              allAnswers.splice(correctAnswerIndex, 0, correctAnswer); // Insert correct answer at random index
-              shuffleArray(allAnswers); // Shuffle the combined answers
-              for (let i = 0; i < allAnswers.length; i++) {
-                  let button = document.createElement('button');
-                  button.disabled = true;
-                  button.id = 'quiz-ans-' + i;
-                  // Add a data attribute to store the correctness of the answer
-                  button.dataset.isCorrect = allAnswers[i] === questionObject.correct_answer;
-                  button.classList.add(
-                      'btn',
-                      'quiz-ans-btn',
-                      'animated',
-                      i % 2 === 0 ? 'fadeInLeft' : 'fadeInRight',
-                  );
-                  button.innerHTML = allAnswers[i];
-                  quizOptions.appendChild(button);
-                  setTimeout(() => {
-                      button.disabled = false;
-                      button.classList.remove(i % 2 === 0 ? 'fadeInLeft' : 'fadeInRight');
-                  }, 500);
-              }
-          } else {
-              console.log('Invalid question object or missing answers property.');
-          }
-      }, 0.01);
-  }, 1000);
+        setTimeout(() => {
+            stats.questionsAsked++;
+            stats.currentTime = new Date();
+
+            if (questionObject) {
+                const allAnswers = questionObject.incorrect_answers.slice(); // Copy incorrect answers
+                const correctAnswer = questionObject.correct_answer;
+                const correctAnswerIndex = Math.floor(Math.random() * (allAnswers.length + 1)); // Random index for correct answer
+                allAnswers.splice(correctAnswerIndex, 0, correctAnswer); // Insert correct answer at random index
+                shuffleArray(allAnswers); // Shuffle the combined answers
+                for (let i = 0; i < allAnswers.length; i++) {
+                    let button = document.createElement('button');
+                    button.disabled = true;
+                    button.id = 'quiz-ans-' + i;
+                    // Add a data attribute to store the correctness of the answer
+                    button.dataset.isCorrect = allAnswers[i] === questionObject.correct_answer;
+                    button.classList.add(
+                        'btn',
+                        'quiz-ans-btn',
+                        'animated',
+                        i % 2 === 0 ? 'fadeInLeft' : 'fadeInRight',
+                    );
+                    button.innerHTML = allAnswers[i];
+                    quizOptions.appendChild(button);
+                    setTimeout(() => {
+                        button.disabled = false;
+                        button.classList.remove(i % 2 === 0 ? 'fadeInLeft' : 'fadeInRight');
+                    }, 500);
+                }
+            } else {
+                console.log('Invalid question object or missing answers property.');
+            }
+        }, 500); // Ajoutez un délai approprié avant d'afficher les réponses
+    }, 500); // Ajoutez un délai approprié avant d'afficher la question
 }
 
 let questions = [];
@@ -230,38 +233,53 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function initiateGame() {
-  questions = myQuestions.slice();
-  displayQuestion(questions[0]);
-}
-
-function nextQuestion() {
-  document.querySelector('#quiz-question').classList.add('fadeOut');
-
-  if (questions.length > 0) {
-      const quizOptions = document.querySelector('#quiz-options');
-      while (quizOptions.firstChild) {
-          quizOptions.removeChild(quizOptions.firstChild);
-      }
-      questions.shift();
-      if (questions.length > 0) {
-          displayQuestion(questions[0]);
-          setTimeout(() => {
-              document.querySelector('#quiz-question').classList.remove('fadeOut');
-          }, 500);
-      } else {
-          document.querySelector('#quiz-play-again').style.display = 'block';
-          document.querySelector('#quiz-play-again-btn').classList.add('flipInX');
-          setTimeout(() => {
-              document
-                  .querySelector('#quiz-play-again-btn')
-                  .classList.remove('flipInX');
-              document
-                  .querySelector('#quiz-play-again-btn')
-                  .classList.add('infinite', 'pulse');
-          }, 0);
-      }
+    questions = myQuestions.slice();
+    shuffleArray(questions); // Mélanger l'ordre des questions
+    displayQuestion(questions[0]);
+    document.querySelector('#quiz-question').classList.remove('fadeOut');
   }
+  
+  
+function nextQuestion() {
+    const quizQuestion = document.querySelector('#quiz-question');
+    const quizOptions = document.querySelector('#quiz-options');
+
+    // Ajoutez la classe d'animation pour les réponses sortantes en fonction de la direction
+    const fadeOutClass = Math.random() < 0.5 ? 'fadeOutLeft' : 'fadeOutRight';
+    quizOptions.classList.add(fadeOutClass); // Ajoutez la classe d'animation fadeOut
+
+    setTimeout(() => {
+        if (questions.length > 0) {
+            const quizOptions = document.querySelector('#quiz-options');
+            while (quizOptions.firstChild) {
+                // Ajoutez la classe d'animation pour les réponses sortantes à chaque bouton de réponse
+                quizOptions.firstChild.classList.add(fadeOutClass);
+                quizOptions.removeChild(quizOptions.firstChild);
+            }
+            questions.shift();
+            if (questions.length > 0) {
+                displayQuestion(questions[0]); // Affichez la nouvelle question
+            } else {
+                // Affichez le bouton "Jouer à nouveau" lorsque toutes les questions ont été posées
+                document.querySelector('#quiz-play-again').style.display = 'block';
+                document.querySelector('#quiz-play-again-btn').classList.add('flipInX');
+                setTimeout(() => {
+                    document
+                        .querySelector('#quiz-play-again-btn')
+                        .classList.remove('flipInX');
+                    document
+                        .querySelector('#quiz-play-again-btn')
+                        .classList.add('infinite', 'pulse');
+                }, 0);
+            }
+        }
+    }, 500); // Ajoutez un délai avant de retirer les anciennes questions et réponses
 }
+
+  
+  
+  
+  
 
 function displayStats() {
   document
