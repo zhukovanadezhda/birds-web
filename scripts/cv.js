@@ -1,5 +1,5 @@
 function checkAnswer(button) {
-    // correct answer is thr button avec id= "correctAnswer"
+    // correct answer is the button with id= "correctAnswer"
     const correctAnswer = document.getElementById('correctAnswer').textContent;
     const userAnswer = button.textContent;
     const feedback = document.createElement('div');
@@ -12,16 +12,18 @@ function checkAnswer(button) {
         feedback.textContent = "Ce n'est pas un mensonge !";
     }    
 
-        // Position the feedback above the clicked button
-        feedback.classList.add('feedback');
-        feedback.style.width = button.offsetWidth + 'px'; // Set width to match button
-        feedback.style.height = button.offsetHeight + 'px'; // Set height to match button
-        feedback.style.top = button.getBoundingClientRect().top - feedback.offsetHeight + 'px';
-        feedback.style.left = button.getBoundingClientRect().left + 'px';
-        document.body.appendChild(feedback); // Append feedback to the body
-        setTimeout(() => {
-            feedback.remove();
-        }, 1000); // Remove feedback after 2 seconds
+    // Position the feedback above the clicked button, accounting for page scroll
+    feedback.classList.add('feedback');
+    feedback.style.width = button.offsetWidth + 'px'; // Set width to match button
+    feedback.style.height = button.offsetHeight + 'px'; // Set height to match button
+    const buttonRect = button.getBoundingClientRect();
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    feedback.style.top = buttonRect.top + scrollTop - feedback.offsetHeight + 'px';
+    feedback.style.left = buttonRect.left + 'px';
+    document.body.appendChild(feedback); // Append feedback to the body
+    setTimeout(() => {
+        feedback.remove();
+    }, 1000); // Remove feedback after 1 second
 }
 
 
@@ -37,4 +39,4 @@ function showPage(pageId) {
     if (selectedPage) {
         selectedPage.style.display = 'block';
     }
-    }
+}
