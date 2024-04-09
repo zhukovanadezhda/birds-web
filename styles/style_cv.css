@@ -252,17 +252,10 @@ hr{
     justify-content: space-between;
 }
 
-.left-column {
-    width: 23%;
-
-}
-
-.right-column {
-	padding-top: 0.2%;
-    width: 75%;
-	line-height: 149%;
-	margin-bottom: 0;
-}
+.normal-text {
+	font-weight: normal;
+	color: black
+  }  
 
 .section-heading {
 	font-size: 1.5em;
@@ -287,4 +280,92 @@ font-weight: bold;
 }
 
 
-
+@media screen and (max-width: 768px) {
+	div {
+	  float: none;
+	  margin: 0 auto;
+	  box-sizing: border-box;
+	}
+  
+	.tu {
+	  text-transform: uppercase;
+	}
+  
+	.tr {
+	  transition: 0.2s;
+	}
+  
+	.bio_area {
+	  display: flex;
+	  flex-direction: column; /* Changement de direction pour empiler les éléments */
+	  align-items: center; /* Centrage des éléments */
+	  margin-top: 5%; /* Ajustement de la marge supérieure */
+	}
+  
+	.bl_area,
+	.br_area {
+	  width: 90%; /* Ajustement de la largeur pour les petits écrans */
+	  margin: 10px 0; /* Ajustement de la marge pour séparer les éléments */
+	}
+  
+	.bl_area img {
+	  width: 100%; /* Ajustement de la largeur de l'image pour qu'elle occupe toute la largeur */
+	  border-radius: 10px; /* Ajustement de la bordure */
+	}
+  
+	.social_links {
+	  float: none;
+	  margin: 5px auto; /* Centrage horizontal */
+	  padding: 5px;
+	}
+  
+	.cr_bg {
+	  padding: 8px 12px; /* Ajustement du rembourrage */
+	}
+  
+	.name {
+	  text-align: center; /* Centrage du texte */
+	  margin-bottom: 10px; /* Ajout d'un espace entre les noms */
+	}
+  
+	.name_cnt {
+	  display: block; /* Affichage des informations de contact */
+	  width: 90%; /* Ajustement de la largeur pour les petits écrans */
+	  margin: 5px auto; /* Centrage horizontal et espacement des éléments */
+	  position: static; /* Positionnement par défaut */
+	  text-align: center; /* Centrage du texte */
+	}
+  
+	.cv_button {
+	  width: 100%; /* Ajustement de la largeur pour occuper toute la largeur */
+	  margin-top: 10px; /* Espacement vers le haut */
+	}
+  
+	.cv_page {
+	  margin: 3% auto; /* Centrage horizontal et ajustement de la marge */
+	}
+  
+	.button-row {
+	  flex-wrap: wrap; /* Permettre aux boutons de passer à la ligne */
+	  gap: 5px; /* Ajout d'un espace entre les boutons */
+	}
+  
+	.button-row button {
+	  flex-basis: calc(50% - 5px); /* Deux boutons par ligne */
+	}
+  
+	.feedback {
+	  width: 100%; /* Ajustement de la largeur pour occuper toute la largeur */
+	}
+  
+	.details {
+	  flex-direction: column; /* Changement de direction pour empiler les éléments */
+	  align-items: center; /* Centrage des éléments */
+	}
+  
+	.left-column,
+	.right-column {
+	  width: 100%; /* Ajustement de la largeur pour occuper toute la largeur */
+	  margin-bottom: 20px; /* Espacement vers le bas */
+	}
+  }
