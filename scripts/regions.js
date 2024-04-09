@@ -64,12 +64,13 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-function toggleCard(birdName, birdFamily, birdSize, birdWeight, birdHabitat, birdDescription) {
+function toggleCard(birdName, birdFamily, birdSize, birdWeight, birdSong, birdHabitat, birdDescription) {
   var modal = document.getElementById("bird-modal");
   var nameCell = document.getElementById("bird-name-cell");
   var familyCell = document.getElementById("bird-family-cell");
   var sizeCell = document.getElementById("bird-size-cell");
   var weightCell = document.getElementById("bird-weight-cell");
+  var songCell = document.getElementById("bird-song-cell");
   var habitatCell = document.getElementById("bird-habitat-cell");
   var descriptionCell = document.getElementById("bird-description-cell");
 
@@ -78,11 +79,66 @@ function toggleCard(birdName, birdFamily, birdSize, birdWeight, birdHabitat, bir
   familyCell.textContent = birdFamily;
   sizeCell.textContent = birdSize;
   weightCell.textContent = birdWeight;
+  songCell.textContent = birdSong;
   habitatCell.textContent = birdHabitat;
   descriptionCell.textContent = birdDescription;
 
-  // Afficher ou masquer le modal
-  modal.style.display = modal.style.display === "none" ? "block" : "none";
+// Créer le lecteur audio
+var audio = new Audio(birdSong);
+
+audio.addEventListener("loadedmetadata", function() {
+  duration.textContent = "0:00 / " + formatTime(audio.duration);
+});
+
+  // Créer le bouton de lecture/pause
+  var playButton = document.createElement("button");
+  playButton.textContent = "Play";
+  playButton.classList.add("play-button"); // Ajouter une classe pour le style CSS
+  playButton.addEventListener("click", function() {
+      if (audio.paused) {
+          audio.play();
+          playButton.textContent = "Pause";
+      } else {
+          audio.pause();
+          playButton.textContent = "Play";
+      }
+  });
+
+
+// Ajouter le bouton de lecture au champ birdSong
+songCell.innerHTML = ""; // Effacer le contenu existant
+songCell.appendChild(playButton);
+
+// Mettre à jour la barre de progression de l'audio
+var progressBar = document.createElement("div");
+progressBar.classList.add("progress-bar");
+var progressFilled = document.createElement("div");
+progressFilled.classList.add("progress-filled");
+progressBar.appendChild(progressFilled);
+songCell.appendChild(progressBar);
+
+// Mettre à jour la durée de l'audio
+var duration = document.createElement("p");
+duration.classList.add("duration");
+duration.textContent = "0:00 / " + formatTime(audio.duration);
+songCell.appendChild(duration);
+
+// Mettre à jour la barre de progression et la durée de l'audio lors de la lecture
+audio.addEventListener("timeupdate", function() {
+    var progress = (audio.currentTime / audio.duration) * 100;
+    progressFilled.style.width = progress + "%";
+    duration.textContent = formatTime(audio.currentTime) + " / " + formatTime(audio.duration);
+});
+
+// Fonction pour formater le temps en minutes et secondes
+function formatTime(time) {
+    var minutes = Math.floor(time / 60);
+    var seconds = Math.floor(time % 60);
+    return minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
+}
+
+// Afficher ou masquer le modal
+modal.style.display = modal.style.display === "none" ? "block" : "none";
 }
 
 document.addEventListener('DOMContentLoaded', function() {

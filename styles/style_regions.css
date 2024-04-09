@@ -333,6 +333,41 @@ h1 {
 }
 
 
+/* Style du bouton de lecture */
+.play-button {
+  background-color: #1DB954;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Style de la barre de progression */
+.progress-bar {
+  background-color: #ddd;
+  height: 10px;
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 100px;
+}
+
+/* Style de la barre de progression remplie */
+.progress-filled {
+  background-color: #1DB954;
+  height: 100%;
+  width: 0; /* Ajusté dynamiquement avec JavaScript */
+  border-radius: 100px;
+}
+
+/* Style de la durée de l'audio */
+.duration {
+  margin-top: 5px;
+}
+
+
+
+
 /*### Style d'introduction ###*/
 .introduction {
   padding: 20px;
