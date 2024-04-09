@@ -221,7 +221,7 @@ hr{
 
 .feedback {
 	position: absolute;
-	background-color: white;
+	background-color: rgba(255, 255, 255, 0);
 	border: none;
 	padding: 1% 1%;
 	border-radius: 30px;
