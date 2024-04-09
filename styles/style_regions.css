@@ -184,8 +184,8 @@ h1 {
   margin: 10% auto; /* Vous pouvez ajuster la marge comme vous le souhaitez */
   padding: 10px 160px; /* Ajustez la marge intérieure pour plus d'espace */
   border: 1px solid #888;
-  width: 50%; /* Utilisez 90% de la largeur de l'écran */
-  height: 60%; /* Utilisez 90% de la hauteur de l'écran */
+  width: 50%; /* Utilisez la largeur de l'écran */
+  height: 60%; /* Utilisez la hauteur de l'écran */
   overflow-y: auto; /* Ajoutez une barre de défilement verticale si nécessaire */
 }
 
@@ -215,6 +215,7 @@ h1 {
   margin: 0.5% 5%;
   border: 1px solid #000000; /* Bordure noire pour toutes les faces */
   border-radius: 5px;
+  overflow-y: auto;
 }
 
 .rectangle2 table {
@@ -223,18 +224,24 @@ h1 {
 }
 
 .rectangle2 td {
-  border-bottom: 1px solid #000000; /* Bordure noire pour chaque cellule */
-  padding: 10px; /* Espacement intérieur des cellules */
-  text-align: center; /* Centrer le texte à l'intérieur des cellules */
-  min-height: 48px; /* Hauteur minimale pour chaque cellule */
+  border-bottom: 1px solid #000000;
+  padding: 10px;
+  text-align: center;
+  min-height: 48px;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  font-size: 1em; /* Taille de police de base */
 }
 
 .rectangle2 td:first-child {
-  width: 30%; /* Largeur de la première colonne (colonne de gauche) */
+  width: 30%;
   background-color: #AFABAA;
-  border-top: 1px solid #000000; /* Bordure supérieure de la cellule de gauche */
-  border-bottom: 1px solid #000000; /* Bordure inférieure de la cellule de gauche */
-  font-weight: bold; /* Texte en gras */
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  font-weight: bold;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  font-size: 1.2em; /* Taille de police de base pour la première colonne */
 }
 
 .rectangle2 td:not(:first-child) {
@@ -242,6 +249,7 @@ h1 {
   border-top: 1px solid #000000; /* Bordure supérieure de la cellule de droite */
   border-bottom: 1px solid #000000; /* Bordure inférieure de la cellule de droite */
   border-left: none; /* Supprimer la bordure gauche de la cellule de droite */
+  font-size: 1em; /* Taille de police de base */
 }
 
 .rectangle2 td:last-child {
@@ -331,7 +339,21 @@ h1 {
   margin-top: 5px;
 }
 
+/* Adaptation aux téléphones */
+@media screen and (max-width: 768px) {
+  .rectangle2 td:not(:first-child) {
+    font-size: 0.8em; /* Réduire la taille de police pour les écrans plus petits, sauf pour la première colonne */
+  }
 
+  .rectangle2 td:first-child {
+    font-size: 1em; /* Taille de police de base pour la première colonne */
+  }
+
+  .modal-content {
+    width: 90%; /* Ajuste la largeur pour les petits écrans */
+    padding: 10px; /* Réduit l'espacement sur tous les côtés pour les petits écrans */
+  }
+}
 
 
 /*### Style d'introduction ###*/
