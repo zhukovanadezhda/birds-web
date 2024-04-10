@@ -1,3 +1,5 @@
+var audio;
+
 function showPage(pageId) {
 	// Hide all pages
 	var pages = document.getElementsByClassName("cv_page");
@@ -50,6 +52,9 @@ function openModal(birdName, birdDescription) {
 function closeModal() {
   var modal = document.getElementById('bird-modal');
   modal.style.display = 'none';
+  if (audio) {
+    audio.pause(); // Pause the audio if it exists
+  }
 }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -84,7 +89,7 @@ function toggleCard(birdName, birdFamily, birdSize, birdWeight, birdSong, birdHa
   descriptionCell.textContent = birdDescription;
 
 // Créer le lecteur audio
-var audio = new Audio(birdSong);
+audio = new Audio(birdSong);
 
 audio.addEventListener("loadedmetadata", function() {
   duration.textContent = "0:00 / " + formatTime(audio.duration);
@@ -103,7 +108,6 @@ audio.addEventListener("loadedmetadata", function() {
           playButton.textContent = "Play";
       }
   });
-
 
 // Ajouter le bouton de lecture au champ birdSong
 songCell.innerHTML = ""; // Effacer le contenu existant
