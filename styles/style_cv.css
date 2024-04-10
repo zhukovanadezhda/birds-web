@@ -342,7 +342,7 @@ font-weight: bold;
 	}
   
 	.cv_page {
-	  margin: 3% auto; /* Centrage horizontal et ajustement de la marge */
+	  margin: 3% 3%; /* Centrage horizontal et ajustement de la marge */
 	}
   
 	.button-row {
