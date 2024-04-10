@@ -276,10 +276,6 @@ function nextQuestion() {
     }, 500); // Ajoutez un délai avant de retirer les anciennes questions et réponses
 }
 
-  
-  
-  
-  
 
 function displayStats() {
   document
