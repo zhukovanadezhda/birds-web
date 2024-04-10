@@ -1,16 +1,14 @@
 function switchMode() {
     let moon = document.getElementById("moon");
-    let navLinks = document.querySelectorAll("nav ul li a");
+    let navLinks = document.querySelectorAll(".top-menu nav ul li a");
 	let footerText = document.querySelectorAll(".footer-text, .footer-list li a, .footer-text-cr");
     let container = document.querySelector(".container");
     let footer = document.querySelector(".footer"); // Select the footer element
-    let menu = document.querySelector(".top-page-container"); // Select the menu element
 
 
     if (moon.className == "moon") {
         moon.className = "sun";
         document.body.style.backgroundImage = "url('../styles/images/back_night.jpg')";
-        menu.style.backgroundImage = "url('../styles/images/back_night.jpg')";
 		document.body.style.backgroundColor = "#070B17";
         document.body.style.color = "#FFFFFF";
         container.style.backgroundColor = "#070B17"; // Background color of the container in night mode
@@ -32,7 +30,6 @@ function switchMode() {
     } else {
         moon.className = "moon";
         document.body.style.backgroundImage = "url('../styles/images/back_day.jpg')";
-        menu.style.backgroundImage = "url('../styles/images/back_day.jpg')";
 		document.body.style.backgroundColor = "#FFFFFF";
         document.body.style.color = "#000000";
         container.style.backgroundColor = ""; // Reset background color of the container in day mode
