@@ -37,13 +37,21 @@ card.style.transform = 'scale(1)';
 }
 
 // Fonction pour ouvrir le cadre modal
-function openModal(birdName, birdDescription) {
+function openModal(birdName, birdDescription, birdImageUrl) {
   var modal = document.getElementById('bird-modal');
   var nameField = document.getElementById('bird-name');
-  var descriptionField = document.getElementById('bird-description');
-  
+  var descriptionField = document.querySelector('.bird-text'); // Updated to select the text div
+  var imageField = document.querySelector('.bird-image'); // Select the image div
+
   nameField.textContent = birdName;
   descriptionField.textContent = birdDescription;
+  imageField.innerHTML = ''; // Clear previous image
+  if (birdImageUrl) {
+      var image = document.createElement('img');
+      image.src = birdImageUrl;
+      image.alt = 'Bird Image';
+      imageField.appendChild(image);
+  }
   
   modal.style.display = 'block';
 }
@@ -64,7 +72,8 @@ document.addEventListener('DOMContentLoaded', function() {
     card.addEventListener('click', function() {
       var birdName = card.querySelector('.bird-name').textContent;
       var birdDescription = card.querySelector('.bird-info').textContent;
-      openModal(birdName, birdDescription);
+      var birdImageUrl = card.querySelector('.bird-image-inner').getAttribute('src'); 
+      openModal(birdName, birdDescription, birdImageUrl);
     });
   });
 });

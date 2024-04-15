@@ -83,85 +83,98 @@ h1 {
     margin: 0 auto; /* Pour centrer le conteneur */
   }
   
-  .bird-card {
-    width: 200px; /* Largeur des cartes d'oiseaux */
-    height: 200px;
-    margin: 20px; /* Espacement entre les cartes */
-    overflow: hidden;
-    border: 1px solid #ccc;
-    transition: transform 0.3s;
-    border-radius: 10px; /* Rendre le cadre rond */
-    position: relative; /* Ajout de la position relative pour le contenu de la carte */
-    perspective: 1000px; /* Ajout de la perspective pour l'effet 3D */
-    backface-visibility: hidden; /* Empêche l'affichage du visage arrière */
-    cursor: pointer;
-  }
-  
-  .bird-card:hover .bird-card-inner {
-    transform: scale(1.05) rotateY(180deg); /* Ajustement pour l'effet de rotation au survol */
-  }
-  
-  .bird-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ajustement de l'image à la taille du cadre */
-    border-radius: 10px; /* Rendre l'image ronde */
-    transition: filter 0.4s; /* Temps que le flou apparaisse avec la rotation */
-  } 
+.bird-card {
+  width: 200px; /* Largeur des cartes d'oiseaux */
+  height: 200px;
+  margin: 20px; /* Espacement entre les cartes */
+  overflow: hidden;
+  border: 1px solid #ccc;
+  transition: transform 0.3s;
+  border-radius: 10px; /* Rendre le cadre rond */
+  position: relative; /* Ajout de la position relative pour le contenu de la carte */
+  perspective: 1000px; /* Ajout de la perspective pour l'effet 3D */
+  backface-visibility: hidden; /* Empêche l'affichage du visage arrière */
+  cursor: pointer;
+}
 
-  .bird-card:hover img {
-    filter: blur(5px); /* Appliquer le flou à l'image au survol */
-  }
-  
-  .bird-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.3s;
-    transform-style: preserve-3d; /* Conserve la face avant visible pendant la rotation */
-    overflow: hidden; /* Assurez-vous que le contenu débordant est masqué */
-  }
-  
-  .bird-name {
-    position: absolute;
-    margin-left: -7px;
-    margin-top: 5px;
-    transform: translate(-50%, -50%) rotateY(180deg) scale(-1, 1); /* Rotation uniquement sur l'axe Y */
-    text-align: center;
-    backface-visibility: hidden; /* Empêche l'affichage du nom à l'arrière de la carte */
-    color: white; /* Couleur du texte */
-    font-weight: bold; /* Style du texte */
-    font-size: 18px; /* Taille de la police */
-    padding: 5px 10px; /* Espacement autour du texte */
-    background-color: rgba(0, 0, 0, 0.5); /* Couleur de fond semi-transparente */
-    border-radius: 5px; /* Coins arrondis */
-    min-width: 110px; /* Largeur minimale du cadre */
-  }
+.bird-card:hover .bird-card-inner {
+  transform: scale(1.05) rotateY(180deg); /* Ajustement pour l'effet de rotation au survol */
+}
 
-  .bird-info {
+.bird-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajustement de l'image à la taille du cadre */
+  border-radius: 10px; /* Rendre l'image ronde */
+  transition: filter 0.4s; /* Temps que le flou apparaisse avec la rotation */
+} 
+
+.bird-card:hover img {
+  filter: blur(5px); /* Appliquer le flou à l'image au survol */
+}
+
+.bird-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s;
+  transform-style: preserve-3d; /* Conserve la face avant visible pendant la rotation */
+  overflow: hidden; /* Assurez-vous que le contenu débordant est masqué */
+  margin: 0 auto;
+}
+
+.bird-name {
+  position: absolute;
+  margin-left: -7px;
+  margin-top: 5px;
+  transform: translate(-50%, -50%) rotateY(180deg) scale(-1, 1); /* Rotation uniquement sur l'axe Y */
+  text-align: center;
+  backface-visibility: hidden; /* Empêche l'affichage du nom à l'arrière de la carte */
+  color: white; /* Couleur du texte */
+  font-weight: bold; /* Style du texte */
+  font-size: 18px; /* Taille de la police */
+  padding: 5px 10px; /* Espacement autour du texte */
+  background-color: rgba(0, 0, 0, 0.5); /* Couleur de fond semi-transparente */
+  border-radius: 5px; /* Coins arrondis */
+  min-width: 110px; /* Largeur minimale du cadre */
+}
+
+h2#bird-name {
+  transition: 700ms ease;
+  text-transform: uppercase;
+  font-variation-settings: "wght" 311;
+  color: #7871F3;
+  font-size: 2.2em;
+  font-weight: bold;
+  margin: 3 auto;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+h2#bird-name:hover {
+  font-variation-settings: "wght" 582; 
+  letter-spacing: 3px;
+}
+
+.bird-info {
+    margin: 0 auto;
     display: none;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
+    color: #ffffff;
     position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 10px;
     text-align: center;
-  }
-  
-  .bird-card:hover .bird-name {
-    -moz-transform: scale(-1, 1);
-    -webkit-transform: scale(-1, 1);
-    -o-transform: scale(-1, 1);
-    -ms-transform: scale(-1, 1);
-    transform: scale(-1, 1);
-    left: 20%; /* Position horizontale au centre */
-    top: 30%; /* Position verticale au centre */
-    right: 25%;
-    display: flex;
-    justify-content: center;
-  }
+}
+
+.bird-card:hover .bird-name {
+  -moz-transform: scale(-1, 1);
+  -webkit-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+  left: 20%; /* Position horizontale au centre */
+  top: 30%; /* Position verticale au centre */
+  right: 25%;
+  display: flex;
+  justify-content: center;
+}
 
 /*########## Cadre informations oiseaux ##########*/
 
@@ -176,82 +189,137 @@ h1 {
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.5);
   text-align: center;
+  margin: 0 auto;
 }
 
 .modal-content {
-  background-image: url('../styles/images/fond-tableau-oiseau.PNG'); /* Ajout de l'image de fond */
+  font-family: Arial, sans-serif;
+  /* background-image: url('../styles/images/fond-tableau-oiseau.PNG'); /* Ajout de l'image de fond */
+  background-color: #D0E9EB;
+  opacity: 0.9;
   background-size: cover; /* Ajustement de la taille de l'image pour couvrir tout le cadre */
   background-repeat: no-repeat; /* Empêche la répétition de l'image */
   background-position: center; /* Centre l'image horizontalement et verticalement */
-  margin: 10% auto; /* Vous pouvez ajuster la marge comme vous le souhaitez */
-  padding: 10px 160px; /* Ajustez la marge intérieure pour plus d'espace */
+  margin: 4% auto; 
+  padding: 10px 30px; /* Ajustez la marge intérieure pour plus d'espace */
   border: 1px solid #888;
-  width: 50%; /* Utilisez la largeur de l'écran */
-  height: 60%; /* Utilisez la hauteur de l'écran */
-  overflow-y: auto; /* Ajoutez une barre de défilement verticale si nécessaire */
+  width: 70%; /* Utilisez la largeur de l'écran */
+  height: 71%; /* Utilisez la hauteur de l'écran */
+  overflow-y: auto;
+  overflow-x: hidden; /* Masquer la barre de défilement horizontale */
+  border-radius: 30px; /* Coins arrondis */
 }
 
-.shapes {
+/* For WebKit-based browsers (Chrome, Safari) */
+.modal-content::-webkit-scrollbar {
+  width: 15px; /* Adjust scrollbar width */
+  border-radius: 30px; /* Same as container border-radius */
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background-color: rgba(116, 116, 116, 0.5);
+  border-radius: 10px; /* Same as container border-radius */
+}
+
+.modal-content::-webkit-scrollbar-track {
+  border-radius: 10px; /* Same as container border-radius */
+}
+
+
+#bird-description {
+  background-color: rgba(120, 113, 243, 0.1);
+  border-color: rgba(120, 113, 243, 1);
+  border-width: 20px;
+  border-radius: 10px;
+  padding: 20px;
   display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
 }
 
-.rectangle1 {
-  width: auto;
+#bird-table {
+  background-color: rgba(120, 113, 243, 0.1);
+  border-color: rgba(120, 113, 243, 1);
+  border-width: 20px;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+}
+
+.bird-image {
+  flex: 1; 
+  margin-right: 10px;
+  margin: auto auto;
+}
+
+.bird-image img {
+  width: 80%;
   height: auto;
-  background-color: #AFABAA;
-  margin: 0.5% 5%;
-  border: 1px solid #000000;
-  border-radius: 5px;
-  display: flex; /* Utilisez Flexbox pour centrer le contenu */
-  align-items: center; /* Centrez verticalement le contenu */
-  justify-content: center; /* Centrez horizontalement le contenu */
-  font-weight: bold; /* Texte en gras */
+}
+
+.bird-text {
+  flex: 2; 
+  padding: 15px;
+  line-height: 1.25;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  text-align: justify;
+  font-style: italic;
+  letter-spacing: 0.5px;
+  margin: auto auto;
 }
 
 .rectangle2 {
-  width: auto;
-  height: auto;
-  background-color: #F7F1F0;
-  margin: 0.5% 5%;
-  border: 1px solid #000000; /* Bordure noire pour toutes les faces */
+  width: 150%;
+  background-color: transparent;
+  border: 1px solid rgb(85, 80, 172);
   border-radius: 5px;
-  overflow-y: auto;
+  margin: auto auto;
+  margin-right: 7%;
 }
 
 .rectangle2 table {
   border-collapse: collapse; /* Fusionner les bordures de cellule */
-  width: 100%
 }
 
 .rectangle2 td {
-  border-bottom: 1px solid #000000;
+  border-bottom: 1px solid rgb(85, 80, 172);
   padding: 10px;
   text-align: center;
   min-height: 48px;
   word-wrap: break-word;
   white-space: pre-wrap;
   font-size: 1em; /* Taille de police de base */
+  margin-right: 10px;
 }
 
 .rectangle2 td:first-child {
   width: 30%;
-  background-color: #AFABAA;
-  border-top: 1px solid #000000;
-  border-bottom: 1px solid #000000;
+  background-color: rgba(120, 113, 243, 0.1);
+  border-top: 1px solid rgb(85, 80, 172);
+  border-bottom: 1px solid rgb(85, 80, 172);
+  border-right: 1px solid rgb(85, 80, 172);
   font-weight: bold;
   word-wrap: break-word;
   white-space: pre-wrap;
-  font-size: 1.2em; /* Taille de police de base pour la première colonne */
+  line-height: 1.25;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 0.5px;
+  margin: auto auto;
 }
 
 .rectangle2 td:not(:first-child) {
   width: 70%; /* Largeur des autres colonnes (colonne de droite) */
-  border-top: 1px solid #000000; /* Bordure supérieure de la cellule de droite */
-  border-bottom: 1px solid #000000; /* Bordure inférieure de la cellule de droite */
+  border-top: 1px solid rgb(85, 80, 172);/* Bordure supérieure de la cellule de droite */
+  border-bottom: 1px solid rgb(85, 80, 172);/* Bordure inférieure de la cellule de droite */
   border-left: none; /* Supprimer la bordure gauche de la cellule de droite */
-  font-size: 1em; /* Taille de police de base */
+  padding: 15px;
+  line-height: 1.25;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 0.5px;
+  margin: auto auto;
 }
 
 .rectangle2 td:last-child {
@@ -261,6 +329,7 @@ h1 {
 /* Styles spécifiques pour la première ligne */
 .rectangle2 tr:first-child td {
   border-top: none; /* Supprimer la bordure du haut de la première ligne */
+  border-right: none;
 }
 
 /* Styles spécifiques pour la dernière ligne */
@@ -268,36 +337,47 @@ h1 {
   border-bottom: none; /* Supprimer la bordure du bas de la dernière ligne */
 }
 
-
-.rectangle3 {
-  width: 90%;
-  height: auto;
-  background-color: #F7F1F0;
-  margin: 0.5% 5%;
-  border: 1px solid #000000;
-  border-radius: 5px;
-  display: flex; /* Utilisez Flexbox pour centrer le contenu */
-  align-items: center; /* Centrez verticalement le contenu */
-  justify-content: center; /* Centrez horizontalement le contenu */
+.bird-additional-info {
+  margin: auto auto;
+  display: flex;
+  margin-top: 10%;
 }
 
-.rectangle4 {
-  width: 90%;
-  height: auto;
-  background-color: #F7F1F0;
-  margin: 0.5% 5%;
-  border: 1px solid #000000;
-  border-radius: 5px;
-  display: flex; /* Utilisez Flexbox pour centrer le contenu */
-  align-items: center; /* Centrez verticalement le contenu */
-  justify-content: center; /* Centrez horizontalement le contenu */
+#bird-habitat-cell {
+  width: 75%;
+  padding: 10px;
+  line-height: 1.25;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  text-align: justify;
+  font-style: italic;
+  letter-spacing: 0.5px;
+  margin: auto auto;
+}
+
+#bird-description-cell {
+  width: 75%;
+  padding: 10px;
+  line-height: 1.25;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  text-align: justify;
+  font-style: italic;
+  letter-spacing: 0.5px;
+  margin: auto auto;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  margin-top: 5%;
 }
 
 
 .close {
   color: #aaa;
   float: right;
-  font-size: 28px;
+  font-size: 32px;
   font-weight: bold;
 }
 
@@ -311,11 +391,11 @@ h1 {
 
 /* Style du bouton de lecture */
 .play-button {
-  background-color: #1DB954;
+  background-color: rgb(85, 80, 172);
   color: white;
   border: none;
   padding: 10px;
-  border-radius: 50%;
+  border-radius: 30%;
   cursor: pointer;
 }
 
@@ -354,6 +434,19 @@ h1 {
   .modal-content {
     width: 90%; /* Ajuste la largeur pour les petits écrans */
     padding: 10px; /* Réduit l'espacement sur tous les côtés pour les petits écrans */
+  }
+
+  #bird-description {
+    display: block;
+  }
+
+  #bird-table {
+    display: block;
+  }
+
+  .rectangle2 {
+    width: 100%;
+    margin-top: 5%;
   }
 }
 

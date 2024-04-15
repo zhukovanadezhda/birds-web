@@ -375,30 +375,6 @@ nav ul > li:hover > .dropdown {
     }
 }
 
-
-
-
-/*
-.top-page-container {
-    z-index: 100; 
-    padding: 10px;
-    z-index: 99999999999;
-    position:relative;
-    width: 100%;
-    height: 15%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('../styles/images/back_day.jpg'); 
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed; 
-} 
-*/
-
-
-
 /* ##############################################
     MODE JOUR / NUIT
    ############################################## 
