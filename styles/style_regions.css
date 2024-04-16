@@ -377,8 +377,12 @@ h2#bird-name:hover {
 .close {
   color: #aaa;
   float: right;
-  font-size: 32px;
+  align-items: right;
+  font-size: 42px;
+  margin-left: 33%;
   font-weight: bold;
+  position: fixed;
+  cursor: pointer;
 }
 
 .close:hover,
@@ -447,6 +451,10 @@ h2#bird-name:hover {
   .rectangle2 {
     width: 100%;
     margin-top: 5%;
+  }
+
+  .rectangle2 table {
+    width: 100%;
   }
 }
 
