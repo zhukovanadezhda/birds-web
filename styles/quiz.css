@@ -162,36 +162,6 @@ button:visited,
   animation-duration: 2s;
 }
 
-@media (max-width: 768px) {
-  #quiz-stats {
-    padding: 12px 0 8px 0;
-    font-size: 10px;
-  }
-  #quiz-stats > div > span {
-    font-size: 18px;
-  }
-  #quiz-stats > div > p > span {
-    display: none;
-  }
-  #quiz-stats .fa-bar-chart {
-    font-size: 54px;
-  }
-  #quiz-question {
-    font-size: 16px;
-    margin: 20px 0 14px 0;
-  }
-  #quiz-options {
-    margin: 14px 0 20px 0;
-  }
-  .quiz-ans-btn {
-    font-size: 16px;
-    min-height: 65px;
-  }
-  #quiz-play-again-btn {
-    font-size: 28px;
-    width: 66%;
-  }
-}
 
 /* Réponses sortantes vers la gauche */
 .fadeOutLeft {
@@ -305,12 +275,14 @@ button:visited,
   margin-bottom: 40px; /* Espacement inférieur du cadre */
   width: 70%;
   margin: 0 auto; 
+  font-size: 100%;   
+  text-align: justify;
 }
 
 .container-heading {
   width: 50%;
   display: flex;
-  margin: 12% auto 0; /* Adjust the top margin to move the container down */
+  margin: 5% auto 0; /* Adjust the top margin to move the container down */
   justify-content: center;
   flex-direction: column;
 }
@@ -358,4 +330,48 @@ button:visited,
   text-align: center;
   letter-spacing: .5px;
   -webkit-text-stroke-width: 0px; /* Width of the black border */
+}
+
+@media (max-width: 768px) {
+  #quiz-stats {
+    padding: 12px 0 8px 0;
+    font-size: 10px;
+  }
+  #quiz-stats > div > span {
+    font-size: 18px;
+  }
+  #quiz-stats > div > p > span {
+    display: none;
+  }
+  #quiz-stats .fa-bar-chart {
+    font-size: 54px;
+  }
+  #quiz-question {
+    font-size: 16px;
+    margin: 20px 0 14px 0;
+  }
+  #quiz-options {
+    margin: 14px 0 20px 0;
+  }
+  .quiz-ans-btn {
+    font-size: 16px;
+    min-height: 65px;
+  }
+  #quiz-play-again-btn {
+    font-size: 28px;
+    width: 66%;
+  }
+
+  .intro-container {
+    font-size: 55%;
+  }
+  .container-heading {
+    margin: 12% auto 0; /* Adjust the top margin to move the container down */
+  }
+}
+
+@media (max-width: 900px) {
+  .intro-container {
+    font-size: 70%;
+  }
 }

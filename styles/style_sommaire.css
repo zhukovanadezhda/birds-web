@@ -166,9 +166,15 @@
 .container-heading {
   width: 50%;
   display: flex;
-  margin: 12% auto 0; /* Adjust the top margin to move the container down */
+  margin: 5% auto 0; /* Adjust the top margin to move the container down */
   justify-content: center;
   flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .container-heading {
+    margin: 12% auto 0;
+  }
 }
 
 .container-heading h1{
