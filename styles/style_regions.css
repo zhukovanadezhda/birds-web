@@ -268,7 +268,7 @@ h2#bird-name:hover {
 }
 
 .rectangle2 {
-  width: 83%;
+  width: 72%;
   background-color: transparent;
   border: 1px solid rgb(85, 80, 172);
   border-radius: 5px;
@@ -323,7 +323,7 @@ h2#bird-name:hover {
 }
 
 .rectangle2 td:last-child {
-  width: auto; /* Supprimer la largeur de la dernière colonne (pour éviter les problèmes d'affichage) */
+  width: 0; /* Supprimer la largeur de la dernière colonne (pour éviter les problèmes d'affichage) */
 }
 
 /* Styles spécifiques pour la première ligne */
