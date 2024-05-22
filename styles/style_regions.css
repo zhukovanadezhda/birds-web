@@ -381,8 +381,9 @@ h2#bird-name:hover {
   font-size: 42px;
   margin-left: 33%;
   font-weight: bold;
-  position: fixed;
+  position:fixed;
   cursor: pointer;
+  z-index: 10;
 }
 
 .close:hover,
